@@ -1,0 +1,323 @@
+:root {
+  --white: #ffffff;
+  --dark-gray: #a0a0a0;
+  --black: #222222;
+  --gray: #bababa;
+  --light-gray: #f7f7f7;
+  --red: #fe6c6c;
+  --brand-red: #f76c6c;
+  --light-black: #656565;
+  --brand-yellow: #f8e9a1;
+  --brand-light-blue: #7cbde2;
+  --brand-blue: #374785;
+  --brand-navy: #395e;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-72: 72px;
+  --spacing-80: 80px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 41.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: -1px;
+  color: var(--black);
+}
+
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 33.2px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.8px;
+  color: var(--black);
+}
+
+h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 26.6px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.64px;
+  color: var(--black);
+}
+
+h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  color: var(--black);
+}
+
+h5 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--black);
+}
+
+.HeaderH5 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--black);
+}
+
+.BodyWhite17 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--white);
+}
+
+.BodyBlack17 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--black);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--light-black);
+}
+
+.BodyGray17 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--dark-gray);
+}
+
+.CaptionGraySmall {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  color: var(--dark-gray);
+}
+
+.CaptionBlackSmall {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  color: var(--black);
+}
+
+.BodyLight-Black15 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--light-black);
+}
+
+.BodyWhite15 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--white);
+}
+
+.BodyBlack15 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--black);
+}
+
+.BodyGray15 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--dark-gray);
+}
+
+.CaptionGrayXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: 0.07px;
+  color: var(--dark-gray);
+}
+
+.CaptionBlackXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: 0.07px;
+  color: var(--black);
+}
+
+.BodyWhite13 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: -0.33px;
+  color: var(--white);
+}
+
+.BodyBlack13 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: -0.33px;
+  color: var(--black);
+}
+
+.BodyLight-Black13 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.32;
+  letter-spacing: -0.33px;
+  color: var(--light-black);
+}
+
+.BodyGray13 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.32;
+  letter-spacing: -0.33px;
+  color: var(--dark-gray);
+}
+
+.CaptionGrayXXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 10.9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.21;
+  letter-spacing: -0.26px;
+  color: var(--dark-gray);
+}
+
+.CaptionBlackXXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 10.9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.21;
+  letter-spacing: -0.26px;
+  color: var(--black);
+}
+
+.CaptionGrayXXXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 8.7px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.76;
+  letter-spacing: -0.21px;
+  color: var(--dark-gray);
+}
+
+.CaptionBlackXXXS {
+  font-family: "DM Sans", sans-serif;
+  font-size: 8.7px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.76;
+  letter-spacing: -0.21px;
+  color: var(--black);
+}
+
+a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  color: var(--black);
+}
