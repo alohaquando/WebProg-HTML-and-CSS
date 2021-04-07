@@ -104,14 +104,22 @@ label.logo a {
   display: none;
 }
 /* Testing */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .checkbtn {
     display: block;
   }
-  nav label {
-    width: 50px;
-    float: right;
+  ul {
+    width: 272px;
+    height: 617px;
+    margin: 0 0 0 48px;
+    padding: 78px 174px 291px 24px;
+    box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: var(--white);
+  }
+  ul li {
     display: block;
+    margin: 50px 0;
+    line-height: 55px;
   }
 
   nav input[type="checkbox"] ~ ul {
