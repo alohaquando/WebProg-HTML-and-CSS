@@ -66,7 +66,6 @@ h4 {
   line-height: 1.51;
   letter-spacing: -0.51px;
   color: var(--black);
-  margin-bottom: 8px;
 }
 
 h5 {
@@ -135,7 +134,6 @@ h5 {
   line-height: 1.6;
   letter-spacing: -0.41px;
   color: var(--light-black);
-  margin-top: 0;
 }
 
 .CaptionGraySmall {

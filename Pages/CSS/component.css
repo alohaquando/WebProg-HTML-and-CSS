@@ -1,9 +1,17 @@
+.Header {
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
 .H4_and_body_17 {
   margin-top: 48px;
   margin-bottom: 48px;
 }
 
-.Header {
-  margin-top: 64px;
-  margin-bottom: 48px;
+.H4_and_body_17 h4 {
+  margin-bottom: 8px;
+}
+
+.H4_and_body_17 p {
+  margin-top: 8px;
 }
