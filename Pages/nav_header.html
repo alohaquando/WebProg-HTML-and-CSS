@@ -13,21 +13,41 @@
 
   <body>
     <nav>
-      <div class="nav_logo">
-        <h1>Shop!</h1>
-      </div>
-      <ul class="nav_elements">
-        <li><a href="#">Home</a></li>
-        <li>
+      <div class="nav_wrapper">
+        <div class="nav_elements_left">
+          <div class="nav_logo">
+            <h1>Shop!</h1>
+          </div>
+          <div class="nav_links">
+            <ul class="nav_links">
+              <li><a href="#">Home</a></li>
+              <li>
+                <a href="#"
+                  >Browse 
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </li>
+              <li><a href="#">About us</a></li>
+              <li><a href="5.1.5-FAQs.html">FAQs</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav_elements_right">
+          <h5 class="nav_cart_icon">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </h5>
+
           <a href="#"
-            >Browse 
-            <i class="fas fa-caret-down"></i>
-          </a>
-        </li>
-        <li><a href="#">About us</a></li>
-        <li><a href="5.1.5-FAQs.html">FAQs</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+            ><img src="Asset/avatar.jpg" class="avatar_logged_in"
+          /></a>
+        </div>
+
+        <div>
+          <button class="nav_menu_icon"><img src="Asset/menu.svg" /></button>
+        </div>
+      </div>
     </nav>
   </body>
 </html>
