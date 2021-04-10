@@ -7,6 +7,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   flex-grow: 100%;
+  margin: 0 auto;
 }
 
 .footer_elements_left {
@@ -29,11 +30,10 @@
 
 .footer_elements_right {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .footer_elements_right p {
-  margin: 16px;
 }
 
 @media only screen and (min-width: 1024px) {

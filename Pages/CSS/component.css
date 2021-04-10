@@ -39,3 +39,21 @@ button {
   cursor: pointer;
   border: none;
 }
+
+hr {
+  border-top: 2px;
+  border-color: -var(--light-gray);
+}
+
+@media only screen and (min-width: 1024px) {
+  .body_spacing {
+    max-width: var(--screen-max-width-desktop);
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .body_spacing {
+    margin: 0 24px;
+  }
+}
