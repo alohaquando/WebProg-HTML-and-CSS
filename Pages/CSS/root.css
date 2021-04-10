@@ -21,4 +21,5 @@
   --spacing-64: 64px;
   --spacing-72: 72px;
   --spacing-80: 80px;
+  --screen-max-width-desktop: min(95vw, 1024px);
 }
