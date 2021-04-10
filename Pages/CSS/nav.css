@@ -71,7 +71,7 @@ header {
 
 @media only screen and (min-width: 1024px) {
   .nav_wrapper {
-    max-width: min(95vw, 1024px);
+    max-width: var(--screen-max-width-desktop);
   }
   .nav_menu_icon {
     display: none;
