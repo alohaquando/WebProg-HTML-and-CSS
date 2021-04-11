@@ -6,55 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register Account</title>
   <link href="CSS/main.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="script.js"></script>
 </head>
 
 <body>
   <header id="nav_header"></header>
+  <div class="body_spacing">
   <div class="right">
   </div>
   <div class="left">
+
     <h2>Welcome to Shop!</h2>
     <p>Register now! Your vouchers are waiting for you!</p>
 
     <div class="items">
      <h4>Account</h4>
+
       <h5>Email</h5>
        <input type='email' placeholder="example@email.com" name='email'/>
+
       <h5>Phone number</h5>
-       <!--<span class = "inline">-->
        <input id = "phone-left" placeholder = "+84" type='national code' name='national-code'/>
        <input id = "phone-right" placeholder = "123 456 789"type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></span>
+
       <h5>password</5>
        <div><input type="password" id="pass" name="password"
            minlength="8" required></div>
+
       <h5>Confirm password</5>
       <div><input type="password" id="pass" name="password"
            minlength="8" required></div>
         </div>
 
       <h4>Personal Information</h4>
-<div class = "name">
-<h5><label for="fname">First name</label></h5>
-  <input id="fname" type="text" id="fname" placeholder = "First name" name="fname">
-  <h5><label for="lname">Last name</label></h5>
-  <input id="lname" type="text" id="lname" placeholder = "Last name"name="lname">
-    </div>
 
-  <h5>Address</h5>
-  <input type="text" id="address" placeholder="123 Street" name="address">
-  <h5>city</h5>
-  <input type="text" id="city" placeholder="New York" name="city">
-  <h5>zipcode</h5>
-  <input type="text" id="zipcode" placeholder = "000000" pattern="[0-9]{5}">
+     <div class = "name">
+      <h5><label for="fname">First name</label></h5>
+      <input id="fname" type="text" id="fname" placeholder = "First name" name="fname">
+      <h5><label for="lname">Last name</label></h5>
+      <input id="lname" type="text" id="lname" placeholder = "Last name"name="lname">
+     </div>
 
-  <h5>Country</h5>
-  <div class="custom-select">
-  <select name='category-list'>
+      <h5>Address</h5>
+       <input type="text" id="address" placeholder="123 Street" name="address">
+
+      <h5>city</h5>
+       <input type="text" id="city" placeholder="New York" name="city">
+
+      <h5>zipcode</h5>
+       <input type="text" id="zipcode" placeholder = "000000" pattern="[0-9]{5}">
+
+      <h5>Country</h5>
+
+     <div class="custom-select">
+        <select name='category-list'>
           <option value='0' selected>Unitted States</option>
           <option value='1'>China</option>
           <option value='2'>Vietnam</option>
           <option value='3'>Korea</option>
         </select></div>
+
       <h4>I am a...</4>
 
       <h5><input type="radio" id="shopper" name="gender" value="shopper">
@@ -71,14 +84,15 @@
        <h5>Store category</h5>
       <div class="custom-select">
         <select name='category-list'>
-          <option value='' selected>Select a category</option>
-          <option value='s1234567'>A</option>
-          <option value='s1234568'>B</option>
-          <option value='s1234569'>C</option>
+          <option value='0' selected>Select a category</option>
+          <option value='1'>A</option>
+          <option value='2'>B</option>
+          <option value='3'>C</option>
         </select></div>
     </div>
-    <h4><button class="create" value="create-account">Create account</button></h4>
+    <h4><button >Create account</button></h4>
     <h4><button class="reset"  value="reset">reset</button></h4>
+</div>
   </body>
   <footer id="mall_footer"></footer>
   </html>
