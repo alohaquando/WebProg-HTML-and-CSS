@@ -35,5 +35,5 @@ table, h1, h2, h3, h4, h5, a, p, button has already been styled.
 3. Don't use any inline CSS. If you need more CSS code:
     - Make your CSS code inside Pages/CSS
     - Open main.css
-    - Add @import yourcssfilehere.css;
+    - Add `@import yourcssfilehere.css;`
 
