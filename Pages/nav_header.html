@@ -42,21 +42,41 @@
             </ul>
           </div>
         </div>
+        <div class="nav_menu_icon" id="sidenav">
+          <!-- <img src="Asset/menu.svg" /> -->
 
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;
+          </a>
+        </div>
         <div>
-          <button class="nav_menu_icon"><img src="Asset/menu.svg" /></button>
+          <span
+            style="font-size: 30px; color: black; cursor: pointer"
+            onclick="openNav()"
+            >&#9776;
+          </span>
         </div>
 
         <div class="nav_elements_right">
           <h5 class="nav_cart_icon">
             <a href="#"><i class="fas fa-shopping-cart"></i></a>
           </h5>
-
           <a href="#"
             ><img src="Asset/avatar.jpg" class="avatar_logged_in"
           /></a>
         </div>
       </div>
     </nav>
+    <script>
+      function openNav() {
+        document.getElementById("sidenav").style.width = "300px";
+        document.body.style.backgroundColor = "rgba(24, 24, 24, 0.46)";
+      }
+
+      function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
   </body>
 </html>
