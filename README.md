@@ -11,6 +11,7 @@ Guide:
 <link rel="stylesheet" href="CSS/main.css" />
 ```
 
+<hr />
 
 2. How to implemenent footer and header:
 Our footer sticks to the bottom by making the whole body a flexbox, and then making the footer flex 1. If you're using CSS collumns, this might break your layout. You can read Pages/CSS/footer.css, spacing.css, header.css to understand how our footer and header was made.
@@ -37,9 +38,12 @@ Our footer sticks to the bottom by making the whole body a flexbox, and then mak
 ```
 This div maintains a consistent spacing across our whole website. You can read about it inside Pages/CSS/spacing.css
       
-      
+<hr />
+
 3. Please take a read through our defined CSS files inside Pages/CSS to understand what has already been made and try to reuse them. Certain elements like
 table, h1, h2, h3, h4, h5, a, p, button has already been styled.
+
+<hr />
 
 4. Don't use any inline CSS. If you need more CSS code:
     - Make your CSS code inside Pages/CSS
