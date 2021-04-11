@@ -16,10 +16,19 @@
   margin-top: 8px;
 }
 
-.center_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.circle {
+  width: 200px;
+  height: 200px;
+  line-height: 210px;
+  border-radius: 50%;
+  color: #222;
+  text-align: center;
+  background: white;
+  margin: 80px auto;
+}
+
+.check_icon {
+  font-size: 5rem;
 }
 
 button {
@@ -42,18 +51,31 @@ button {
 
 hr {
   border-top: 2px;
-  border-color: -var(--light-gray);
+  border-color: var(--light-gray);
 }
 
-@media only screen and (min-width: 1024px) {
-  .body_spacing {
-    max-width: var(--screen-max-width-desktop);
-    margin: 0 auto;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
 }
 
-@media only screen and (max-width: 1024px) {
-  .body_spacing {
-    margin: 0 24px;
-  }
+thead {
+  text-align: left;
+  background-color: var(--brand-red);
+  height: 24px;
+}
+
+th {
+  text-align: left;
+  padding: 20px 24px;
+  color: white;
+}
+
+td {
+  text-align: left;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-gray);
 }
