@@ -1,4 +1,6 @@
 input{
+  font-family: inherit;
+  color: inherit;
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
@@ -15,6 +17,7 @@ input:focus{
   border-radius: 16px;
   outline:32px;
   margin-bottom: 32px;
+  border-color: black;
 }
 input:placeholder {              /* Chrome, Safari, Firefox */
   color: #a0a0a0;
@@ -40,4 +43,14 @@ input[type="radio"]:checked{
   height: 24px;
   margin: 0 8px 0 0;
   border: solid 2px #f76c6c;
+}
+select{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 21px 16px 16px;
+  border-radius: 16px;
+  border: solid 2px var(--light-gray);
 }

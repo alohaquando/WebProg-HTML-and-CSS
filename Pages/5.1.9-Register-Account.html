@@ -28,26 +28,25 @@
        <input type='email' placeholder="example@email.com" name='email'/>
 
       <h5>Phone number</h5>
-       <input id = "phone-left" placeholder = "+84" type='national code' name='national-code'/>
-       <input id = "phone-right" placeholder = "123 456 789"type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></span>
+       <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"></span>
 
       <h5>password</5>
-       <div><input type="password" id="pass" name="password"
-           minlength="8" required></div>
+       <input type="password" id="pass" name="password"
+           minlength="8" required>
 
       <h5>Confirm password</5>
-      <div><input type="password" id="pass" name="password"
-           minlength="8" required></div>
+       <input type="password" id="pass" name="password"
+           minlength="8" required>
         </div>
 
       <h4>Personal Information</h4>
 
-     <div class = "name">
-      <h5><label for="fname">First name</label></h5>
-      <input id="fname" type="text" id="fname" placeholder = "First name" name="fname">
-      <h5><label for="lname">Last name</label></h5>
-      <input id="lname" type="text" id="lname" placeholder = "Last name"name="lname">
-     </div>
+       <div class = "name">
+        <h5><label for="fname">First name</label></h5>
+        <input id="fname" type="text" id="fname" placeholder = "First name" name="fname">
+        <h5><label for="lname">Last name</label></h5>
+        <input id="lname" type="text" id="lname" placeholder = "Last name"name="lname">
+       </div>
 
       <h5>Address</h5>
        <input type="text" id="address" placeholder="123 Street" name="address">
@@ -56,7 +55,7 @@
        <input type="text" id="city" placeholder="New York" name="city">
 
       <h5>zipcode</h5>
-       <input type="text" id="zipcode" placeholder = "000000" pattern="[0-9]{5}">
+       <input type="text" id="zipcode" placeholder = "000000" pattern="[0-9]{4,6}">
 
       <h5>Country</h5>
 
@@ -85,9 +84,18 @@
       <div class="custom-select">
         <select name='category-list'>
           <option value='0' selected>Select a category</option>
-          <option value='1'>A</option>
-          <option value='2'>B</option>
-          <option value='3'>C</option>
+          <option value='1'>Fashion</option>
+          <option value='2'>Toy, Hobby & DIY</option>
+          <option value='3'>Home appliances</option>
+          <option value="4">Household product</option>
+          <option value="5">Funiture</option>
+          <option value="6">Beauty or personal care</option>
+          <option value="7">Groceries</option>
+          <option value="8">Food</option>
+          <option value="9">Electronics</option>
+
+
+
         </select></div>
     </div>
     <h4><button >Create account</button></h4>
