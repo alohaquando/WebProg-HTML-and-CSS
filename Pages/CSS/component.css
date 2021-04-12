@@ -1,6 +1,6 @@
 .HeaderH1_Left_With_Spacing {
   margin-top: 64px;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .H4_and_body_17 {
@@ -49,7 +49,7 @@ button {
   cursor: pointer;
   border: none;
 }
-secondary-button{
+secondary-button {
   outline: 0;
   height: 56px;
   border-radius: 10px;
@@ -83,7 +83,7 @@ table {
 
 thead {
   text-align: left;
-  background-color: var(--brand-red);
+  background-color: var(--brand-navy);
   height: 24px;
 }
 
