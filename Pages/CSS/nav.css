@@ -79,6 +79,9 @@ header {
   .nav_logo_h2 {
     display: none;
   }
+  .closebtn {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -105,6 +108,7 @@ header {
     width: 48px;
   }
 }
+
 .nav_menu_icon {
   height: 100%;
   width: 0;
