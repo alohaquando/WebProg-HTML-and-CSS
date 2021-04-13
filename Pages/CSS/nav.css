@@ -69,6 +69,12 @@ header {
   top: 0;
 }
 
+.sidebar_hr {
+  border-top: 4px;
+  border-color: var(--light-gray);
+  margin-right: 24px;
+}
+
 @media only screen and (min-width: 1024px) {
   .nav_wrapper {
     max-width: var(--screen-max-width-desktop);
@@ -100,12 +106,31 @@ header {
   .nav_links {
     display: none;
   }
-  .nav_menu_icon {
-    display: unset;
-    padding-top: 16px;
-    align-content: end;
-    background: url(Asset/menu.svg);
-    width: 48px;
+  .nav_menu_icon li {
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: -0.41px;
+    display: flex;
+    margin: 32px 0;
+    color: var(--black);
+    white-space: nowrap;
+  }
+
+  .nav_menu_link_extra_padding a {
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: -0.41px;
+    display: flex;
+    margin: 0 24px;
+    color: var(--black);
+  }
+
+  .nav_menu_icon ul {
+    padding-left: 24px;
   }
 }
 
@@ -123,14 +148,6 @@ header {
   padding-top: 60px;
 }
 
-.nav_menu_icon a {
-  text-decoration: none;
-  font-size: 25px;
-  color: #111;
-  display: block;
-  transition: 0.3s;
-  line-height: -1px;
-}
 .nav_menu_icon .closebtn {
   position: absolute;
   top: 0;
@@ -162,11 +179,6 @@ header {
   line-height: 1;
   white-space: nowrap;
 }
-
-/* .navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color: red;
-} */
 
 .dropdown-content {
   border-radius: 10px;
