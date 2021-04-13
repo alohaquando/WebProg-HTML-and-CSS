@@ -145,7 +145,7 @@ header {
   background-color: var(--white);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 56px;
 }
 
 .nav_menu_icon .closebtn {
