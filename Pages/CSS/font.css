@@ -13,6 +13,11 @@ body {
   color: var(--light-black);
 }
 
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 a {
   font-family: "DM Sans", sans-serif;
   font-size: 17px;

@@ -1,6 +1,6 @@
 .HeaderH1_Left_With_Spacing {
   margin-top: 64px;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .H4_and_body_17 {
@@ -16,13 +16,23 @@
   margin-top: 8px;
 }
 
-.center_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.circle {
+  width: 200px;
+  height: 200px;
+  line-height: 210px;
+  border-radius: 50%;
+  color: #222;
+  text-align: center;
+  background: white;
+  margin: 80px auto;
+}
+
+.check_icon {
+  font-size: 5rem;
 }
 
 button {
+  outline: 0;
   height: 56px;
   border-radius: 10px;
   padding: 12px 32px;
@@ -39,21 +49,52 @@ button {
   cursor: pointer;
   border: none;
 }
+secondary-button {
+  outline: 0;
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: var(--white);
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--black);
+  cursor: pointer;
+  border: black;
+}
 
 hr {
   border-top: 2px;
-  border-color: -var(--light-gray);
+  border-color: var(--light-gray);
 }
 
-@media only screen and (min-width: 1024px) {
-  .body_spacing {
-    max-width: var(--screen-max-width-desktop);
-    margin: 0 auto;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
 }
 
-@media only screen and (max-width: 1024px) {
-  .body_spacing {
-    margin: 0 24px;
-  }
+thead {
+  text-align: left;
+  background-color: var(--brand-navy);
+  height: 24px;
+}
+
+th {
+  text-align: left;
+  padding: 20px 24px;
+  color: white;
+}
+
+td {
+  text-align: left;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-gray);
 }

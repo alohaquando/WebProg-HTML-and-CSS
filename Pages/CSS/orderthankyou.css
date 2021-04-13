@@ -11,17 +11,5 @@
   background-color: var(--white);
 } */
 
-.circle {
-  width: 200px;
-  height: 200px;
-  line-height: 210px;
-  border-radius: 50%;
-  color: #222;
-  text-align: center;
-  background: white;
-  margin: 80px auto;
-}
 
-.check_icon {
-  font-size: 5rem;
 }
