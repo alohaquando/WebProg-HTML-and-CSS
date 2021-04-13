@@ -55,4 +55,5 @@ select{
   padding: 16px 21px 16px 16px;
   border-radius: 16px;
   border: solid 2px var(--light-gray);
+  outline: none;
 }
