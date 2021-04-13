@@ -65,6 +65,8 @@ select{
   border-radius: 10px;
   border: solid 2px var(--black);
   background:#fff;
+  border-color: black;
+
 }
 secondary-button {
   outline: 0;
@@ -82,5 +84,5 @@ secondary-button {
   text-align: center;
   color: var(--black);
   cursor: pointer;
-  border: black;
+  border-color: black;
 }
