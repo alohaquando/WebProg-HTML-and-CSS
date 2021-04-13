@@ -35,11 +35,11 @@
   position: relative;
   width: 100%;
 }
-h3 {
+.teamtitle {
   margin: 80px 399px 24px 166px;
   color: var(--black);
 }
-h5 {
+.snumber {
   width: 71px;
   height: 26px;
   margin: 32px 157px 41px 22px;
@@ -52,7 +52,7 @@ h5 {
   letter-spacing: 0.07px;
   color: var(--brand-red);
 }
-.text {
+.name {
   width: 197px;
   height: 34px;
   margin-top: -45px;
@@ -65,7 +65,7 @@ h5 {
   letter-spacing: -0.64px;
   color: var(--black);
 }
-p {
+.paracontent {
   width: 228px;
   height: 72px;
   margin-bottom: 50px;
