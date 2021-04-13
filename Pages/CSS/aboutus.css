@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  float: left;
+  width: 538px;
+  height: 278px;
+  margin: 24px 32px 32px 166px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+/* .card_container {
+  float: left;
+  width: 538px;
+  height: 278px;
+  margin: 24px 32px 32px 166px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+} */
+.cardimg {
+  width: 182px;
+  height: 182px;
+  margin: 0 32px 0 0;
+  border-radius: 100px;
+}
+.text-block {
+  position: absolute;
+  top: 150px;
+  margin-left: 152px;
+  color: var(--black);
+}
+.cardbackground {
+  position: relative;
+  width: 100%;
+}
+h3 {
+  margin: 80px 399px 24px 166px;
+  color: var(--black);
+}
+h5 {
+  width: 71px;
+  height: 26px;
+  margin: 32px 157px 41px 22px;
+  font-family: "DM Sans";
+  font-size: 13.6px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: 0.07px;
+  color: var(--brand-red);
+}
+.text {
+  width: 197px;
+  height: 34px;
+  margin-top: -45px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 26.6px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.64px;
+  color: var(--black);
+}
+p {
+  width: 228px;
+  height: 72px;
+  margin-bottom: 50px;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--light-black);
+}
