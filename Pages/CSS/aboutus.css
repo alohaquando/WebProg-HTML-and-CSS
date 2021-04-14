@@ -1,6 +1,5 @@
 .cardbackground {
   position: relative;
-  width: 1440px;
 }
 .teamtitle {
   margin: 80px 399px 24px 166px;
@@ -10,7 +9,7 @@
   position: absolute;
   top: 150px;
   margin-left: 152px;
-  color: var(--black);
+  color: white;
 }
 .cardimg {
   width: 182px;
@@ -19,52 +18,28 @@
   border-radius: 100px;
 }
 /* Quan  */
-.wrapper_card1 {
+.wrapper_card {
   display: flex;
   justify-content: space-between;
   float: left;
   width: 538px;
   height: 278px;
-  margin: 32px;
+  margin: 24px 32px 32px 166px;
+  margin-right: 166px;
+  margin-bottom: 32px;
   padding: 48px;
   border-radius: 16px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
 }
 /* Thinh */
-.wrapper_card2 {
+.wrapper_card1 {
   display: flex;
   justify-content: space-between;
   float: right;
   width: 538px;
   height: 278px;
-  margin: 32px;
-  padding: 48px;
-  border-radius: 16px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--white);
-}
-/* Tae  */
-.wrapper_card3 {
-  float: left;
-  display: flex;
-  justify-content: space-between;
-  width: 538px;
-  height: 278px;
-  margin: 32px;
-  padding: 48px;
-  border-radius: 16px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--white);
-}
-/* Anh */
-.wrapper_card4 {
-  float: right;
-  display: flex;
-  justify-content: space-between;
-  width: 538px;
-  height: 278px;
-  margin: 30px;
+  margin: 24px 166px 32px 32px;
   padding: 48px;
   border-radius: 16px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
