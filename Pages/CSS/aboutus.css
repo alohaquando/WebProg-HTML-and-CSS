@@ -1,19 +1,10 @@
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 538px;
-  height: 278px;
-  margin: 0px 32px 32px;
-  padding: 48px;
-  border-radius: 16px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--white);
+.cardbackground {
+  position: relative;
+  width: 1440px;
 }
-.cardimg {
-  width: 182px;
-  height: 182px;
-  margin: 0 32px 0 0;
-  border-radius: 100px;
+.teamtitle {
+  margin: 80px 399px 24px 166px;
+  color: var(--black);
 }
 .text-block {
   position: absolute;
@@ -21,14 +12,65 @@
   margin-left: 152px;
   color: var(--black);
 }
-.cardbackground {
-  position: relative;
-  width: 100%;
+.cardimg {
+  width: 182px;
+  height: 182px;
+  margin: 0 32px 0 0;
+  border-radius: 100px;
 }
-.teamtitle {
-  margin: 80px 399px 24px 166px;
-  color: var(--black);
+/* Quan  */
+.wrapper_card1 {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 538px;
+  height: 278px;
+  margin: 32px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
 }
+/* Thinh */
+.wrapper_card2 {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  width: 538px;
+  height: 278px;
+  margin: 32px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+/* Tae  */
+.wrapper_card3 {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width: 538px;
+  height: 278px;
+  margin: 32px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+/* Anh */
+.wrapper_card4 {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  width: 538px;
+  height: 278px;
+  margin: 30px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
 .snumber {
   width: 71px;
   height: 26px;
@@ -67,14 +109,4 @@
   line-height: 1.6;
   letter-spacing: -0.36px;
   color: var(--light-black);
-}
-.wrapper1 {
-  display: flex;
-  justify-content: space-between;
-  width: 538px;
-  height: 278px;
-  padding: 48px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--white);
-  float: right;
 }
