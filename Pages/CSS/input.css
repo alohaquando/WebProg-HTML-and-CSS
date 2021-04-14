@@ -57,3 +57,30 @@ select{
   border: solid 2px var(--light-gray);
   outline: none;
 }
+.reset{
+  width: 125px;
+  height: 56px;
+  margin: 64px 203px 143px 8px;
+  padding: 12px 35px 12px 34px;
+  border-radius: 10px;
+  border: solid 2px var(--black);
+  background:#fff;
+}
+secondary-button {
+  outline: 0;
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: var(--white);
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--black);
+  cursor: pointer;
+  border: black;
+}
