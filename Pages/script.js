@@ -5,3 +5,7 @@ $(function () {
 $(function () {
   $("#mall_footer").load("footer.html");
 });
+
+$(function () {
+  $("#store_footer").load("store-footer.html");
+});

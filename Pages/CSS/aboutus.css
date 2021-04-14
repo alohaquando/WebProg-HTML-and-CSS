@@ -1,81 +1,74 @@
-.cardbackground {
-  position: relative;
+.hero-image {
+  background-image: url("../Asset/bg.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.teamtitle {
-  margin: 80px 399px 24px 166px;
-  color: var(--black);
+
+.hero-text {
+  margin-top: 120px;
 }
-.text-block {
-  position: absolute;
-  top: 150px;
-  margin-left: 152px;
+
+.hero-text h1,
+.hero-text h5 {
   color: white;
 }
+
+.teamtitle {
+  margin-top: 48px;
+}
+
 .cardimg {
-  width: 182px;
-  height: 182px;
-  margin: 0 32px 0 0;
+  width: 140px;
+  height: 140px;
   border-radius: 100px;
 }
-/* Quan  */
+
 .wrapper_card {
   display: flex;
-  justify-content: space-between;
-  float: left;
-  width: 538px;
-  height: 278px;
-  margin: 24px 32px 32px 166px;
-  margin-right: 166px;
-  margin-bottom: 32px;
-  padding: 48px;
+  flex-grow: 2;
+  align-items: center;
   border-radius: 16px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--white);
-}
-/* Thinh */
-.wrapper_card1 {
-  display: flex;
-  justify-content: space-between;
-  float: right;
-  width: 538px;
-  height: 278px;
-  margin: 24px 166px 32px 32px;
-  padding: 48px;
-  border-radius: 16px;
+  padding: 24px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
 }
 
+@media only screen and (min-width: 768px) {
+  .wrapper_card {
+    flex-basis: 1;
+    max-width: 40%;
+    margin: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper_card {
+    margin: 16px 0px 16px 0;
+  }
+}
+
 .snumber {
-  width: 71px;
-  height: 26px;
-  margin: 32px 157px 41px 22px;
-  font-family: "DM Sans";
   font-size: 13.6px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.76;
   letter-spacing: 0.07px;
+  color: var(--brand-red);
   color: var(--brand-red);
 }
 .name {
-  width: flex;
-  height: 34px;
-  margin-top: -45px;
   font-family: "DM Sans", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.51;
   letter-spacing: -0.64px;
   color: var(--black);
 }
+
 .paracontent {
-  width: 228px;
-  height: 72px;
-  margin-bottom: 50px;
   font-family: "DM Sans";
   font-size: 15px;
   font-weight: normal;
@@ -84,4 +77,13 @@
   line-height: 1.6;
   letter-spacing: -0.36px;
   color: var(--light-black);
+}
+
+.card-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content_wrapper {
+  margin-left: 16px;
 }

@@ -18,7 +18,6 @@ body {
   .body_spacing {
     min-width: var(--screen-max-width-desktop);
     max-width: var(--screen-max-width-desktop);
-
     margin: 0 auto;
     flex: 1;
   }
