@@ -42,7 +42,7 @@ p{
     margin-bottom: 30px;
 }
 .col-3 img{
-    width: 60%;
+    width: 70%;
     border-radius: 12px;
 }
 .small-container{
@@ -96,4 +96,15 @@ h4{
 .col-4{
     font-size: 20px;
     text-align: left;
+}
+.featured-product{
+    background-color: lightcoral;
+    padding: 0;
+}
+.title3{
+    text-align: left;
+    margin: 150px auto 10px;
+    position: relative;
+    line-height: 60px;
+    color: white;
 }
