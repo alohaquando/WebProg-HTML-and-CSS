@@ -108,3 +108,29 @@ h4{
     line-height: 60px;
     color: white;
 }
+.col-4-fp{
+    flex-basis: 25%;
+    padding: 8px 16px 24px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4-fp img{
+    width: 100%;
+    border-radius: 12px;
+}
+.col-4-fp:hover{
+    transform: translateY(-5px);
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
