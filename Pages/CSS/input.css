@@ -133,14 +133,7 @@ select{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-input.message{
-  width: 348px;
-  height: 104px;
-  margin: 8px 0 0;
-  padding: 16px 6px 4px 16px;
-  border-radius: 16px;
-  border: solid 2px var(--light-gray);
-}
+
 .message input{
   width: 348px;
   height: 104px;
