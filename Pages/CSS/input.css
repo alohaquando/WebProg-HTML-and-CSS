@@ -19,6 +19,17 @@ input:focus{
   margin-bottom: 32px;
   border-color: black;
 }
+input:focus:invalid{
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  outline:32px;
+  margin-bottom: 32px;
+  border-color: #fe6c6c;
+  background: url(Pages\Asset\exclamation-triangle-solid.svg no-repeat 95% 50%;
+}
 input:placeholder {              /* Chrome, Safari, Firefox */
   color: #a0a0a0;
   opacity: 1;
