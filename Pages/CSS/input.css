@@ -71,33 +71,6 @@ select{
   cursor:pointer;
 }
 
-
-/* radioooooooooooooooooooooooooooooooooooooooooooooooooooo */
-.radioContainer{
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 17px;
-  user-select: none;
-  padding-left: 30px;
-}
-.radioContainer input{
-  display: none;
-}
-.radioContainer .circle{
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-color: #eee;
-  position: absolute;
-  left: 0;
-  top:0;
-  border-radius: 50%;
-}
-.radioContainer input:checked+ .circle{
-  background-color: #2196fc;
-}
 /* Customize the label (the container) */
 .contain {
   display: block;
@@ -168,7 +141,14 @@ input.message{
   border-radius: 16px;
   border: solid 2px var(--light-gray);
 }
-
+.message input{
+  width: 348px;
+  height: 104px;
+  margin: 8px 0 0;
+  padding: 16px 6px 4px 16px;
+  border-radius: 16px;
+  border: solid 2px var(--light-gray);
+}
 .reset{
   width: 125px;
   height: 56px;
