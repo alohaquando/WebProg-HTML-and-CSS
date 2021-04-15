@@ -1,13 +1,10 @@
-/* Quan: Don't define extra style here. Check the font.css */
 
-/* a {
-  text-decoration: none;
-  color: #555;
-}
-p {
-  color: #555;
-} */
 .container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 8px 16px 24px;
+}
+.container .featured-store{
   max-width: 1300px;
   margin: auto;
   padding-left: 8px 16px 24px;
@@ -31,9 +28,6 @@ p {
   font-size: 50px;
   line-height: 60px;
   margin: 25px 0;
-}
-.header {
-  background: radial-gradient(#fff, #ffd6d6 /*#004B93, #005CB4*/);
 }
 .categories {
   margin: 70px 0;
@@ -91,24 +85,19 @@ p {
   left: 45%;
   transform: translateX(-50);
 }
-/* h4 {
-  color: black;
-  font-weight: normal;
-} */
 .col-4 {
   font-size: 20px;
   text-align: left;
 }
 .featured-product {
-  background-color: lightcoral;
-  padding: 0;
+  background-color: rgb(168, 226, 156);
+  padding: 0px;
 }
 .title3 {
   text-align: left;
   margin: 150px auto 10px;
   position: relative;
-  line-height: 60px;
-  color: white;
+  line-height: 50px;
 }
 .col-4-fp {
   flex-basis: 25%;
@@ -124,11 +113,6 @@ p {
 .col-4-fp:hover {
   transform: translateY(-5px);
 }
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
 .centered {
   position: absolute;
   top: 50%;
@@ -136,7 +120,7 @@ p {
   transform: translate(-50%, -50%);
   color: white;
 }
-.list1 {
+/* Browse Store Select*/
+.list1{
   justify-content: space-between;
-  margin: auto;
 }
