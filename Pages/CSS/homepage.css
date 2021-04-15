@@ -91,7 +91,6 @@
 }
 .featured-product {
   background-color: rgb(168, 226, 156);
-  padding: 0px;
 }
 .title3 {
   text-align: left;
@@ -112,13 +111,6 @@
 }
 .col-4-fp:hover {
   transform: translateY(-5px);
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  color: white;
 }
 /* Browse Store Select*/
 .list1{
