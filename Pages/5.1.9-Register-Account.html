@@ -25,21 +25,26 @@
      <h4>Account</h4>
 
       <h5>Email</h5>
-       <input type='email' placeholder="example@email.com" name='email'pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"/>
+       <input type='email' placeholder="example@email.com" name='email' pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
 
       <h5>Phone number</h5>
        <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"></span>
 
       <h5>password</5>
-       <input type="password" placeholder="password" name="password"
-           minlength="8" required>
+       <input type="password" placeholder="password" name="password" minlength="8" required>
 
       <h5>Confirm password</5>
-       <input type="password" placeholder="password" name="password"
-           minlength="8" required>
+       <input type="password" placeholder="password" name="password" minlength="8" required>
         </div>
 
       <h4>Personal Information</h4>
+
+       <div class = "oval">
+         <label for="file-input">
+           <img src="" alt="">
+         </label>
+         <input id ="file-input" type="file" name="pic" value="pic">
+       </div>
 
        <div class = "name">
         <h5><label for="fname">First name</label></h5>
@@ -313,11 +318,13 @@
         </select></div>
 
       <h4>I am a...</4><br>
-
-      <label class="container">Phone
-      <input type="radio">
-      <span class="checkmark"></span>
-      </label>
+        <ul>
+          <li>
+            <input type="radio" id="radio-1" name="shopper" value="shopper">
+            <label for="radio-1">shopper</label>
+            <div class="check"></div>
+          </li>
+        </ul>
 
     <div>
       <h4>Store information</h4>

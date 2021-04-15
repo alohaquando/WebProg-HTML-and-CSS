@@ -31,56 +31,65 @@
      <h5>Name</h5>
      <input type = "text" placeholder="Name">
 
-
      <h5>Email</h5>
      <input type='email' placeholder="example@email.com" name='email'/>
 
      <h5>Phone number</h5>
      <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
 
-
      <h5>Preferred contact method</h5>
-     <input type="radio" name="Email" value="Email">
-     <label for="Email">Email</label><br>
-     <input type="radio" name="Phone" value="Phone">
-     <label for="Phone">Phone</label><br>
+     <label class="con">Phone
+     <input type="radio" checked="checked">
+     <span class="check"></span>
+     </label>
+
+     <label class="con">Email
+       <input type="radio">
+       <span class="check"></span>
+     </label>
 
      <h5>Contact days</h5>
-      <label class="container">Monday
+      <!-- <label class="contain">Monday
       <input type="checkbox" checked="checked">
       <span class="checkmark"></span>
       </label>
 
-      <label class="container">Tuesday
+      <label class="contain">Tuesday
         <input type="checkbox">
         <span class="checkmark"></span>
       </label>
 
-      <label class="container">Wednesday
+      <label class="contain">Wednesday
        <input type="checkbox">
        <span class="checkmark"></span>
       </label>
 
-     <label class="container">Thursday
+     <label class="contain">Thursday
       <input type="checkbox">
       <span class="checkmark"></span>
-     </labels
-     <label class="container">Friday
-      <input type="checkbox">
-      <span class="checkmark"></span>
-     </label>
-     <label class="container">Saturday
+    </label>
+
+     <label class="contain">Friday
       <input type="checkbox">
       <span class="checkmark"></span>
      </label>
-     <label class="container">Sunday
+
+     <label class="contain">Saturday
       <input type="checkbox">
       <span class="checkmark"></span>
      </label>
+
+     <label class="contain">Sunday
+      <input type="checkbox">
+      <span class="checkmark"></span>
+     </label> -->
 
      <h5>Message</h5>
-     <input type="Message" name="" value="">
-
+     <div class="message">
+       <input type="text" placeholder="What's your message?" name="Message" value="Message">
+     </div>
+     <button input type="submit">Send</button>
+     <secondary-button type="reset" value="reset">Reset</secondary-button>
     </div>
     <footer id="mall_footer"></footer>
   </body>
