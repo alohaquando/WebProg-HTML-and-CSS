@@ -1,50 +1,73 @@
-/* Hi I'm Duc Anh who is edditing this but i don't think it work out*/
-/* Also forget to mention this is acutally Thinh work but he might forget to do it*/
-/* So, Thinh please if you think you can continue editting with this code you can otherwise you can delete it*/
+.col-2 {
+  flex-shrink: 50%;
+  min-width: 300px;
+}
+.col-2 img {
+  max-width: 100%;
+  padding: 8px 16px 24px;
+  border-radius: 30px;
+}
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+.product-detail-btn {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  background: rgb(91, 113, 240);
+  color: white;
+  padding: 8px 16px 24px;
+  margin: 30px 0;
+  border-radius: 12px;
+  transition: background 0.5s;
+}
+.product-detail-btn:hover {
+  background: gray;
+}
+.product-detail .col-2 img {
+  padding: 0;
+  margin: 10px;
+}
+/* .product-detail .col-2 img {
+  padding: 1px;
+} */
 
+.small-img-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+.small-img-col {
+  display: flex;
+  flex-basis: 27%;
+  cursor: pointer;
+}
 
-.col-2{
-    flex-shrink: 50%;
-    min-width: 300px;
+#margin_left_none {
+  margin-left: 0;
 }
-.col-2 img{
-    max-width: 100%;
-    padding: 8px 16px 24px;
-    border-radius: 12px;
+#margin_right_none {
+  margin-right: 0;
 }
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
+/* Recommended Products */
+.rec_products h1 {
+  font-size: 15px;
 }
-.product-detail-btn{
-    display: inline-block;
-    width: 45%;
-    text-align: center;
-    background: rgb(91, 113, 240);
-    color: white;
-    padding: 8px 16px 24px;
-    margin: 30px 0;
-    border-radius: 12px;    
-    transition: background 0.5s;
+.prodcard {
+  border-radius: 12px;
 }
-.product-detail-btn:hover{
-    background: gray;
+.rec_products {
+  margin-left: 0;
+  align-items: center;
+  border-radius: 15px;
+  width: 253px;
+  height: 362px;
+  margin: 12px;
 }
-.product-detail .col-2 img{
-    padding: 0;
-}
-.product-detail .col-2 img{
-    padding: 20px;
-}
-.product-detail h4{
-    margin: 20px;
-}
-.small-img-row{
-    display: flex;
-    justify-content: space-between;
-}
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
+.recpro_wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
