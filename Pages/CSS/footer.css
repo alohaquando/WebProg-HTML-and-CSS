@@ -1,11 +1,18 @@
 .mall_footer {
-  margin-top: 64px;
   background-color: var(--light-gray);
 }
 
 .store_footer {
   margin-top: 64px;
   background-color: var(--brand-light-blue);
+}
+
+.store_footer a {
+  color: white;
+}
+
+.store_footer p {
+  color: white;
 }
 
 .footer_wrapper {
