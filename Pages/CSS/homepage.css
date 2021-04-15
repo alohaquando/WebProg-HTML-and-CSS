@@ -120,12 +120,7 @@
   transform: translate(-50%, -50%);
   color: white;
 }
-.list1 {
-  justify-content: space-between;
-  margin: auto;
-}
 /* Browse Store Select*/
-.row-2{
+.list1{
   justify-content: space-between;
-  margin: auto;
 }
