@@ -42,22 +42,7 @@ label{
   font-family: inherit;
   font-size: 17px;
 }
-input[type="radio"] {
-  display:inline-block;
-  font-size: 17px;
-  font-family: inherit;
-  width: 24px;
-  height: 24px;
-  margin: 0 8px 0 0;
-  border: solid 2px #f7f7f7;
-}
-input[type="radio"]:checked{
-  display:inline-block;
-  width: 24px;
-  height: 24px;
-  margin: 0 8px 0 0;
-  border: solid 2px #f76c6c;
-}
+
 select{
   font-family: inherit;
   color: inherit;
@@ -85,80 +70,34 @@ select{
   top:0;
   cursor:pointer;
 }
-input [type="radio"]{
-  display: none;
-}
-
-/* Customize the label (the container) */
-.con {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  font-size: 17px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.con input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom radio button */
-.check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.con:hover input ~ .check {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .check {
-  background-color: #2196F3;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.check:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.con input:checked ~ .check:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.con .check:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
 
 
 /* radioooooooooooooooooooooooooooooooooooooooooooooooooooo */
-
+.radioContainer{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  user-select: none;
+  padding-left: 30px;
+}
+.radioContainer input{
+  display: none;
+}
+.radioContainer .circle{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  top:0;
+  border-radius: 50%;
+}
+.radioContainer input:checked+ .circle{
+  background-color: #2196fc;
+}
 /* Customize the label (the container) */
 .contain {
   display: block;
@@ -191,10 +130,13 @@ input [type="radio"]{
   width: 25px;
   background-color:#f7f7f7;
   border-radius: 6px;
+  /* border: solid 2px #a0a0a0; */
+
 }
 
 .contain input:checked ~ .checkmark {
   background-color: #f76c6c;
+
 }
 
 .checkmark:after {
