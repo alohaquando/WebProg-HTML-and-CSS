@@ -1,64 +1,63 @@
-input {
+.h5-for-input{
+
+}
+input{
   font-family: inherit;
-  font-size: inherit;
   color: inherit;
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
-  border-radius: 10px;
-  border: 2px solid var(--gray);
+  border-radius: 16px;
+  border: solid 1.5px var(--gray);
 }
-input:focus {
+input:focus{
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
-  border-radius: 10px;
-  outline: 32px;
-  border-color: black;
-
+  border-radius: 16px;
+  outline:32px;
+  border: solid 1.5px black;
 }
-input:focus:invalid {
+input:focus:invalid{
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
-  border-radius: 10px;
-  outline: 32px;
+  border-radius: 16px;
+  outline:32px;
   border-color: #fe6c6c;
   background: f071;
 }
-input:placeholder {
-  /* Chrome, Safari, Firefox */
+input:placeholder {              /* Chrome, Safari, Firefox */
   color: #a0a0a0;
   opacity: 1;
 }
-input:-ms-input-placeholder {
-  /* IE, Edge */
+input:-ms-input-placeholder {     /* IE, Edge */
   color: #a0a0a0;
   opacity: 1;
 }
 input:focus::placeholder {
-  color: transparent;
+  color:transparent;
 }
-label {
+label{
   font-family: inherit;
   font-size: 17px;
 }
 
-select {
+select{
   font-family: inherit;
   color: inherit;
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 25px 16px 16px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: solid 1.5px var(--gray);
   outline: none;
 }
-.oval {
+.oval{
   width: 120px;
   height: 120px;
   margin: 32px 8px 32px 16px;
@@ -66,15 +65,65 @@ select {
   border: solid 1.5px var(--gray);
   border-radius: 50%;
 }
-.oval input {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  cursor: pointer;
+.oval input{
+  width:120px;
+  height:120px;
+  position:absolute;
+  left:0;
+  top:0;
+  cursor:pointer;
 }
 
+.rad{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rad input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.rad input:checked ~ .check {
+  background-color: var(--red);
+}
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.rad input:checked ~ .check:after {
+  display: block;
+}
+.rad .check:after {
+  top: 8.7px;
+  left: 8.7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+/* radio */
 /* Customize the label (the container) */
 .contain {
   display: block;
@@ -105,13 +154,15 @@ select {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #f7f7f7;
+  background-color:#f7f7f7;
   border-radius: 6px;
   /* border: solid 2px #a0a0a0; */
+
 }
 
 .contain input:checked ~ .checkmark {
-  background-color: var(--brand-navy);
+  background-color: #f76c6c;
+
 }
 
 .checkmark:after {
@@ -136,22 +187,22 @@ select {
   transform: rotate(45deg);
 }
 
-.message input {
+.message input{
   width: 348px;
   height: 104px;
   margin: 8px 0 0;
   padding: 16px 6px 4px 16px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
-.reset {
+.reset{
   width: 125px;
   height: 56px;
   margin: 64px 203px 143px 8px;
   padding: 12px 35px 12px 34px;
   border-radius: 10px;
   border: solid 2px var(--black);
-  background: #fff;
+  background:#fff;
   border-color: black;
 }
 secondary-button {
@@ -172,88 +223,87 @@ secondary-button {
   cursor: pointer;
   border: solid 1.5px var(--black);
 }
-.items {
-  margin-bottom: ;
+.items{
+  margin-bottom:
 }
-.body_spacing {
+.body_spacing{
   width: inherit;
   height: inherit;
 }
-.body_spacing input {
+.body_spacing input{
   font-family: inherit;
   color: inherit;
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
 @media screen and (max-width: 1024px) {
   div.left {
-    width: 50%;
-    padding-left: 116px;
-    padding-top: 64px;
-  }
+          width: 50%;
+          padding-left: 116px;
+          padding-top:64px;
+        }
   div.right {
     width: 50%;
     float: right;
     background: #96a6bb;
   }
+
 }
 /*mobile*/
 @media screen and (max-width: 768px) {
   div.left {
-    width: 50%;
-    padding-left: 29px;
-    padding-top: 16px;
-    padding-right: 29px;
-  }
+          width: 50%;
+          padding-left: 29px;
+          padding-top: 16px;
+          padding-right: 29px;
+        }
   div.right {
     width: 0%;
     float: right;
     background: #96a6bb;
   }
-  input {
+  input{
     font-family: inherit;
     color: inherit;
     width: 348px;
     height: 56px;
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
-    border-radius: 10px;
+    border-radius: 16px;
     border: solid 2px var(--gray);
   }
-  input:focus {
+  input:focus{
     width: 348px;
     height: 56px;
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
-    border-radius: 10px;
-    outline: 32px;
+    border-radius: 16px;
+    outline:32px;
     border-color: black;
   }
-  input:focus:invalid {
+  input:focus:invalid{
     width: 348px;
     height: 56px;
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
-    border-radius: 10px;
-    outline: 32px;
+    border-radius: 16px;
+    outline:32px;
     border-color: #fe6c6c;
     background: f071;
   }
-  input:placeholder {
-    /* Chrome, Safari, Firefox */
+  input:placeholder {              /* Chrome, Safari, Firefox */
     color: #a0a0a0;
     opacity: 1;
   }
-  input:-ms-input-placeholder {
-    /* IE, Edge */
+  input:-ms-input-placeholder {     /* IE, Edge */
     color: #a0a0a0;
     opacity: 1;
   }
   input:focus::placeholder {
-    color: transparent;
+    color:transparent;
   }
 }
