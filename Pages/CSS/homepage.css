@@ -1,38 +1,3 @@
-/* Card Products*/
-.card {
-  display: grid;
-  grid-template-columns: 250px;
-  grid-template-rows: 30px 260px 80px;
-  grid-template-areas: "image" "text";
-
-  border-radius: 12px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
-  text-align: center;
-}
-.card-image {
-  grid-area: auto;
-}
-.card-text {
-  grid-area: text;
-}
-.card-image {
-  grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-.card:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-}
-.card {
-  transition: 0.2s ease;
-  cursor: pointer;
-  margin:30px;
-}
-
 /* */
 .container {
   max-width: 1300px;
@@ -50,6 +15,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/* Col-2*/
 .col-2 {
   flex-shrink: 50%;
   min-width: 300px;
@@ -64,6 +31,8 @@
   line-height: 60px;
   margin: 25px 0;
 }
+
+/* Col-3*/
 .col-3 {
   flex-basis: 30%;
   min-width: 250px;
@@ -78,6 +47,8 @@
   margin: auto;
   padding: 8px 16px 24px;
 }
+
+/* Col-4*/
 .col-4 {
   flex-basis: 25%;
   padding: 8px 16px 24px;
@@ -92,6 +63,26 @@
 .col-4:hover {
   transform: translateY(-5px);
 }
+.col-4 {
+  font-size: 20px;
+  text-align: left;
+}
+.col-4-fp {
+  flex-basis: 25%;
+  padding: 8px 16px 24px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+.col-4-fp img {
+  width: 100%;
+  border-radius: 12px;
+}
+.col-4-fp:hover {
+  transform: translateY(-5px);
+}
+
+/* Title 1-2-3*/
 .title {
   text-align: left;
   margin: 150px auto 10px;
@@ -117,30 +108,13 @@
   left: 45%;
   transform: translateX(-50);
 }
-.col-4 {
-  font-size: 20px;
-  text-align: left;
-}
 .title3 {
   text-align: left;
   margin: 150px auto 10px;
   position: relative;
   line-height: 50px;
 }
-.col-4-fp {
-  flex-basis: 25%;
-  padding: 8px 16px 24px;
-  min-width: 200px;
-  margin-bottom: 50px;
-  transition: transform 0.5s;
-}
-.col-4-fp img {
-  width: 100%;
-  border-radius: 12px;
-}
-.col-4-fp:hover {
-  transform: translateY(-5px);
-}
+
 /* Browse Store Select*/
 .list1{
   justify-content: space-between;
@@ -161,4 +135,18 @@ li a{
   text-align: center;
   padding: 14px;
   text-decoration: none;
+}
+
+/* Browse Store Col-4 xx */
+.xx img {
+  width: 100%;
+  border-radius: 12px;
+}
+.xx:hover {
+  transform: translateY(-5px);
+}
+.xx{
+padding: 8px 16px 24px;
+font-size: 8px;
+text-align: center;
 }
