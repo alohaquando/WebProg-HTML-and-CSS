@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Browse Store By Category</title>
+    <title>Your Shopping cart!</title>
     <meta name="description" content="Browse Store BCategory" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
@@ -10,8 +10,87 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <header id="nav_header"></header>
     <div class="body_spacing">
-      <div class="cart-wrapper"></div>
+      <i class="fas fa-angle-left"></i>
+      <h5>Continue Shopping</h5>
+      <h3>Your cart</h3>
+      <div class="cart-wrapper">
+        <div class="product-name">
+          <h4 class="name-edit">Razer Laptop</h4>
+          <h5 class="font-edit">Razer</h5>
+          <p class="para-edit">430.000VND</p>
+          <div class="button-wrap">
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus" /><input
+                type="number"
+                step="1"
+                min="1"
+                max=""
+                name="quantity"
+                value="1"
+                title="Qty"
+                class="input-text qty text"
+                size="4"
+                pattern=""
+                inputmode=""
+              /><input type="button" value="+" class="plus" />
+            </div>
+          </div>
+        </div>
+        <div class="specific-card">
+          <img
+            src="Asset/product.jpg"
+            alt="mouse10"
+            class="card-product"
+            width="173px"
+            height="158px"
+          />
+        </div>
+      </div>
+      <div class="cart-wrapper">
+        <div class="product-name">
+          <h4 class="name-edit">Razer Laptop</h4>
+          <h5 class="font-edit">Razer</h5>
+          <p class="para-edit">430.000VND</p>
+          <div class="button-wrap">
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus" /><input
+                type="number"
+                step="1"
+                min="1"
+                max=""
+                name="quantity"
+                value="1"
+                title="Qty"
+                class="input-text qty text"
+                size="4"
+                pattern=""
+                inputmode=""
+              /><input type="button" value="+" class="plus" />
+            </div>
+          </div>
+        </div>
+        <div class="specific-card">
+          <img
+            src="Asset/product.jpg"
+            alt="mouse10"
+            class="card-product"
+            width="173px"
+            height="158px"
+          />
+        </div>
+      </div>
+      <hr />
+      <div class="total-money">
+        <h5>Total</h5>
+        <h1>50.000.000VND</h1>
+        <div class="order-button">
+          <a href="5.2.4-Order-Placement-Thank-you.html"
+            ><button type="button" class="btn-od">Order</button></a
+          >
+        </div>
+      </div>
     </div>
   </body>
 </html>
