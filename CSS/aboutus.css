@@ -20,7 +20,7 @@
 }
 
 .cardimg {
-  width: 140px;
+  min-width: 140px;
   height: 140px;
   border-radius: 100px;
 }
