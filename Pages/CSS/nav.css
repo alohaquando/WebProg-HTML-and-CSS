@@ -124,7 +124,7 @@ header {
     color: var(--black);
     white-space: nowrap;
   }
-
+  
   .nav_menu_link_extra_padding a {
     font-size: 17px;
     font-stretch: normal;
@@ -317,7 +317,7 @@ header {
   .nav_store_elements_left {
     height: 80px;
   }
-    
+
   .nav_store_elements_right::-webkit-scrollbar {
     display: none;
   }

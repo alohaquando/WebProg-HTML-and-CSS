@@ -6,7 +6,7 @@ input{
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--light-gray);
+  border: solid 2px var(--grey);
 }
 input:focus{
   width: 348px;
@@ -51,7 +51,7 @@ select{
   margin: 8px 0 0;
   padding: 16px 21px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--light-gray);
+  border: solid 2px var(--grey);
   outline: none;
 }
 .oval{
@@ -59,7 +59,7 @@ select{
   height: 120px;
   margin: 32px 8px 32px 16px;
   padding: 35px 39px 36px;
-  border: solid 2px var(--light-gray);
+  border: solid 2px var(--gray);
   border-radius: 50%;
 }
 .oval input{
@@ -173,4 +173,72 @@ secondary-button {
 }
 .items{
   margin-bottom:
+}
+@media screen and (max-width: 1024px) {
+  div.left {
+          width: 50%;
+          padding-left: 116px;
+          padding-top:64px;
+        }
+  div.right {
+    width: 50%;
+    float: right;
+    background: #96a6bb;
+  }
+
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  div.left {
+          width: 50%;
+          padding-left: 29px;
+          padding-top: 16px;
+          padding-right: 29px;
+        }
+
+  div.right {
+    width: 0%;
+    float: right;
+    background: #96a6bb;
+  }
+  input{
+    font-family: inherit;
+    color: inherit;
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    border: solid 2px var(--light-gray);
+  }
+  input:focus{
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    outline:32px;
+    border-color: black;
+  }
+  input:focus:invalid{
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    outline:32px;
+    border-color: #fe6c6c;
+    background: f071;
+  }
+  input:placeholder {              /* Chrome, Safari, Firefox */
+    color: #a0a0a0;
+    opacity: 1;
+  }
+  input:-ms-input-placeholder {     /* IE, Edge */
+    color: #a0a0a0;
+    opacity: 1;
+  }
+  input:focus::placeholder {
+    color:transparent;
+  }
 }
