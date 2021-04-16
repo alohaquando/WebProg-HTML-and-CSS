@@ -6,7 +6,7 @@ input{
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--grey);
+  border: solid 2px var(--gray);
 }
 input:focus{
   width: 348px;
@@ -49,10 +49,11 @@ select{
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
-  padding: 16px 21px 16px 16px;
+  padding: 16px 25px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--grey);
+  border: solid 2px var(--gray);
   outline: none;
+
 }
 .oval{
   width: 120px;
@@ -141,7 +142,7 @@ select{
   margin: 8px 0 0;
   padding: 16px 6px 4px 16px;
   border-radius: 16px;
-  border: solid 2px var(--light-gray);
+  border: solid 2px var(--gray);
 }
 .reset{
   width: 125px;
@@ -195,7 +196,6 @@ secondary-button {
           padding-top: 16px;
           padding-right: 29px;
         }
-
   div.right {
     width: 0%;
     float: right;
@@ -209,7 +209,7 @@ secondary-button {
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
     border-radius: 16px;
-    border: solid 2px var(--light-gray);
+    border: solid 2px var(--gray);
   }
   input:focus{
     width: 348px;
