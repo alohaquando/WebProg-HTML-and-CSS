@@ -54,6 +54,9 @@
   .footer_elements_left a:first-child {
     margin-left: 0px;
   }
+  .footer-hr {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
