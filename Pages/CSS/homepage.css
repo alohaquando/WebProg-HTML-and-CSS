@@ -4,7 +4,7 @@
   margin: auto;
   padding-left: 8px 16px 24px;
 }
-.container .featured-store{
+.container .featured-store {
   max-width: 1300px;
   margin: auto;
   padding-left: 8px 16px 24px;
@@ -116,12 +116,12 @@
 }
 
 /* Browse Store Select*/
-.list1{
+.list1 {
   justify-content: space-between;
 }
 
 /* Browse Store By Letter Sorting */
-ul{
+ul {
   list-style-type: none;
   overflow: hidden;
   background-color: white;
@@ -129,7 +129,7 @@ ul{
 li {
   float: left;
 }
-li a{
+li a {
   display: block;
   color: black;
   text-align: center;
@@ -145,20 +145,23 @@ li a{
 .xx:hover {
   transform: translateY(-5px);
 }
-.xx{
+.xx {
   padding: 8px 16px 24px;
   font-size: 8px;
   text-align: center;
 }
 
 /* Featured Store */
-.hero-img1{
+.hero-img1 {
   position: relative;
-  height: 700px;
-  background-image: url("Asset/razerbackground.jpg");
+  width: 1440px;
+  height: 480px;
+
+  border-radius: 12px;
+  background-image: url(https://assets2.razerzone.com/images/downloads-page/desktop-wallpapers/razer-vortex-2560x1080.jpg);
   background-size: cover;
 }
-.herofs{
+.herofs {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -169,31 +172,31 @@ li a{
   font: 700;
   text-transform: uppercase;
 }
-.herofs h1{
+.herofs h1 {
   font-size: 72px;
   letter-spacing: 0.2cm;
   margin: auto;
 }
-.herofs h1 span{
+.herofs h1 span {
   border: 10px solid white;
   padding: 8px 16px 24px;
   display: inline-block;
 }
-.des-fs{
+.des-fs {
   margin: auto;
   display: box;
   font-size: 26px;
   text-shadow: none;
 }
-.btn-fs{
+.btn-fs {
   color: #313131;
-  padding:  8px 16px 24px;
+  padding: 8px 16px 24px;
   font-size: 20px;
   text-decoration: none;
   background: #f1f1f1;
   border-radius: 12px;
   transition: 0.3s all;
 }
-.btn-fs:hover{
+.btn-fs:hover {
   opacity: 0.8;
 }
