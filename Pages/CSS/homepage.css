@@ -161,17 +161,17 @@ li a {
 /* Featured Store */
 .hero-img1 {
   position: relative;
-  width: 1440px;
-  height: 480px;
+  width: 1000px;
+  height: 500px;
   border-radius: 12px;
-  background-image: url(https://assets2.razerzone.com/images/downloads-page/desktop-wallpapers/Mercury_3840x2160.jpg?_ga=2.165208383.1245898629.1618546323-102298825.1618546323);
+  background-image: url(https://i.redd.it/y8sq6vpgvt531.png);
   background-size: cover;
 }
 .herofs {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-85%, -50%);
   overflow: hidden;
   text-align: center;
   color: white;
@@ -187,6 +187,7 @@ li a {
   border: 10px solid white;
   padding: 8px 16px 24px;
   display: inline-block;
+  color: white;
 }
 .des-fs {
   margin: auto;
