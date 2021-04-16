@@ -134,7 +134,7 @@ header {
     color: var(--black);
   }
 
-  .nav_menu_icon # {
+  .nav_menu_icon ul {
     padding-left: 24px;
   }
   .nav_store_wrapper {
@@ -222,7 +222,7 @@ header {
 /* Store Navbar */
 
 .nav_store {
-  background-color: var(--brand-light-blue);
+  background-color: var(--brand-navy);
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
