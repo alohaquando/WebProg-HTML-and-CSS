@@ -121,3 +121,6 @@
   text-align: center;
   margin: 8px;
 }
+.btn a {
+  color: var(--white);
+}
