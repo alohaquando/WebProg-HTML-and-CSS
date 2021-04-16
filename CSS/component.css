@@ -80,3 +80,44 @@ td {
   padding: 20px 24px;
   border-bottom: 1px solid var(--light-gray);
 }
+
+.letter-spacing {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.letter-spacing ul {
+  padding-left: 0;
+}
+
+.letter-spacing li,
+.letter-spacing a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.store-card h4 {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.styled-select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  padding: 16px;
+  background-color: #fff;
+  border: 2px solid #222;
+  border-radius: 10px;
+  color: #222;
+  font-size: inherit;
+  margin: 24px 0;
+}

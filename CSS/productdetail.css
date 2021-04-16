@@ -1,16 +1,23 @@
 .img-select {
   display: flex;
-  margin: 8px;
+  /* margin: 8px; */
+  justify-content: center;
+}
+.img-select img:last-child {
+  margin-left: 0;
 }
 .img-item img {
   margin: 16px;
   border-radius: 16px;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
-
+.img-item {
+  padding: 4px;
+}
 .product-detail {
   float: right;
   margin-top: -500px;
+  padding: 32px;
 }
 /* Recommended Products */
 .recpro_wrapper {
@@ -26,14 +33,15 @@
 .rec_products {
   align-items: center;
   border-radius: 16px;
-  width: 253px;
+  width: 22%;
   height: 362px;
-  margin: 12px;
+  margin: 24px 0px 48px 27px;
 }
 .big_wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 48px;
+  padding: 0 30px;
+  margin: 48px 32px 16px 0;
 }
 .main_product {
   border-radius: 12px;
@@ -41,7 +49,7 @@
 .main_card {
   display: flex;
   height: 538px;
-  width: 1140px;
+  width: 100%;
 }
 .titlename {
   padding: 32px;
@@ -111,6 +119,5 @@
   border: 1.5px solid #ddd;
   border-radius: 10px;
   text-align: center;
-  margin-left: -16px;
-  margin: 16px;
+  margin: 8px;
 }

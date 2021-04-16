@@ -17,8 +17,79 @@
   <div id="nav_header"></div>
   <div id="store_header"></div>
 </header>    <div class="body_spacing">
-      <h2></h2>
+  <div class="body_spacing">
 
+
+      <h2>Contact DashBear</h2>
+
+      <h5>Contact purpose</h5>
+      <div class="custom-select">
+         <select name='category-list'>
+           <option value='0' selected>Contact purpose</option>
+           <option value='1'>Your Account</option>
+           <option value='2'>Your order</option>
+           <option value='3'>Shipping & Delivery</option>
+           <option value='4'>Return & Refund</option>
+           <option value='5'>Payments</option>
+           <option value='6'>Product</option>
+           <option value='7'>Others</option>
+         </select></div>
+
+      <h5>Name</h5>
+      <input type = "text" placeholder="Name">
+
+      <h5>Email</h5>
+      <input type='email' placeholder="example@email.com" name='email'/>
+
+      <h5>Phone number</h5>
+      <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+
+      <h5>Preferred contact method</h5>
+
+      <h5>Contact days</h5>
+       <label class="contain">Monday
+       <input type="checkbox" checked="checked">
+       <span class="checkmark"></span>
+       </label>
+
+       <label class="contain">Tuesday
+         <input type="checkbox">
+         <span class="checkmark"></span>
+       </label>
+
+       <label class="contain">Wednesday
+        <input type="checkbox">
+        <span class="checkmark"></span>
+       </label>
+
+      <label class="contain">Thursday
+       <input type="checkbox">
+       <span class="checkmark"></span>
+     </label>
+
+      <label class="contain">Friday
+       <input type="checkbox">
+       <span class="checkmark"></span>
+      </label>
+
+      <label class="contain">Saturday
+       <input type="checkbox">
+       <span class="checkmark"></span>
+      </label>
+
+      <label class="contain">Sunday
+       <input type="checkbox">
+       <span class="checkmark"></span>
+      </label>
+
+      <h5>Message</h5>
+      <div class="message">
+        <input type="text" placeholder="What's your message?" name="Message" value="Message">
+      </div>
+      <button input type="submit">Send</button>
+      <secondary-button type="reset" value="reset">Reset</secondary-button>
+     </div>
+  </div>
     </div>
     <footer id="mall_footer"></footer>
   </body>
