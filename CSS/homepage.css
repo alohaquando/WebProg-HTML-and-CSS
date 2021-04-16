@@ -85,7 +85,7 @@
 }
 */
 
-/* Title 1-2-3*/
+/* Title*/
 .title {
   text-align: left;
   margin: 150px auto 10px;
@@ -119,26 +119,9 @@
 }
 
 /* Browse Store Select*/
-.list1 {
+.list2 {
   justify-content: space-between;
 }
-
-/* Browse Store By Letter Sorting */
-/* ul {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: white;
-}
-li {
-  float: left;
-}
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-} */
 
 /* Browse Store Col-4 xx */
 .xx img {
@@ -158,53 +141,47 @@ li a {
 }
 
 /* Featured Store */
-.hero-img1 {
+.hero-image2{
   position: relative;
+  height: 700px;
   width: 1000px;
-  height: 500px;
-  border-radius: 12px;
-  background-image: url(https://i.redd.it/y8sq6vpgvt531.png);
+  overflow: hidden;
+  background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg) no-repeat center;
   background-size: cover;
 }
-.herofs {
+.hero-text2{ /*Feated store word setting */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-85%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   text-align: center;
-  color: white;
-  font: 700;
+  color: white; /*inside Featured Store text*/
+  font-weight: 500;
   text-transform: uppercase;
 }
-.herofs h1 {
-  font-size: 72px;
-  letter-spacing: 0.2cm;
-  margin: auto;
-}
-.herofs h1 span {
-  border: 10px solid white;
-  padding: 8px 16px 24px;
-  display: inline-block;
+.hero-text2 h1{
+  font-size: 100px;
+  letter-spacing: 0.2em;
+  margin: 0;
   color: white;
 }
-.des-fs {
-  margin: auto;
-  display: box;
-  font-size: 30px;
-  text-shadow: none;
+.hero-text2 h1 span{
+  border: 1px solid white;
+  padding: 8px 16px 24px;
+  display: inline-block;
 }
-.btn-fs {
-  color: #313131;
-  padding: 10px;
+.hero-text3{ 
+  margin: auto;
+  display: block;
+  font-size: 14px;
+  text-shadow: 0 0 10px white;
+}
+.hero-button{
+  color: black;
+  padding: 1px 16px 1px;
   font-size: 20px;
   text-decoration: none;
-  background: #f1f1f1;
+  background:white; /*box background */
   border-radius: 12px;
-  transition: 0.3s all;
 }
-/*
-.btn-fs:hover {
-  opacity: 0.8;
-}
-*/
