@@ -27,10 +27,11 @@
 
 .wrapper_card {
   display: flex;
-  flex-grow: 2;
+  flex-grow: 1;
+  flex-basis: 50%
   align-items: center;
   border-radius: 16px;
-  padding: 24px;
+  padding: 24px auto;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
 }
