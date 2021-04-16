@@ -14,7 +14,7 @@
 
      <h2>Contact US</h2>
      <p>We're right here to help</p>
-
+     <div class="h5-for-input">
      <h5>Contact purpose</h5>
      <div class="custom-select">
         <select name='category-list'>
@@ -27,16 +27,24 @@
           <option value='6'>Product</option>
           <option value='7'>Others</option>
         </select></div>
+      </div>
 
+    <div class="h5-for-input">
      <h5>Name</h5>
      <input type = "text" placeholder="Name">
+   </div>
 
+   <div class="h5-for-input">
      <h5>Email</h5>
      <input type='email' placeholder="example@email.com" name='email'/>
+   </div>
 
+   <div class="h5-for-input">
      <h5>Phone number</h5>
      <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required/>
+     </div>
 
+     <div class="h5-for-input">
      <h5>Preferred contact method</h5>
      <label class = "rad">Phone
        <input type="radio" checked = "checked">
@@ -47,7 +55,9 @@
        <input type="radio" checked = "checked">
        <span class="check"></span>
      </label>
+   </div>
 
+   <div class="h5-for-input">
      <h5>Contact days</h5>
       <label class="contain">Monday
       <input type="checkbox" checked="checked">
@@ -82,8 +92,10 @@
      <label class="contain">Sunday
       <input type="checkbox">
       <span class="checkmark"></span>
-     </label>
+    </label>
+  </div>
 
+  <div class="h5-for-input">
      <h5>Message</h5>
      <div class="message">
        <input type="text" placeholder="What's your message?" name="Message" value="Message">
@@ -91,6 +103,7 @@
      <button input type="submit">Send</button>
      <secondary-button type="reset" value="reset">Reset</secondary-button>
     </div>
+  </div>
     <footer id="mall_footer"></footer>
   </body>
 </html>
