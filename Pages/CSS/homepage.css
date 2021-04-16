@@ -146,7 +146,54 @@ li a{
   transform: translateY(-5px);
 }
 .xx{
-padding: 8px 16px 24px;
-font-size: 8px;
-text-align: center;
+  padding: 8px 16px 24px;
+  font-size: 8px;
+  text-align: center;
+}
+
+/* Featured Store */
+.hero-img1{
+  position: relative;
+  height: 700px;
+  background-image: url("/https://www.google.com/search?q=razer+background&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjA_LzrhYLwAhXCa94KHYlnCrAQ_AUoAXoECAEQAw&biw=1920&bih=979#imgrc=1mg-aIb3B3pojM/razerbackground.jpg");
+  background-size: cover;
+}
+.herofs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font: 700;
+  text-transform: uppercase;
+}
+.herofs h1{
+  font-size: 72px;
+  letter-spacing: 0.2cm;
+  margin: auto;
+}
+.herofs h1 span{
+  border: 10px solid white;
+  padding: 8px 16px 24px;
+  display: inline-block;
+}
+.des-fs{
+  margin: auto;
+  display: box;
+  font-size: 26px;
+  text-shadow: none;
+}
+.btn-fs{
+  color: #313131;
+  padding:  8px 16px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #f1f1f1;
+  border-radius: 12px;
+  transition: 0.3s all;
+}
+.btn-fs:hover{
+  opacity: 0.8;
 }
