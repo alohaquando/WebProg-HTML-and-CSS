@@ -6,7 +6,7 @@ input{
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--gray);
+  border: solid 1px var(--gray);
 }
 input:focus{
   width: 348px;
@@ -51,7 +51,7 @@ select{
   margin: 8px 0 0;
   padding: 16px 25px 16px 16px;
   border-radius: 16px;
-  border: solid 2px var(--gray);
+  border: solid 1.5px var(--gray);
   outline: none;
 
 }
@@ -60,7 +60,7 @@ select{
   height: 120px;
   margin: 32px 8px 32px 16px;
   padding: 35px 39px 36px;
-  border: solid 2px var(--gray);
+  border: solid 1.5px var(--gray);
   border-radius: 50%;
 }
 .oval input{
@@ -142,7 +142,7 @@ select{
   margin: 8px 0 0;
   padding: 16px 6px 4px 16px;
   border-radius: 16px;
-  border: solid 2px var(--gray);
+  border: solid 1.5px var(--gray);
 }
 .reset{
   width: 125px;
@@ -178,6 +178,16 @@ secondary-button {
 .body_spacing{
   width: inherit;
   height: inherit;
+}
+.body_spacing input{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  border: solid 1.5px var(--gray);
 }
 @media screen and (max-width: 1024px) {
   div.left {
