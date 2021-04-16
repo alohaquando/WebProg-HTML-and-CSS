@@ -175,6 +175,10 @@ secondary-button {
 .items{
   margin-bottom:
 }
+.body_spacing{
+  width: inherit;
+  height: inherit;
+}
 @media screen and (max-width: 1024px) {
   div.left {
           width: 50%;
