@@ -17,6 +17,7 @@ input:focus {
   border-radius: 10px;
   outline: 32px;
   border-color: black;
+
 }
 input:focus:invalid {
   width: 348px;
