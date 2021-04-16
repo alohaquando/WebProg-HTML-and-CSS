@@ -121,3 +121,7 @@ td {
   font-size: inherit;
   margin: 24px 0;
 }
+
+.text_underlined a {
+  text-decoration: underline !important;
+}
