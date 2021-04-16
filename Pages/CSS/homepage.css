@@ -1,4 +1,39 @@
+/* Card Products*/
+.card {
+  display: grid;
+  grid-template-columns: 250px;
+  grid-template-rows: 30px 260px 80px;
+  grid-template-areas: "image" "text";
 
+  border-radius: 12px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+}
+.card-image {
+  grid-area: auto;
+}
+.card-text {
+  grid-area: text;
+}
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+.card {
+  transition: 0.2s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+/* */
 .container {
   max-width: 1300px;
   margin: auto;
@@ -28,9 +63,6 @@
   font-size: 50px;
   line-height: 60px;
   margin: 25px 0;
-}
-.categories {
-  margin: 70px 0;
 }
 .col-3 {
   flex-basis: 30%;
@@ -88,9 +120,6 @@
 .col-4 {
   font-size: 20px;
   text-align: left;
-}
-.featured-product {
-  background-color: rgb(168, 226, 156);
 }
 .title3 {
   text-align: left;
