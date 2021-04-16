@@ -7,6 +7,7 @@ input[type="number"] {
   height: 158px;
   margin: 0 0 40px 0;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
 }
 .product-name {
   padding: 0;
@@ -109,4 +110,11 @@ hr {
   border-radius: 16px;
   box-shadow: 0 2px 20px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
+}
+.checkicon1 {
+  font-size: 1rem;
+  margin: 3px 8px 4px 0;
+}
+.checkicon2 {
+  margin: 4px 9px 4px 0;
 }
