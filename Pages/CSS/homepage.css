@@ -125,7 +125,7 @@
 }
 
 /* Browse Store By Letter Sorting */
-ul {
+/* ul {
   list-style-type: none;
   overflow: hidden;
   background-color: white;
@@ -139,7 +139,7 @@ li a {
   text-align: center;
   padding: 14px;
   text-decoration: none;
-}
+} */
 
 /* Browse Store Col-4 xx */
 .xx img {

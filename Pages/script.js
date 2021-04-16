@@ -7,5 +7,9 @@ $(function () {
 });
 
 $(function () {
-  $("#store_footer").load("store-footer.html");
+  $("#store_footer").load("store_footer.html");
+});
+
+$(function () {
+  $("#store_header").load("store_header.html");
 });
