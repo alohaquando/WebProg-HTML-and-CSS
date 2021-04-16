@@ -1,0 +1,116 @@
+.img-select {
+  display: flex;
+  margin: 8px;
+}
+.img-item img {
+  margin: 16px;
+  border-radius: 16px;
+  margin-right: 0.5rem;
+}
+
+.product-detail {
+  float: right;
+  margin-top: -500px;
+}
+/* Recommended Products */
+.recpro_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rec_products h1 {
+  font-size: 15px;
+}
+.prodcard {
+  border-radius: 12px;
+}
+.rec_products {
+  align-items: center;
+  border-radius: 16px;
+  width: 253px;
+  height: 362px;
+  margin: 12px;
+}
+.big_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 48px;
+}
+.main_product {
+  border-radius: 12px;
+}
+.main_card {
+  display: flex;
+  height: 538px;
+  width: 1140px;
+}
+.titlename {
+  padding: 32px;
+  font-family: "DM Sans";
+  font-size: 33.2px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.8px;
+  color: var(--black);
+}
+.price {
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  color: var(--black);
+}
+.describe {
+  margin: 16px;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--light-black);
+}
+.titlename1 {
+  margin: 16px;
+  font-family: "DM Sans";
+  font-size: 33.2px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.8px;
+  color: var(--black);
+}
+.price1 {
+  margin: 16px;
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  color: var(--black);
+}
+.describe1 {
+  margin: 16px;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: -0.36px;
+  color: var(--light-black);
+}
+.purchase-info .btn {
+  float: left;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: -16px;
+  margin: 16px;
+}

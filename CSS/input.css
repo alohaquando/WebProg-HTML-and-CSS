@@ -1,0 +1,244 @@
+input{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  border: solid 2px var(--grey);
+}
+input:focus{
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  outline:32px;
+  border-color: black;
+}
+input:focus:invalid{
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  outline:32px;
+  border-color: #fe6c6c;
+  background: f071;
+}
+input:placeholder {              /* Chrome, Safari, Firefox */
+  color: #a0a0a0;
+  opacity: 1;
+}
+input:-ms-input-placeholder {     /* IE, Edge */
+  color: #a0a0a0;
+  opacity: 1;
+}
+input:focus::placeholder {
+  color:transparent;
+}
+label{
+  font-family: inherit;
+  font-size: 17px;
+}
+
+select{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 56px;
+  margin: 8px 0 0;
+  padding: 16px 21px 16px 16px;
+  border-radius: 16px;
+  border: solid 2px var(--grey);
+  outline: none;
+}
+.oval{
+  width: 120px;
+  height: 120px;
+  margin: 32px 8px 32px 16px;
+  padding: 35px 39px 36px;
+  border: solid 2px var(--gray);
+  border-radius: 50%;
+}
+.oval input{
+  width:120px;
+  height:120px;
+  position:absolute;
+  left:0;
+  top:0;
+  cursor:pointer;
+}
+
+
+/* Customize the label (the container) */
+.contain {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  color: black;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color:#f7f7f7;
+  border-radius: 6px;
+  /* border: solid 2px #a0a0a0; */
+
+}
+
+.contain input:checked ~ .checkmark {
+  background-color: #f76c6c;
+
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.contain .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.message input{
+  width: 348px;
+  height: 104px;
+  margin: 8px 0 0;
+  padding: 16px 6px 4px 16px;
+  border-radius: 16px;
+  border: solid 2px var(--light-gray);
+}
+.reset{
+  width: 125px;
+  height: 56px;
+  margin: 64px 203px 143px 8px;
+  padding: 12px 35px 12px 34px;
+  border-radius: 10px;
+  border: solid 2px var(--black);
+  background:#fff;
+  border-color: black;
+}
+secondary-button {
+  outline: 0;
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: var(--white);
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--black);
+  cursor: pointer;
+  border: solid 2px var(--black);
+}
+.items{
+  margin-bottom:
+}
+@media screen and (max-width: 1024px) {
+  div.left {
+          width: 50%;
+          padding-left: 116px;
+          padding-top:64px;
+        }
+  div.right {
+    width: 50%;
+    float: right;
+    background: #96a6bb;
+  }
+
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  div.left {
+          width: 50%;
+          padding-left: 29px;
+          padding-top: 16px;
+          padding-right: 29px;
+        }
+
+  div.right {
+    width: 0%;
+    float: right;
+    background: #96a6bb;
+  }
+  input{
+    font-family: inherit;
+    color: inherit;
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    border: solid 2px var(--light-gray);
+  }
+  input:focus{
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    outline:32px;
+    border-color: black;
+  }
+  input:focus:invalid{
+    width: 348px;
+    height: 56px;
+    margin: 8px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    outline:32px;
+    border-color: #fe6c6c;
+    background: f071;
+  }
+  input:placeholder {              /* Chrome, Safari, Firefox */
+    color: #a0a0a0;
+    opacity: 1;
+  }
+  input:-ms-input-placeholder {     /* IE, Edge */
+    color: #a0a0a0;
+    opacity: 1;
+  }
+  input:focus::placeholder {
+    color:transparent;
+  }
+}

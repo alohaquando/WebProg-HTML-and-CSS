@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>gg:menu</title>
+    <g id="Symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Nav-/-Mobile-/-Header" transform="translate(-280.000000, -24.000000)">
+            <g id="gg:menu" transform="translate(280.000000, 24.000000)">
+                <rect id="ViewBox" x="0" y="0" width="24" height="24"></rect>
+                <g id="Group" transform="translate(2.000000, 5.000000)" fill="#000000" fill-rule="nonzero">
+                    <path d="M0,1 C0,0.44771525 0.44771525,0 1,0 L19,0 C19.5522847,0 20,0.44771525 20,1 C20,1.55228475 19.5522847,2 19,2 L1,2 C0.44771525,2 0,1.55228475 0,1 Z" id="Path"></path>
+                    <path d="M0,7.032 C0,6.47971525 0.44771525,6.032 1,6.032 L19,6.032 C19.5522847,6.032 20,6.47971525 20,7.032 C20,7.58428475 19.5522847,8.032 19,8.032 L1,8.032 C0.44771525,8.032 0,7.58428475 0,7.032 Z" id="Path"></path>
+                    <path d="M1,12.064 C0.44771525,12.064 0,12.5117153 0,13.064 C0,13.6162847 0.44771525,14.064 1,14.064 L19,14.064 C19.5522847,14.064 20,13.6162847 20,13.064 C20,12.5117153 19.5522847,12.064 19,12.064 L1,12.064 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,82 @@
+.HeaderH1_Left_With_Spacing {
+  margin-top: 64px;
+  margin-bottom: 56px;
+}
+
+.H4_and_body_17 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.H4_and_body_17 h4 {
+  margin-bottom: 8px;
+}
+
+.H4_and_body_17 p {
+  margin-top: 8px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  line-height: 210px;
+  border-radius: 50%;
+  color: #222;
+  text-align: center;
+  background: white;
+  margin: 80px auto;
+}
+
+.check_icon {
+  font-size: 5rem;
+}
+
+button {
+  outline: 0;
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: var(--brand-red);
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}
+
+hr {
+  border-top: 2px;
+  border-color: var(--light-gray);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+thead {
+  text-align: left;
+  background-color: var(--brand-navy);
+  height: 24px;
+}
+
+th {
+  text-align: left;
+  padding: 20px 24px;
+  color: white;
+}
+
+td {
+  text-align: left;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-gray);
+}
