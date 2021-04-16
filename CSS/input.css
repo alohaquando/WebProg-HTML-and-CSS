@@ -6,7 +6,7 @@ input{
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
   border-radius: 16px;
-  border: solid 1px var(--gray);
+  border: solid 1.5px var(--gray);
 }
 input:focus{
   width: 348px;
@@ -170,7 +170,7 @@ secondary-button {
   text-align: center;
   color: var(--black);
   cursor: pointer;
-  border: solid 2px var(--black);
+  border: solid 1.5px var(--black);
 }
 .items{
   margin-bottom:
@@ -187,9 +187,7 @@ secondary-button {
   margin: 8px 0 0;
   padding: 16px 18px 16px 16px;
   border-radius: 16px;
-  b
-
-  order: solid 1.5px var(--gray);
+  border: solid 1.5px var(--gray);
 }
 @media screen and (max-width: 1024px) {
   div.left {
