@@ -87,7 +87,7 @@ td {
   align-items: flex-start;
   width: 100%;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .letter-spacing ul {
@@ -106,4 +106,18 @@ td {
 .store-card h4 {
   margin-top: 8px;
   margin-bottom: 0px;
+}
+
+.styled-select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  padding: 16px;
+  background-color: #fff;
+  border: 2px solid #222;
+  border-radius: 10px;
+  color: #222;
+  font-size: inherit;
+  margin: 24px 0;
 }
