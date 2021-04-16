@@ -60,9 +60,11 @@
   width: 100%;
   border-radius: 12px;
 }
+/*
 .col-4:hover {
   transform: translateY(-5px);
 }
+*/
 .col-4 {
   font-size: 20px;
   text-align: left;
@@ -78,9 +80,11 @@
   width: 100%;
   border-radius: 12px;
 }
+/*
 .col-4-fp:hover {
   transform: translateY(-5px);
 }
+*/
 
 /* Title 1-2-3*/
 .title {
@@ -142,9 +146,12 @@ li a {
   width: 100%;
   border-radius: 12px;
 }
+/*
 .xx:hover {
   transform: translateY(-5px);
 }
+*/
+
 .xx {
   padding: 8px 16px 24px;
   font-size: 8px;
@@ -156,9 +163,8 @@ li a {
   position: relative;
   width: 1440px;
   height: 480px;
-
   border-radius: 12px;
-  background-image: url(https://assets2.razerzone.com/images/downloads-page/desktop-wallpapers/razer-vortex-2560x1080.jpg);
+  background-image: url(https://assets2.razerzone.com/images/downloads-page/desktop-wallpapers/Mercury_3840x2160.jpg?_ga=2.165208383.1245898629.1618546323-102298825.1618546323);
   background-size: cover;
 }
 .herofs {
@@ -185,18 +191,20 @@ li a {
 .des-fs {
   margin: auto;
   display: box;
-  font-size: 26px;
+  font-size: 30px;
   text-shadow: none;
 }
 .btn-fs {
   color: #313131;
-  padding: 8px 16px 24px;
+  padding: 10px;
   font-size: 20px;
   text-decoration: none;
   background: #f1f1f1;
   border-radius: 12px;
   transition: 0.3s all;
 }
+/*
 .btn-fs:hover {
   opacity: 0.8;
 }
+*/
