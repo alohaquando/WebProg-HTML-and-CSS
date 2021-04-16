@@ -125,3 +125,10 @@ td {
 .text_underlined a {
   text-decoration: underline !important;
 }
+
+.row_space_between {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
