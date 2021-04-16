@@ -50,6 +50,25 @@ button {
   border: none;
 }
 
+secondary-button {
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: #fff;
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+  border: solid var(--brand-navy);
+  border-width: 2px !important;
+}
+
 hr {
   border-top: 2px;
   border-color: var(--light-gray);
@@ -119,7 +138,7 @@ td {
   border-radius: 10px;
   color: #222;
   font-size: inherit;
-  margin: 24px 0;
+  margin: 16px 0;
 }
 
 .text_underlined a {
@@ -131,4 +150,19 @@ td {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.h5-for-input h5 {
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.button-group-for-input {
+  margin-top: 48px;
+}
+
+.styled-radio {
+  width: unset !important;
+  height: unset !important;
+  margin-right: 24px;
 }

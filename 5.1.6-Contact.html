@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Contact</title>
     <link rel="stylesheet" href="CSS/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,85 +11,134 @@
   <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
+      <h2>Contact US</h2>
+      <p>We're right here to help</p>
 
-     <h2>Contact US</h2>
-     <p>We're right here to help</p>
+      <div class="h5-for-input">
+        <h5>Contact purpose</h5>
+        <div class="custom-select">
+          <select name="category-list" class="styled-select">
+            <option value="0" disabled selected hidden>
+              Contact purpose... ▾
+            </option>
+            <option value="1">Your Account</option>
+            <option value="2">Your order</option>
+            <option value="3">Shipping & Delivery</option>
+            <option value="4">Return & Refund</option>
+            <option value="5">Payments</option>
+            <option value="6">Product</option>
+            <option value="7">Others</option>
+          </select>
+        </div>
+      </div>
 
-     <h5>Contact purpose</h5>
-     <div class="custom-select">
-        <select name='category-list'>
-          <option value='0' selected>Contact purpose</option>
-          <option value='1'>Your Account</option>
-          <option value='2'>Your order</option>
-          <option value='3'>Shipping & Delivery</option>
-          <option value='4'>Return & Refund</option>
-          <option value='5'>Payments</option>
-          <option value='6'>Product</option>
-          <option value='7'>Others</option>
-        </select></div>
+      <div class="h5-for-input">
+        <h5>Name</h5>
+        <input type="text" placeholder="Name" />
+      </div>
 
-     <h5>Name</h5>
-     <input type = "text" placeholder="Name">
+      <div class="h5-for-input">
+        <h5>Email</h5>
+        <input type="email" placeholder="example@email.com" name="email" />
+      </div>
 
-     <h5>Email</h5>
-     <input type='email' placeholder="example@email.com" name='email'/>
+      <div class="h5-for-input">
+        <h5>Phone number</h5>
+        <input
+          type="tel"
+          placeholder="123 456 789"
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+        />
+      </div>
 
-     <h5>Phone number</h5>
-     <input type="tel" placeholder = "123 456 789" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+      <div class="h5-for-input">
+        <h5>Preferred contact method</h5>
+        <input
+          type="radio"
+          name="perf_contact"
+          value="perf_phone"
+          id="perf_phone"
+        />
+        <label for="perf_phone">Phone </label>
+        <input
+          type="radio"
+          name="perf_contact"
+          value="perf_email"
+          value="perf_email"
+        />
+        <label for="perf_email">Email </label>
+      </div>
 
-     <h5>Preferred contact method</h5>
-     <label class = "rad">Phone
-       <input type="radio" checked = "checked">
-       <span class="check"></span>
-     </label>
+      <div>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br />
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+      </div>
 
-     <label class="rad">Email
-       <input type="radio" checked = "checked">
-       <span class="check"></span>
-     </label>
+      <div class="h5-for-input">
+        <h5>Contact days</h5>
+        <label class="contain"
+          >Monday
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
 
-     <h5>Contact days</h5>
-      <label class="contain">Monday
-      <input type="checkbox" checked="checked">
-      <span class="checkmark"></span>
-      </label>
+        <label class="contain"
+          >Tuesday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
 
-      <label class="contain">Tuesday
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
+        <label class="contain"
+          >Wednesday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
 
-      <label class="contain">Wednesday
-       <input type="checkbox">
-       <span class="checkmark"></span>
-      </label>
+        <label class="contain"
+          >Thursday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
 
-     <label class="contain">Thursday
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
+        <label class="contain"
+          >Friday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
 
-     <label class="contain">Friday
-      <input type="checkbox">
-      <span class="checkmark"></span>
-     </label>
+        <label class="contain"
+          >Saturday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
 
-     <label class="contain">Saturday
-      <input type="checkbox">
-      <span class="checkmark"></span>
-     </label>
+        <label class="contain"
+          >Sunday
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
 
-     <label class="contain">Sunday
-      <input type="checkbox">
-      <span class="checkmark"></span>
-     </label>
-
-     <h5>Message</h5>
-     <div class="message">
-       <input type="text" placeholder="What's your message?" name="Message" value="Message">
-     </div>
-     <button input type="submit">Send</button>
-     <secondary-button type="reset" value="reset">Reset</secondary-button>
+      <div class="h5-for-input">
+        <h5>Message</h5>
+        <div class="message">
+          <input
+            type="text"
+            placeholder="What's your message?"
+            name="Message"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="button-group-for-input">
+        <button input type="submit">Send</button>
+        <secondary-button type="reset" value="reset">Reset</secondary-button>
+      </div>
     </div>
     <footer id="mall_footer"></footer>
   </body>
