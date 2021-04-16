@@ -155,7 +155,7 @@ li a{
 .hero-img1{
   position: relative;
   height: 700px;
-  background-image: url("/https://www.google.com/search?q=razer+background&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjA_LzrhYLwAhXCa94KHYlnCrAQ_AUoAXoECAEQAw&biw=1920&bih=979#imgrc=1mg-aIb3B3pojM/razerbackground.jpg");
+  background-image: url("Asset/razerbackground.jpg");
   background-size: cover;
 }
 .herofs{
