@@ -1,0 +1,211 @@
+/* */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 8px 16px 24px;
+}
+.container .featured-store {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 8px 16px 24px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Col-2*/
+.col-2 {
+  flex-shrink: 50%;
+  min-width: 300px;
+}
+.col-2 img {
+  max-width: 100%;
+  padding: 8px 16px 24px;
+  border-radius: 12px;
+}
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+/* Col-3*/
+.col-3 {
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+.col-3 img {
+  width: 70%;
+  border-radius: 12px;
+}
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 8px 16px 24px;
+}
+
+/* Col-4*/
+.col-4 {
+  flex-basis: 25%;
+  padding: 8px 16px 24px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+.col-4 img {
+  width: 100%;
+  border-radius: 12px;
+}
+/*
+.col-4:hover {
+  transform: translateY(-5px);
+}
+*/
+.col-4 {
+  font-size: 20px;
+  text-align: left;
+}
+.col-4-fp {
+  flex-basis: 25%;
+  padding: 8px 16px 24px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+.col-4-fp img {
+  width: 100%;
+  border-radius: 12px;
+}
+/*
+.col-4-fp:hover {
+  transform: translateY(-5px);
+}
+*/
+
+/* Title 1-2-3*/
+.title {
+  text-align: left;
+  margin: 150px auto 10px;
+  position: relative;
+  line-height: 60px;
+  color: black;
+}
+.title2 {
+  text-align: center;
+  margin: 150px auto 10px;
+  position: relative;
+  line-height: 60px;
+  color: black;
+}
+.title2::after {
+  content: "";
+  background: black;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  transform: translateX(-50);
+}
+.title3 {
+  text-align: left;
+  margin: 150px auto 10px;
+  position: relative;
+  line-height: 50px;
+}
+
+/* Browse Store Select*/
+.list1 {
+  justify-content: space-between;
+}
+
+/* Browse Store By Letter Sorting */
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: white;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Browse Store Col-4 xx */
+.xx img {
+  width: 100%;
+  border-radius: 12px;
+}
+/*
+.xx:hover {
+  transform: translateY(-5px);
+}
+*/
+
+.xx {
+  padding: 8px 16px 24px;
+  font-size: 8px;
+  text-align: center;
+}
+
+/* Featured Store */
+.hero-img1 {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  border-radius: 12px;
+  background-image: url(https://i.redd.it/y8sq6vpgvt531.png);
+  background-size: cover;
+}
+.herofs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-85%, -50%);
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font: 700;
+  text-transform: uppercase;
+}
+.herofs h1 {
+  font-size: 72px;
+  letter-spacing: 0.2cm;
+  margin: auto;
+}
+.herofs h1 span {
+  border: 10px solid white;
+  padding: 8px 16px 24px;
+  display: inline-block;
+  color: white;
+}
+.des-fs {
+  margin: auto;
+  display: box;
+  font-size: 30px;
+  text-shadow: none;
+}
+.btn-fs {
+  color: #313131;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #f1f1f1;
+  border-radius: 12px;
+  transition: 0.3s all;
+}
+/*
+.btn-fs:hover {
+  opacity: 0.8;
+}
+*/
