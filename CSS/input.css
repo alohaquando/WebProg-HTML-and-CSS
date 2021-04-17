@@ -1,5 +1,6 @@
 .h5-for-input{
   margin-bottom:  0.5000em;
+
 }
 .box {
     width: 150px;
@@ -12,6 +13,20 @@
     height: 100%;
     object-fit: cover;
 }
+#fname{
+  float: left;
+  margin-right: 10px;
+  width: 158px;
+  height: 56px;
+  margin: 8px 0 0;
+}
+#lname{
+  float: left;
+  width: 158px;
+  height: 56px;
+  margin: 8px 0 0;
+}
+
 input{
   font-family: inherit;
   color: inherit;
@@ -22,6 +37,7 @@ input{
   border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
+
 input:focus{
   width: 348px;
   height: 56px;
@@ -56,7 +72,10 @@ label{
   font-family: inherit;
   font-size: 17px;
 }
+.p-gray{
 
+}
+.h5-
 /* .styled-select {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -155,7 +174,16 @@ label{
   border-radius: 50%;
   background: white;
 }
-
+.textbox{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 100px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  border: solid 1.5px var(--gray);
+}
 
 /* radio */
 /* Customize the label (the container) */
