@@ -30,58 +30,20 @@
 .prodcard {
   border-radius: 12px;
 }
-.rec_products {
-  align-items: center;
-  border-radius: 16px;
-  width: 22%;
-  height: 362px;
-  margin: 24px 0px 48px 27px;
-}
+
 .big_wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 30px;
   margin: 48px 32px 16px 0;
+  /* overflow: hidden; */
 }
 .main_product {
   border-radius: 12px;
 }
 .main_card {
   display: flex;
-  height: 538px;
-  width: 100%;
 }
-.titlename {
-  padding: 32px;
-  font-family: "DM Sans";
-  font-size: 33.2px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: -0.8px;
-  color: var(--black);
-}
-.price {
-  font-family: "DM Sans";
-  font-size: 21.3px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.51;
-  letter-spacing: -0.51px;
-  color: var(--black);
-}
-.describe {
-  margin: 16px;
-  font-family: "DM Sans";
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: -0.36px;
-  color: var(--light-black);
-}
+
 .titlename1 {
   margin: 16px;
   font-family: "DM Sans";
@@ -115,7 +77,7 @@
   color: var(--light-black);
 }
 .purchase-info .btn {
-  float: left;
+  flex-direction: row;
   border: 1.5px solid #ddd;
   border-radius: 10px;
   text-align: center;
@@ -123,4 +85,20 @@
 }
 .btn a {
   color: var(--white);
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav_store_links {
+    display: none;
+  }
+  .product-detail {
+    float: right;
+    /* padding-top: 700px; */
+  }
+
+  .big_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
 }
