@@ -1,5 +1,5 @@
 .h5-for-input{
-
+  margin-bottom:  0.5000em;
 }
 .box {
     width: 150px;
@@ -58,15 +58,24 @@ label{
 }
 
 select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:none;
   font-family: inherit;
   color: inherit;
   width: 348px;
   height: 56px;
   margin: 8px 0 0;
   padding: 16px 25px 16px 16px;
-  border-radius: 16px;
+  border-radius: 30%;
   border: solid 1.5px var(--gray);
   outline: none;
+}
+.select-arrow {
+  pointer-events : none ;
+  border-width : 8px 5px 0 5px ;
+  border-style : solid ;
+  border-color : #999 transparent transparent tramsparent ;
 }
 .oval{
   width: 120px;
