@@ -141,28 +141,13 @@
 }
 
 /* Featured Store */
-.hero-image2{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 500px;
-  width: 700px;
-  overflow: hidden;
-  background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg);
-  margin: auto;
-}
-.hero-text2{ /*Feated store word setting */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  text-align: center;
-  color: white; /*inside Featured Store text*/
-  font-weight: 500;
-  text-transform: uppercase;
-}
+.hero-image2 {
+    background: url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg?size=626&ext=jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 .hero-text2 h1{
   font-size: 100px;
   letter-spacing: 0.8mm;
@@ -170,20 +155,19 @@
   color: white;
 }
 .hero-text2 h1 span{
-  border: 1px solid white;
-  padding: 8px 16px 24px;
+  padding: 28px 1px 24px;
   display: inline-block;
 }
 .hero-text3{ 
   margin: auto;
-  display: block;
-  font-size: 14px;
-  text-shadow: 0 0 10px white;
+  display: inline-block;
+  font-size: 35px;
+  color: white;
 }
 .hero-button{
   color: black;
   padding: 1px 16px 1px;
-  font-size: 20px;
+  font-size: 30px;
   text-decoration: none;
   background:white; /*box background */
   border-radius: 12px;
