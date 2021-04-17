@@ -40,9 +40,9 @@
 
       <h4>Personal Information</h4>
 
-       <div class = "oval">
+         <img id="oval-img" src="Asset/profile.jpg"/><br>
+      <input id ="file-input" type="file" name="pic" value="pic" onchange="return change_img(this)">
 
-       </div>
 
        <div class = "name">
         <h5><label for="fname">First name</label></h5>
@@ -62,8 +62,8 @@
 
       <h5>Country</h5>
        <div class="custom-select">
-        <select name='category-list'>
-          <option>select country</option>
+        <select name='category-list' class = "styled-select">
+          <option>select country... ▾</option>
           <option value="AF">Afghanistan</option>
  <option value="AX">Åland Islands</option>
  <option value="AL">Albania</option>
@@ -342,7 +342,7 @@
        <input type = "text" placeholder="Awesome Business">
        <h5>Store category</h5>
       <div class="custom-select">
-        <select name='category-list'>
+        <select name='category-list' class=styled-select>
           <option value='0' selected>Select a category</option>
           <option value='1'>Fashion</option>
           <option value='2'>Toy, Hobby & DIY</option>
@@ -362,3 +362,31 @@
   </body>
   <footer id="mall_footer"></footer>
   </html>
+
+
+  <script>
+var imageAvatar = document.querySelector('#oval-img');
+
+function check_img_input(input) {
+  if(input.files.length == 0){
+      return 0;
+  } else {
+      return 1;
+  }
+}
+
+function change_img(input){
+  if (check_img_input(input)){
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+    reader.addEventListener("load", function () {
+      // convert image file to base64 string
+      imageAvatar.src = reader.result;
+    }, false);
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+}
+</script>

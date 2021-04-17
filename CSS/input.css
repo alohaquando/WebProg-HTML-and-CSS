@@ -126,7 +126,6 @@ label {
   cursor: pointer;
 }
 
-.rad {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -172,8 +171,7 @@ label {
   height: 8px;
   border-radius: 50%;
   background: white;
-}
-.textbox {
+
   font-family: inherit;
   color: inherit;
   width: 348px;
@@ -183,7 +181,12 @@ label {
   border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
-
+#oval-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 1.5px var(--gray);
+}
 /* radio */
 /* Customize the label (the container) */
 .contain {
