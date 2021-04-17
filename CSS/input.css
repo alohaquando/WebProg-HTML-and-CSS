@@ -126,7 +126,16 @@ label{
   top:0;
   cursor:pointer;
 }
-
+#comment-box{
+  font-family: inherit;
+  color: inherit;
+  width: 348px;
+  height: 100px;
+  margin: 8px 0 0;
+  padding: 16px 18px 16px 16px;
+  border-radius: 16px;
+  border: solid 1.5px var(--gray);
+}
 .rad{
   display: block;
   position: relative;
