@@ -332,28 +332,61 @@ secondary-button {
 /*mobile*/
 @media screen and (max-width: 768px) {
   div.left {
-          width: 50%;
-          padding-left: 29px;
-          padding-top: 16px;
-          padding-right: 29px;
-        }
+    width: 50%;
+    padding-left: 29px;
+    padding-top: 16px;
+    padding-right: 29px;
+  }
+
   div.right {
     width: 0%;
     float: right;
     background: #96a6bb;
   }
-  input{
+
+  .styled-select{
+    width: 100%;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+  }
+
+  #oval-img{
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .message-box{
+    width: 100%;
     font-family: inherit;
     color: inherit;
-    width: 348px;
+    margin: 0px 0 0;
+    padding: 16px 18px 16px 16px;
+    border-radius: 16px;
+    border: solid 1.5px var(--gray);
+  }
+
+  input:not([type="file"]){
+    font-family: inherit;
+    /* color: inherit; */
+    width: 100%;
     height: 56px;
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
     border-radius: 16px;
     border: solid 2px var(--gray);
+    color: black
   }
+
+  input[type="file"]{
+    width: 100%;
+  }
+
   input:focus{
-    width: 348px;
+    width: 100%;
     height: 56px;
     margin: 8px 0 0;
     padding: 16px 18px 16px 16px;
@@ -361,6 +394,7 @@ secondary-button {
     outline:32px;
     border-color: black;
   }
+
   input:focus:invalid{
     width: 348px;
     height: 56px;
@@ -371,15 +405,17 @@ secondary-button {
     border-color: #fe6c6c;
     background: f071;
   }
+
   input:placeholder {              /* Chrome, Safari, Firefox */
     color: #a0a0a0;
     opacity: 1;
   }
+
   input:-ms-input-placeholder {     /* IE, Edge */
     color: #a0a0a0;
     opacity: 1;
   }
+
   input:focus::placeholder {
     color:transparent;
   }
-}
