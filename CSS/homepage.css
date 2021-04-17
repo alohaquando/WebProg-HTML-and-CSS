@@ -1,3 +1,169 @@
+/* Mall Home - New Store */
+.mall-home-new-store{  
+    max-width: 1080px;
+    margin: auto;
+    padding: 8px 16px 24px;
+  }
+  
+  .mall-home-new-store-title{
+      text-align: left;
+      margin: 150px auto 10px;
+      position: relative;
+      line-height: 60px;
+      color: black;
+  }
+  
+  .mall-home-new-store-product-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .mall-home-new-store-product-style{
+    text-align: center;
+    flex-basis: 25%;
+    padding: 8px 16px 24px;
+    min-width: 100px;
+    margin: auto;
+  }
+  
+  .mall-home-new-store-product-style img{
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  
+  /* Mall Home - New Product */
+  .mall-home-new-product{
+      max-width: 1080px;
+      margin: auto;
+      padding: 8px 16px 24px;
+  }
+  
+  .mall-home-new-product-title{
+    text-align: left;
+    margin: 24px auto 24px;
+    position: relative;
+    line-height: 5px;
+    color: black;
+  }
+  
+  .mall-home-new-product-product-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .mall-home-new-product-product-style{
+    text-align: left;
+    flex-basis: 25%;
+    padding: 8px 16px 24px;
+    min-width: 150px;
+    margin: auto;
+  }
+  
+  .mall-home-new-product-product-style img{
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  
+  /* Mall Home - Featured Store */
+  .mall-home-featured-store-img{
+    position: relative;
+    margin: auto;
+    height: 700px;
+    width: 1000px;
+    overflow: hidden;
+    background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg) no-repeat center;
+    background-size: cover;
+    margin: auto;
+  }
+  
+  .mall-home-featured-store-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .mall-home-featured-store-text h1{
+    font-size: 90px;
+    letter-spacing: 0.8mm;
+    margin: 0;
+    color: white;
+  }
+  
+  .mall-home-featured-store-text h1 span{
+    border: 1px solid white;
+    padding: 8px 16px 24px;
+    display: inline-block;
+  }
+  
+  .mall-home-featured-store-text2{
+    margin: auto;
+    display: block;
+    font-size: 14px;
+    text-shadow: 0 0 10px white;
+  }
+  
+  .mall-home-featured-store-button{
+    color: black;
+    padding: 1px 16px 1px;
+    font-size: 20px;
+    text-decoration: none;
+    background:white;
+    border-radius: 12px;
+  }
+  
+  
+  /* Mall Home - Featured Product */
+  .mall-home-featured-product{
+      max-width: 1080px;
+      margin: auto;
+      padding: 8px 16px 24px;
+  }
+  
+  .mall-home-featured-product-title{
+    text-align: left;
+    margin: 24px auto 24px;
+    position: relative;
+    line-height: 5px;
+    color: black;
+  }
+  
+  .mall-home-featured-product-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .mall-home-featured-product-style{
+    text-align: left;
+    flex-basis: 25%;
+    padding: 8px 16px 24px;
+    min-width: 200px;
+    margin: auto;
+  }
+  
+  .mall-home-featured-product img{
+    width: 100%;
+    border-radius: 12px;
+  }
+
+
+
+
+
+
 .container {
     max-width: 1300px;
     margin: auto;
@@ -110,54 +276,8 @@
   }
   */
   
-  .xx {
+.xx {
     padding: 8px 16px 24px;
     font-size: 8px;
     text-align: center;
-  }
-  
-  /* Featured Store */
-  .hero-image2{
-    position: relative;
-    height: 700px;
-    width: 1000px;
-    overflow: hidden;
-    background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg) no-repeat center;
-    background-size: cover;
-  }
-  .hero-text2{ /*Feated store word setting */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    text-align: center;
-    color: white; /*inside Featured Store text*/
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  .hero-text2 h1{
-    font-size: 100px;
-    letter-spacing: 0.8mm;
-    margin: 0;
-    color: white;
-  }
-  .hero-text2 h1 span{
-    border: 1px solid white;
-    padding: 8px 16px 24px;
-    display: inline-block;
-  }
-  .hero-text3{ 
-    margin: auto;
-    display: block;
-    font-size: 14px;
-    text-shadow: 0 0 10px white;
-  }
-  .hero-button{
-    color: black;
-    padding: 1px 16px 1px;
-    font-size: 20px;
-    text-decoration: none;
-    background:white; /*box background */
-    border-radius: 12px;
-  }
+}
