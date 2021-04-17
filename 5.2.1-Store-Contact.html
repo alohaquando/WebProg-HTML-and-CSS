@@ -19,7 +19,7 @@
     </header>
     <div class="body_spacing">
       <div class="body_spacing">
-        <h2>Contact DashBear</h2>
+        <h2>Contact Ziugei General Goods</h2>
         <form action="action.php" method="get">
 
         <h5>Contact purpose</h5>
@@ -52,7 +52,23 @@
           placeholder="123 456 789"
           name="phone">
 
-        <h5>Preferred contact method</h5>
+        <div class="h5-for-input">
+          <h5>Preferred contact method</h5>
+          <input
+            type="radio"
+            name="perf_contact"
+            value="perf_phone"
+            id="perf_phone"
+          />
+          <label for="perf_phone">Phone </label>
+          <input
+            type="radio"
+            name="perf_contact"
+            value="perf_email"
+            value="perf_email"
+          />
+          <label for="perf_email">Email </label>
+        </div>
 
         <h5>Contact days</h5>
         <label class="contain"
@@ -98,14 +114,15 @@
         </label>
 
         <h5>Message</h5>
-        <div class="message">
+        <!-- <div class="message">
           <input
             type="text"
             placeholder="What's your message?"
             name="Message"
             value="Message"
           />
-        </div>
+        </div> -->
+        <textarea name="Message" id="comment-box" class="form-control" placeholder="What's your message?" maxlength="300"></textarea>
         <br>
         <button input type="submit">Send</button>
         <secondary-button type="reset" value="reset">Reset</secondary-button>

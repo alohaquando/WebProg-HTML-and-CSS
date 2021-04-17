@@ -136,7 +136,7 @@ label{
   border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
-.rad{
+/* .rad{
   display: block;
   position: relative;
   padding-left: 35px;
@@ -156,6 +156,7 @@ label{
   width: 0;
 }
 .check {
+  position: absolute;
   top: 0;
   left: 0;
   height: 25px;
@@ -168,6 +169,7 @@ label{
 }
 .check:after {
   content: "";
+  position: absolute;
   display: none;
 }
 .rad input:checked ~ .check:after {
@@ -180,7 +182,7 @@ label{
   height: 8px;
   border-radius: 50%;
   background: white;
-}
+} */
 .textbox{
   font-family: inherit;
   color: inherit;
@@ -191,7 +193,12 @@ label{
   border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
-
+#oval-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 1.5px var(--gray);
+}
 /* radio */
 /* Customize the label (the container) */
 .contain {
@@ -209,6 +216,7 @@ label{
 
 /* Hide the browser's default checkbox */
 .contain input {
+  position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -217,6 +225,7 @@ label{
 }
 
 .checkmark {
+  position: absolute;
   top: 0;
   left: 0;
   height: 25px;
@@ -234,6 +243,7 @@ label{
 
 .checkmark:after {
   content: "";
+  position: absolute;
   display: none;
 }
 
