@@ -125,8 +125,12 @@ label {
   top: 0;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 .rad {
+=======
+/* .rad{
+>>>>>>> bce2ded26c878d9847edadc136ba95a5bd9ee321
   display: block;
   position: relative;
   padding-left: 35px;
@@ -172,8 +176,13 @@ label {
   height: 8px;
   border-radius: 50%;
   background: white;
+<<<<<<< HEAD
 }
 .textbox {
+=======
+} */
+.textbox{
+>>>>>>> bce2ded26c878d9847edadc136ba95a5bd9ee321
   font-family: inherit;
   color: inherit;
   width: 348px;
@@ -183,7 +192,12 @@ label {
   border-radius: 16px;
   border: solid 1.5px var(--gray);
 }
-
+#oval-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 1.5px var(--gray);
+}
 /* radio */
 /* Customize the label (the container) */
 .contain {
