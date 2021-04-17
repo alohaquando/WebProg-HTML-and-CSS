@@ -76,7 +76,7 @@ label{
 
 }
 .h5-
-/* .styled-select {
+.styled-select {
   -webkit-appearance: button;
   -moz-appearance: button;
   -webkit-user-select: none;
@@ -88,7 +88,7 @@ label{
   color: var(--gary);
   font-size: inherit;
   margin: 16px 0;
-} */
+}
 
 .styled-select{
   -webkit-appearance: none;
