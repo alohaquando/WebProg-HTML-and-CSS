@@ -142,12 +142,14 @@
 
 /* Featured Store */
 .hero-image2{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   height: 500px;
   width: 700px;
   overflow: hidden;
-  background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg) no-repeat center;
-  background-size: cover;
+  background: url(https://static.vecteezy.com/system/resources/previews/001/401/677/non_2x/abstract-polygonal-shape-black-background-free-vector.jpg);
   margin: auto;
 }
 .hero-text2{ /*Feated store word setting */
