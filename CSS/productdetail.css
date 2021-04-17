@@ -15,9 +15,9 @@
   padding: 4px;
 }
 .product-detail {
-  float: right;
-  margin-top: -500px;
+  width: 50%;
   padding: 32px;
+  margin-top: -500px;
 }
 /* Recommended Products */
 .recpro_wrapper {
@@ -39,9 +39,10 @@
 }
 .main_product {
   border-radius: 12px;
+  overflow: hidden;
 }
 .main_card {
-  display: flex;
+  width: 50%;
 }
 
 .titlename1 {
@@ -92,10 +93,11 @@
     display: none;
   }
   .product-detail {
-    float: right;
-    /* padding-top: 700px; */
+    width: 50%;
   }
-
+  .main_card {
+    width: 100%;
+  }
   .big_wrapper {
     display: flex;
     flex-wrap: wrap;
