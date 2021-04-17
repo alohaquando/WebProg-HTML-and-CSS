@@ -23,8 +23,12 @@
         <form action="action.php" method="get">
 
         <h5>Contact purpose</h5>
-        <div class="custom-select">
-          <select name="category-list">
+
+            <div class="custom-select">
+              <select name="category-list" class="styled-select">
+                <option value="0" disabled selected hidden>
+                  Contact purpose... ▾            </option>
+
             <option value="0" selected>Contact purpose</option>
             <option value="1">Your Account</option>
             <option value="2">Your order</option>
@@ -103,6 +107,7 @@
             value="Message"
           />
         </div>
+        <br>
         <button input type="submit">Send</button>
         <secondary-button type="reset" value="reset">Reset</secondary-button>
       </div>
