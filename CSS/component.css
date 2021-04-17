@@ -127,19 +127,6 @@ td {
   margin-bottom: 0px;
 }
 
-.styled-select {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  padding: 16px;
-  background-color: #fff;
-  border: 2px solid #222;
-  border-radius: 10px;
-  color: #222;
-  font-size: inherit;
-  margin: 16px 0;
-}
 
 .text_underlined a {
   text-decoration: underline !important;
