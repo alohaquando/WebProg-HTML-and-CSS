@@ -161,23 +161,25 @@ h5 {
 .CaptionGraySmall {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.6;
   letter-spacing: 0.6px;
   color: var(--dark-gray);
+  text-transform: uppercase;
 }
 
 .CaptionBlackSmall {
   font-family: "DM Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.6;
   letter-spacing: 0.6px;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .BodyLight-Black15 {
@@ -233,6 +235,7 @@ h5 {
   line-height: 1.76;
   letter-spacing: 0.07px;
   color: var(--dark-gray);
+  text-transform: uppercase;
 }
 
 .CaptionBlackXS {
@@ -244,6 +247,7 @@ h5 {
   line-height: 1.76;
   letter-spacing: 0.07px;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .BodyWhite13 {
@@ -299,6 +303,7 @@ h5 {
   line-height: 2.21;
   letter-spacing: -0.26px;
   color: var(--dark-gray);
+  text-transform: uppercase;
 }
 
 .CaptionBlackXXS {
@@ -310,6 +315,7 @@ h5 {
   line-height: 2.21;
   letter-spacing: -0.26px;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .CaptionGrayXXXS {
@@ -321,6 +327,7 @@ h5 {
   line-height: 2.76;
   letter-spacing: -0.21px;
   color: var(--dark-gray);
+  text-transform: uppercase;
 }
 
 .CaptionBlackXXXS {
@@ -332,4 +339,5 @@ h5 {
   line-height: 2.76;
   letter-spacing: -0.21px;
   color: var(--black);
+  text-transform: uppercase;
 }

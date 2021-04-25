@@ -31,11 +31,16 @@
   font-size: 5rem;
 }
 
+.button-primary-and-secondary button:first-of-type {
+  margin-left: 0;
+}
+
 button {
   outline: 0;
   height: 56px;
   border-radius: 10px;
   padding: 12px 32px;
+  margin: 16px 4px;
   background-color: var(--brand-navy);
   font-family: "DM Sans";
   font-size: 21.3px;
@@ -45,9 +50,34 @@ button {
   line-height: 1.51;
   letter-spacing: -0.51px;
   text-align: center;
-  color: var(--white);
+  color: var(--white) !important;
   cursor: pointer;
-  border: none;
+  border: solid 2px var(--brand-navy);
+}
+
+button a {
+  color: white;
+}
+
+.button-secondary {
+  height: 56px;
+  border-radius: 10px;
+  padding: 12px 32px;
+  background-color: white;
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  cursor: pointer;
+  border: solid 2px var(--black);
+}
+
+.button-secondary a {
+  color: var(--black);
 }
 
 secondary-button {
@@ -123,10 +153,9 @@ td {
 }
 
 .store-card h4 {
-  margin-top: 8px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
-
 
 .text_underlined a {
   text-decoration: underline !important;
