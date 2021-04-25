@@ -1,6 +1,6 @@
 .hero-image {
   background-image: url("../Asset/bg.jpg");
-  height: 40%;
+  height: 70%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,6 +8,7 @@
 
 .hero-text {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .hero-text h1,
@@ -20,7 +21,7 @@
 }
 
 .cardimg {
-  min-width: 140px;
+  width: 140px;
   height: 140px;
   border-radius: 100px;
 }

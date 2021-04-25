@@ -1,123 +1,42 @@
-.img-select {
+/* Product Detail Text Spacing */
+.product-detail-text h1,
+.product-detail-text h4,
+.product-detail-text p {
+  margin: 0;
+}
+
+.product-detail-text h1 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.product-detail-text h4 {
+  margin-bottom: 32px;
+}
+
+.product-detail-text p {
+  margin-bottom: 64px;
+}
+
+/* Product Image */
+.product-img img {
+  margin-bottom: 8px;
+}
+
+/* Image Gallery */
+.gallery-row {
   display: flex;
-  /* margin: 8px; */
-  justify-content: center;
+  justify-content: space-between;
 }
-.img-select img:last-child {
-  margin-left: 0;
-}
-.img-item img {
-  margin: 16px;
-  border-radius: 16px;
-  /* margin-right: 0.5rem; */
-}
-.img-item {
-  padding: 4px;
-}
-.product-detail {
-  float: right;
-  margin-top: -500px;
-  padding: 32px;
-}
-/* Recommended Products */
-.recpro_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-.rec_products h1 {
-  font-size: 15px;
-}
-.prodcard {
-  border-radius: 12px;
-}
-.rec_products {
-  align-items: center;
-  border-radius: 16px;
-  width: 22%;
-  height: 362px;
-  margin: 24px 0px 48px 27px;
-}
-.big_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 30px;
-  margin: 48px 32px 16px 0;
-}
-.main_product {
-  border-radius: 12px;
-}
-.main_card {
-  display: flex;
-  height: 538px;
+
+.gallery-item img {
   width: 100%;
+
+  border-radius: 16px;
+  margin: 0;
 }
-.titlename {
-  padding: 32px;
-  font-family: "DM Sans";
-  font-size: 33.2px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: -0.8px;
-  color: var(--black);
-}
-.price {
-  font-family: "DM Sans";
-  font-size: 21.3px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.51;
-  letter-spacing: -0.51px;
-  color: var(--black);
-}
-.describe {
-  margin: 16px;
-  font-family: "DM Sans";
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: -0.36px;
-  color: var(--light-black);
-}
-.titlename1 {
-  margin: 16px;
-  font-family: "DM Sans";
-  font-size: 33.2px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: -0.8px;
-  color: var(--black);
-}
-.price1 {
-  margin: 16px;
-  font-family: "DM Sans";
-  font-size: 21.3px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.51;
-  letter-spacing: -0.51px;
-  color: var(--black);
-}
-.describe1 {
-  margin: 16px;
-  font-family: "DM Sans";
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: -0.36px;
-  color: var(--light-black);
-}
-.purchase-info .btn {
-  float: left;
-  border: 1.5px solid #ddd;
-  border-radius: 10px;
-  text-align: center;
-  margin: 8px;
+
+.gallery-item {
+  flex-basis: 23%;
+  /* margin: 0 auto; */
 }

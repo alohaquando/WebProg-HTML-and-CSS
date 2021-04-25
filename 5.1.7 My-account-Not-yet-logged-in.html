@@ -20,11 +20,41 @@
   <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
-      <div class="">
-        <h2>Forgot your password?</h2>
-        <p>Enter your email and get your account back in just seconds</p>
+      <h2>Welcome back!</h2>
+      <form action="action.php" method="get">
 
+      <div class="h5-for-input">
+        <h5>Sign in with</h5>
+        <input
+          type="radio"
+          name="perf_contact"
+          value="perf_phone"
+          id="perf_phone"/>
+        <label for="perf_phone">Phone </label>
+        <input
+          type="radio"
+          name="perf_contact"
+          value="perf_email"
+          id="perf_email"/>
+        <label for="perf_email">Email </label>
       </div>
+
+      <div class = "h5-for-input">
+        <h5>Phone number</h5>
+     <input type="tel" placeholder = "123 456 789" name="phone" >
+   </div>
+
+   <h5>password</h5>
+    <input type="password" placeholder="password" name="password" minlength="8" required>
+
+    <div class="button-group-for-input">
+      <button input type="submit">Log in</button>
+    </div>
+
+    <h5><a href="5.1.8-Forgot-password.html">Forgot password?</a></h5>
+
+    <p class="p-gray">No account yet?</p>
+    <h5><a href="5.1.9-Register-Account.html">Create an account</a></h5>
 
     </div>
     <footer id="mall_footer"></footer>

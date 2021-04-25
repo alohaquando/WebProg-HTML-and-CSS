@@ -1,0 +1,120 @@
+input[type="number"] {
+  width: 49px;
+  height: 32px;
+}
+.cart-wrapper {
+  width: 486px;
+  height: 158px;
+  margin: 0 0 40px 0;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+.product-name {
+  padding: 0;
+  float: right;
+  margin-right: 140px;
+}
+.name-edit {
+  margin: 10px;
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  color: var(--black);
+}
+.font-edit {
+  margin: 10px;
+  font-size: 10.9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.26px;
+  color: var(--black);
+}
+.para-edit {
+  margin: 10px;
+}
+.button-wrap {
+  display: flex;
+}
+.card-product {
+  width: 173px;
+  height: 158px;
+  border-radius: 12px;
+}
+
+.quantity {
+  display: inline-block;
+}
+
+.quantity .input-text.qty {
+  width: 35px;
+  height: 46px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #efefef;
+}
+
+.quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 171px;
+  height: 32px;
+}
+
+.quantity.buttons_added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+  outline: none;
+}
+hr {
+  width: 50%;
+  height: 2px;
+  border: solid 1px var(--light-gray);
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+}
+.button {
+  all: unset;
+}
+.btn-od {
+  width: 182px;
+  height: 56px;
+  color: black;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+.checkicon1 {
+  font-size: 1rem;
+  margin: 3px 8px 4px 0;
+}
+.checkicon2 {
+  margin: 4px 9px 4px 0;
+}

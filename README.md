@@ -1,5 +1,7 @@
 View here https://s3800978.github.io/WebProg-HTML-and-CSS/
 
+Task allocation: https://trello.com/b/IR6MaV8S/to-do-javascript
+
 # WebProg-HTML-and-CSS
 
 This is shared repo for WebProg assignment 1.
