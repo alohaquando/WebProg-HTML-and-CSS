@@ -117,6 +117,7 @@ body {
   transform: translateY(-5px);
 }
 
+/* Desktop */
 @media only screen and (min-width: 1024px) {
   .body_spacing {
     min-width: var(--screen-max-width-desktop);
@@ -126,12 +127,37 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+/* Tablet */
+@media only screen and (max-width: 1023px) {
   .body_spacing {
     margin: 0 24px;
     flex: 1;
   }
   .col-2 {
+    flex-basis: 100%;
+    margin: 0px;
+  }
+  .col-4 {
+    flex-basis: 50%;
+    margin: 0px;
+  }
+  .row {
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .body_spacing {
+    margin: 0 24px;
+    flex: 1;
+  }
+  .col-2 {
+    flex-basis: 100%;
+    margin: 0px;
+  }
+  .col-4 {
     flex-basis: 100%;
     margin: 0px;
   }

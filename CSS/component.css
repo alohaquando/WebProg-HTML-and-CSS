@@ -190,7 +190,7 @@ td {
 
 .featured-section {
   margin-top: 32px;
-  box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.2);
   padding: 8px 16px;
   border-radius: 16px;
 }
