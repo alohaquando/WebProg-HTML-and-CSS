@@ -157,6 +157,11 @@ td {
   margin-bottom: 0px;
 }
 
+.store-card .CaptionBlackSmall {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
 .text_underlined a {
   text-decoration: underline !important;
 }
@@ -181,4 +186,28 @@ td {
   width: unset !important;
   height: unset !important;
   margin-right: 24px;
+}
+
+.featured-section {
+  margin-top: 32px;
+  box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 16px;
+}
+
+.featured-section h3 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: 8px;
+}
+
+.featured-store-color h3,
+.featured-store-color h4,
+.featured-store-color p {
+  color: white;
+}
+
+.featured-store-color {
+  box-shadow: 0 5px 24px 0 rgba(0, 26, 57, 0.4);
+  background-color: var(--brand-navy);
 }
