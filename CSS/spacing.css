@@ -153,12 +153,10 @@ body {
     margin: 0 24px;
     flex: 1;
   }
-  .col-2 {
-    flex-basis: 100%;
-    margin: 0px;
-  }
+  .col-2,
   .col-4 {
     flex-basis: 100%;
     margin: 0px;
+    padding: 8px 0px 24px;
   }
 }
