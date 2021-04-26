@@ -95,6 +95,7 @@ body {
 .col-4 img {
   width: 100%;
   border-radius: 12px;
+  border: 2px solid var(--light-gray);
 }
 
 .col-4:hover {
