@@ -94,47 +94,53 @@
         </div>
 
         <!-- Contact days -->
-        <div class="h5-for-input">
-          <h5>Contact days</h5>
-          <label class="contain"
+        <div class="styled-checkbox">
+          <p>Contact days</p>
+          <label class="checkbox"
             >Monday
-            <input type="checkbox" checked="checked" />
+            <input
+              type="checkbox"
+              checked="checked"
+              name="contact_day"
+              id="mon"
+              value="mon"
+            />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Tuesday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="tue" value="tue" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Wednesday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="wed" value="wed" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Thursday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="thu" value="thu" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Friday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="fri" value="fri" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Saturday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="sat" value="sat" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="contain"
+          <label class="checkbox"
             >Sunday
-            <input type="checkbox" />
+            <input type="checkbox" name="contact_day" id="sun" value="sun" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -152,7 +158,7 @@
         </div>
 
         <!-- Buttons - Submit -->
-        <div>
+        <div class="form-buttons">
           <input type="submit" value="Submit" />
           <input type="reset" />
         </div>
