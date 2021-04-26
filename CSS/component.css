@@ -81,10 +81,11 @@ button a {
 }
 
 secondary-button {
+  outline: 0;
   height: 56px;
   border-radius: 10px;
   padding: 12px 32px;
-  background-color: #fff;
+  background-color: var(--white);
   font-family: "DM Sans";
   font-size: 21.3px;
   font-weight: bold;
@@ -93,10 +94,9 @@ secondary-button {
   line-height: 1.51;
   letter-spacing: -0.51px;
   text-align: center;
-  color: var(--white);
+  color: var(--black);
   cursor: pointer;
-  border: solid var(--brand-navy);
-  border-width: 2px !important;
+  border: solid 2px var(--black);
 }
 
 hr {
