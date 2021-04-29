@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="script.js"></script>
   </head>
   <body>
     <header id="nav_header"></header>
@@ -25,78 +24,181 @@
 
     <div class="body_spacing">
       <h3 class="teamtitle">Our members</h3>
-      <div class="card-flex-container">
-        <div class="wrapper_card">
-          <img
-            src="Asset/Quan.jpg"
-            alt="member1"
-            class="cardimg"
-            width="200px"
-            height="200px"
-          />
-          <div class="content_wrapper">
-            <p class="snumber">S3800978</p>
-            <p class="name">Do Hoang Quan</p>
-            <p class="paracontent">
-              Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
-              causam non.
-            </p>
-          </div>
+      <!-- Click here to open modals  -->
+      <div class="card_flex_container">
+        <div class="wrapper_card open_modal" " data-modal="modal1">
+        <img
+          src="Asset/Quan.jpg"
+          alt="member1"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper">
+          <p class="snumber">S3800978</p>
+          <p class="name">Do Hoang Quan</p>
+          <p class="paracontent">
+            UI/UX Designer, QA Tester, Front-end Developer, Project Planner and
+            Supervisor.
+          </p>
         </div>
-
-        <div class="wrapper_card">
-          <img
-            src="Asset/Thinh.jpg"
-            alt="member1"
-            class="cardimg"
-            width="200px"
-            height="200px"
-          />
-          <div class="content_wrapper">
-            <p class="snumber">S3820374</p>
-            <p class="name">Huynh Quoc Thinh</p>
-            <p class="paracontent">
-              Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
-              causam non.
-            </p>
-          </div>
+      </div>
+      <div class="wrapper_card open_modal" data-modal="modal2">
+        <img
+          src="Asset/Thinh.jpg"
+          alt="member1"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper">
+          <p class="snumber">S3820374</p>
+          <p class="name">Huynh Quoc Thinh</p>
+          <p class="paracontent">Front-end Developer...</p>
         </div>
-        <div class="wrapper_card">
-          <img
-            src="Asset/Tae.jpg"
-            alt="member1"
-            class="cardimg"
-            width="200px"
-            height="200px"
-          />
-          <div class="content_wrapper">
-            <p class="snumber">S3799019</p>
-            <p class="name">Taehyeon Jeong</p>
-            <p class="paracontent">
-              Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
-              causam non.
-            </p>
-          </div>
+      </div>
+      <div class="wrapper_card open_modal" data-modal="modal3">
+        <img
+          src="Asset/Tae.jpg"
+          alt="member1"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper">
+          <p class="snumber">S3799019</p>
+          <p class="name">Taehyeon Jeong</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non.
+          </p>
         </div>
-        <div class="wrapper_card">
-          <img
-            src="Asset/DucAnh.jpg"
-            alt="member1"
-            class="cardimg"
-            width="200px"
-            height="200px"
-          />
-          <div class="content_wrapper">
-            <p class="snumber">S3820374</p>
-            <p class="name">Pham Hoang Duc Anh</p>
-            <p class="paracontent">
-              Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
-              causam non.
-            </p>
-          </div>
+      </div>
+      <!-- Duc Anh -->
+      <div class="wrapper_card open_modal" data-modal="modal4">
+        <img
+          src="Asset/DucAnh.jpg"
+          alt="Duc Anh"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper">
+          <p class="snumber">S3820374</p>
+          <p class="name">Pham Hoang Duc Anh</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non.
+          </p>
         </div>
       </div>
     </div>
+
+    <!-- FIN  -->
+    <!-- Modals  -->
+    <div class="modal" onclick="close_modal()" id="modal1">
+      <div class="wrapper_card_modal">
+        <span class="close_button"
+          ><i class="fas fa-times fa-lg" onclick="close_modal()"></i
+        ></span>
+        <img
+          src="Asset/Quan.jpg"
+          alt="member1"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper_modal">
+          <p class="snumber">S3800978</p>
+          <p class="name">Do Hoang Quan</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non. Quae fuerit causa, mox videro; interea hoc tenebo, si ob
+            aliquam causam non. Quae fuerit causa, mox videro; interea hoc
+            tenebo, si ob aliquam causam non. Quae fuerit causa, mox videro;
+            interea hoc tenebo, si ob aliquam causam non.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal2" onclick="close_modal()">
+      <div class="wrapper_card_modal">
+        <span class="close_button"
+          ><i class="fas fa-times fa-lg close_modal" onclick="close_modal()"></i
+        ></span>
+        <img
+          src="Asset/Thinh.jpg"
+          alt="member2"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper_modal">
+          <p class="snumber">S3820374</p>
+          <p class="name">Huynh Quoc Thinh</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non. Quae fuerit causa, mox videro; interea hoc tenebo, si ob
+            aliquam causam non. Quae fuerit causa, mox videro; interea hoc
+            tenebo, si ob aliquam causam non. Quae fuerit causa, mox videro;
+            interea hoc tenebo, si ob aliquam causam non.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal3" onclick="close_modal()">
+      <div class="wrapper_card_modal">
+        <span class="close_button"
+          ><i class="fas fa-times fa-lg" onclick="close_modal()"></i
+        ></span>
+        <img
+          src="Asset/Tae.jpg"
+          alt="member3"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+
+        <div class="content_wrapper_modal">
+          <p class="snumber">S3799019</p>
+          <p class="name">Taehyeon Jeong</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non. Quae fuerit causa, mox videro; interea hoc tenebo, si ob
+            aliquam causam non. Quae fuerit causa, mox videro; interea hoc
+            tenebo, si ob aliquam causam non. Quae fuerit causa, mox videro;
+            interea hoc tenebo, si ob aliquam causam non.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal4" onclick="close_modal()">
+      <div class="wrapper_card_modal">
+        <span class="close_button"
+          ><i class="fas fa-times fa-lg close_modal" onclick="close_modal()"></i
+        ></span>
+        <img
+          src="Asset/DucAnh.jpg"
+          alt="member4"
+          class="cardimg"
+          width="200px"
+          height="200px"
+        />
+        <div class="content_wrapper_modal">
+          <p class="snumber">S3820374</p>
+          <p class="name">Pham Hoang Duc Anh</p>
+          <p class="paracontent">
+            Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam
+            causam non. Quae fuerit causa, mox videro; interea hoc tenebo, si ob
+            aliquam causam non. Quae fuerit causa, mox videro; interea hoc
+            tenebo, si ob aliquam causam non. Quae fuerit causa, mox videro;
+            interea hoc tenebo, si ob aliquam causam non.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End of modals  -->
     <footer id="mall_footer"></footer>
+    <script src="script.js"></script>
   </body>
 </html>
