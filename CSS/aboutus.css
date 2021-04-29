@@ -34,6 +34,14 @@
   padding: 24px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.wrapper_card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.45);
+
+  transition: 0.5s;
 }
 
 .snumber {
@@ -85,6 +93,7 @@
   z-index: 2;
   justify-content: center;
   align-items: center;
+  transition: 5s;
 }
 
 .wrapper_card_modal {
@@ -95,6 +104,8 @@
   padding: 24px 8px;
   background-color: var(--white);
   overflow: auto;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.35);
+  transition: 5s;
 }
 
 .content_wrapper_modal {
