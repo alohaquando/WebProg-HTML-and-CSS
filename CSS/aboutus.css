@@ -143,3 +143,6 @@
     width: 85%;
   }
 }
+.close_button {
+  cursor: pointer;
+}
