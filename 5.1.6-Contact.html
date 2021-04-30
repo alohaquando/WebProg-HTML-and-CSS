@@ -171,33 +171,46 @@
     <script>
     function validateName(){
       var name = document.getElementsById("name");
+      var nameRegExp = /^[a-zA-Z]{3,}$/;
 
-
-      if(name.value.match(nameRegExp)){
+      if(name.value.test(nameRegExp)){
         return true;
       }
-      if(email.value.match(emailRegExp)){
-        return true;
-      }
-      if(phone.value.match(phoneRegExp)){
-        return true;
-      }
-      else{
+      else {
         return false;
       }
+    }
+
     function validateEmail(){
       var email = document.getElementsById("email");
       var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      if(email.value.test(emailRegExp)){
+        return true;
+      }
     }
 
     function validatePhone(){
       var phone = document.getElementsById("phone");
       var phoneRegExp = /^([0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}){9,11}$/;
+
+      if(phone.value.test(phoneRegExp)){
+        return true;
+      }
+      else{
+        return false;
+      }
     }
 
-    var message = document.getElementsById("message");
+    function validateMessage(){
+      var message = document.getElementsById("message");
+      var messageRegExp =
 
-    var nameRegExp = /^[a-zA-Z]{3,}$/;
+      if(){
+        document.getElementsById()
+      }
+
+    }
 
     </script>
   </body>
