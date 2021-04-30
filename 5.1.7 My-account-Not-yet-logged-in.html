@@ -39,13 +39,22 @@
         <label for="perf_email">Email </label>
       </div>
 
-      <div class = "h5-for-input">
-        <h5>Phone number</h5>
-     <input type="tel" placeholder = "123 456 789" name="phone" >
-   </div>
+      <!-- Phone -->
+      <div class="styled-input-text">
+        <label for="phone">Phone number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="123 456 789"
+          required
+        />
+      </div>
 
-   <h5>password</h5>
-    <input type="password" placeholder="password" name="password" minlength="8" required>
+      <!-- password -->
+      <div class="styled-input-text">
+        <label for="Password">Password</label>
+        <input type="password" placeholder="password" id="password" name="password" minlength="8" required>
 
     <div class="button-group-for-input">
       <button input type="submit">Log in</button>

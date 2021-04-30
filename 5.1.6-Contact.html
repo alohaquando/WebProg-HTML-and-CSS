@@ -80,6 +80,7 @@
             id="perf_phone"
             name="perf_contact"
             value="perf_phone"
+            onchange="myFunction()"
             required
           />
           <label for="perf_phone">Phone</label>
@@ -152,7 +153,8 @@
             name="Message"
             id="Message"
             placeholder="What's your message?"
-            maxlength="300"
+            minlength="50"
+            maxlength="500"
             required
           ></textarea>
         </div>
@@ -165,5 +167,38 @@
       </form>
     </div>
     <footer id="mall_footer"></footer>
+
+    <script>
+    function validateName(){
+      var name = document.getElementsById("name");
+
+
+      if(name.value.match(nameRegExp)){
+        return true;
+      }
+      if(email.value.match(emailRegExp)){
+        return true;
+      }
+      if(phone.value.match(phoneRegExp)){
+        return true;
+      }
+      else{
+        return false;
+      }
+    function validateEmail(){
+      var email = document.getElementsById("email");
+      var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    }
+
+    function validatePhone(){
+      var phone = document.getElementsById("phone");
+      var phoneRegExp = /^([0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}){9,11}$/;
+    }
+
+    var message = document.getElementsById("message");
+
+    var nameRegExp = /^[a-zA-Z]{3,}$/;
+
+    </script>
   </body>
 </html>
