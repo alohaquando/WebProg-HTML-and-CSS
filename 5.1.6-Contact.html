@@ -45,6 +45,7 @@
             name="name"
             placeholder="Name"
             required
+            onchange="nameRegExp()"
           />
         </div>
 
@@ -57,6 +58,7 @@
             name="email"
             placeholder="youremail@domain.com"
             required
+            onchange="emailRegExp"
           />
         </div>
 
@@ -69,6 +71,7 @@
             name="phone"
             placeholder="123 456 789"
             required
+            onchange="phoneRegExp"
           />
         </div>
 
@@ -156,6 +159,7 @@
             minlength="50"
             maxlength="500"
             required
+            onchange="messageRegExp"
           ></textarea>
         </div>
 
