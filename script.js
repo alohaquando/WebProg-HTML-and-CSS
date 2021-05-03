@@ -84,14 +84,31 @@ function close_modal() {
 }
 
 
-// Auto Scrolling on Products and Stores pages
-const autoScrolling = document.getElementById('autoScrolling');
-const autoScrollingWidth = autoScrolling.scrollWidth;
+/* Auto Scrolling on Products and Stores pages STILL FIXING*/
+/*
+const slider = document.querySelector('.autoscrolling');
+let isDown = false;
+let startX;
+let scrollleft;
 
-window.addEventListener('load', () => {
-  self.setInterval(() => {
-    if (autoScrolling.scrollLeft !== autoScrollingWidth) {
-      autoScrolling.scrollTo(autoScrolling.scrollLeft + 1, 0);
-    }
-  }, 15);
+slider.addEventListener('mousedown', () => {
+  isDown = true;
+  slider.classList.add('active');
 });
+
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', () => {
+  console.log(isDown);
+  console.log('Do Work!');
+});
+*/
+/* Auto Scrolling on Products and Stores pages */
