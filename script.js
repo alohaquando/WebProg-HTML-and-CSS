@@ -82,3 +82,16 @@ function close_modal() {
     modal[i].style.display = "none";
   }
 }
+
+
+// Auto Scrolling on Products and Stores pages
+const autoScrolling = document.getElementById('autoScrolling');
+const autoScrollingWidth = autoScrolling.scrollWidth;
+
+window.addEventListener('load', () => {
+  self.setInterval(() => {
+    if (autoScrolling.scrollLeft !== autoScrollingWidth) {
+      autoScrolling.scrollTo(autoScrolling.scrollLeft + 1, 0);
+    }
+  }, 15);
+});

@@ -211,3 +211,12 @@ td {
   box-shadow: 0 5px 24px 0 rgba(0, 26, 57, 0.4);
   background-color: var(--brand-navy);
 }
+
+/*    AUTO SCROLL   */
+.autoscroll{
+  width: 300px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  background-color: #fff;
+}
+/*    END AUTO SCROLL   */
