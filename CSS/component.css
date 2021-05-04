@@ -53,10 +53,12 @@ button {
   color: var(--white) !important;
   cursor: pointer;
   border: solid 2px var(--brand-navy);
+  transition: 0.35s;
 }
 
 button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.35s;
 }
 
 button a {
