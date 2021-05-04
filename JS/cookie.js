@@ -1,7 +1,12 @@
 if (localStorage.getItem("cookie_state") == "accepted") {
-  console.log("cookie OK, consent message NOT loaded");
+  console.log("cookie ACCEPTED, consent message NOT loaded");
+} else if (localStorage.getItem("cookie_state") == "rejected") {
+  console.log("cookie REJECTED, consent message NOT loaded");
+  $(function () {
+    $("#cookie-consent-message").load("./cookie-consent.html");
+  });
 } else {
-  console.log("cookie NOT OK, consent message loaded");
+  console.log("cookie NO ACTION YET, consent message loaded");
   $(function () {
     $("#cookie-consent-message").load("./cookie-consent.html");
   });
@@ -10,4 +15,9 @@ if (localStorage.getItem("cookie_state") == "accepted") {
 function accept_cookie() {
   document.getElementById("cookie-consent-message").style.display = "none";
   localStorage.setItem("cookie_state", "accepted");
+}
+
+function reject_cookie() {
+  document.getElementById("cookie-consent-message").style.display = "none";
+  localStorage.setItem("cookie_state", "rejected");
 }
