@@ -162,7 +162,7 @@
 
         <!-- Buttons - Submit -->
         <div class="form-buttons">
-          <input type="submit" value="Submit" id="submit"/>
+          <input type="submit" value="Submit" id="submit" onsubmit="return validate()"/>
           <input type="reset" />
         </div>
       </form>
@@ -176,7 +176,6 @@
     var email = document.getElementById('email');
     var phone = document.getElementById('phone');
 
-    // btn = document.querySelector(#submit);
     // name.addEventListener("input",function(event)
     // submit.addEventListener("click",function(){
       function validate(){
@@ -188,6 +187,23 @@
 
     }else {
       alert("invalid");
+    }
+    //for radio validation
+    var valid = false;
+    var x = document.myform.perf_contact;
+
+    for(var i=0;i<x.length;i++){
+      if(x[i].checked){
+        valid = true; //valid when only one option is selected
+        break;
+      }
+    }
+    if(valid){
+      return true;
+    }
+    else{
+      alert("Please select a contact option");
+      return false;
     }
     };
     </script>
