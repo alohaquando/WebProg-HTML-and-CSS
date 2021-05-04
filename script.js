@@ -82,3 +82,12 @@ function close_modal() {
     modal[i].style.display = "none";
   }
 }
+// Add item to cart with noti
+let addcart = document.querySelectorAll(".button-secondary");
+
+for (let i = 0; i < addcart.length; i++) {
+  addcart[i].addEventListener("click", () => {
+    console.log("pls ra di, im so tired :((");
+    alert("Add dc roi thg loz dung bam nua ");
+  });
+}
