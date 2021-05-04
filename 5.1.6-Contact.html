@@ -20,6 +20,7 @@
       <!-- Begin form -->
       <form action="action.php" method="get">
         <!-- Contact purpose -->
+        <form class="form" id="form">
         <div class="styled-select">
           <label for="purpose">Contact purpose</label>
           <select name="purpose" id="purpose">
@@ -44,9 +45,12 @@
             id="name"
             name="name"
             placeholder="Name"
+            minlength="3"
             required
             onchange="nameRegExp()"
           />
+          <small>Name must be at least 3 letters</small>
+
         </div>
 
         <!-- Email -->
@@ -60,6 +64,8 @@
             required
             onchange="emailRegExp"
           />
+          <small>Invalid email</small>
+
         </div>
 
         <!-- Phone -->
@@ -73,6 +79,8 @@
             required
             onchange="phoneRegExp"
           />
+          <small>Invalid phone number</small>
+
         </div>
 
         <!-- Contact method -->
@@ -161,6 +169,7 @@
             required
             onchange="messageRegExp"
           ></textarea>
+
         </div>
 
         <!-- Buttons - Submit -->
@@ -173,48 +182,97 @@
     <footer id="mall_footer"></footer>
 
     <script>
-    function validateName(){
-      var name = document.getElementsById("name");
-      var nameRegExp = /^[a-zA-Z]{3,}$/;
+    // function validateName(){
+    //   cons name = document.getElementsById("name");
+    //   var nameRegExp = /^[a-zA-Z]{3,}$/;
+    //
+    //   if(name.value.test(nameRegExp)){
+    //     return true;
+    //   }
+    //   else {
+    //     return false;
+    //   }
+    // }
+    //
+    // function validateEmail(){
+    //   var email = document.getElementsById("email");
+    //   var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    //
+    //   if(email.value.test(emailRegExp)){
+    //     return true;
+    //   }
+    // }
+    //
+    // function validatePhone(){
+    //   var phone = document.getElementsById("phone");
+    //   var phoneRegExp = /^([0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}){9,11}$/;
+    //
+    //   if(phone.value.test(phoneRegExp)){
+    //     return true;
+    //   }
+    //   else{
+    //     return false;
+    //   }
+    // }
+    //
+    // function validateMessage(){
+    //   var message = document.getElementsById("message");
+    //   var messageRegExp =
+    //
+    //   if(){
+    //     document.getElementsById()
+    //   }
+    //
+    // }
+    const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
 
-      if(name.value.test(nameRegExp)){
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
+    form.addEventListener('submit', e => {
+      e.preventDefault();
 
-    function validateEmail(){
-      var email = document.getElementsById("email");
-      var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      checkInputs();
+    });
 
-      if(email.value.test(emailRegExp)){
-        return true;
-      }
-    }
+   function checkInputs() {
+	// trim to remove the whitespaces
+	   const nameValue = name.value.trim();
+	   const emailValue = email.value.trim();
 
-    function validatePhone(){
-      var phone = document.getElementsById("phone");
-      var phoneRegExp = /^([0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}){9,11}$/;
 
-      if(phone.value.test(phoneRegExp)){
-        return true;
-      }
-      else{
-        return false;
-      }
-    }
+  var wordCount = document.getElementById("name").trim().split(/\s+/).length;
+  if( wordCount < 3 ) {
+    setErrorFor(name,'Name must be at least 3 letters')
+  }
+  else{
+    setSuccessFor(name);
+  }
 
-    function validateMessage(){
-      var message = document.getElementsById("message");
-      var messageRegExp =
+  if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+	} else {
+		setSuccessFor(email);
+	}
+}
 
-      if(){
-        document.getElementsById()
-      }
+  function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
 
-    }
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+}
+
+function isEmail(email) {
+	return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+}
+
+
 
     </script>
   </body>
