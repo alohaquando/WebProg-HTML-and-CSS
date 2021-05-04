@@ -44,11 +44,8 @@
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
-            minlength="3"
-            required
-            onchange="nameRegExp()"
-          />
+            placeholder="Name"/>
+
           <small>Name must be at least 3 letters</small>
 
         </div>
@@ -62,7 +59,6 @@
             name="email"
             placeholder="youremail@domain.com"
             required
-            onchange="emailRegExp"
           />
           <small>Invalid email</small>
 
@@ -77,7 +73,6 @@
             name="phone"
             placeholder="123 456 789"
             required
-            onchange="phoneRegExp"
           />
           <small>Invalid phone number</small>
 
@@ -91,7 +86,6 @@
             id="perf_phone"
             name="perf_contact"
             value="perf_phone"
-            onchange="myFunction()"
             required
           />
           <label for="perf_phone">Phone</label>
@@ -167,7 +161,6 @@
             minlength="50"
             maxlength="500"
             required
-            onchange="messageRegExp"
           ></textarea>
 
         </div>
@@ -180,100 +173,6 @@
       </form>
     </div>
     <footer id="mall_footer"></footer>
-
-    <script>
-    // function validateName(){
-    //   cons name = document.getElementsById("name");
-    //   var nameRegExp = /^[a-zA-Z]{3,}$/;
-    //
-    //   if(name.value.test(nameRegExp)){
-    //     return true;
-    //   }
-    //   else {
-    //     return false;
-    //   }
-    // }
-    //
-    // function validateEmail(){
-    //   var email = document.getElementsById("email");
-    //   var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    //
-    //   if(email.value.test(emailRegExp)){
-    //     return true;
-    //   }
-    // }
-    //
-    // function validatePhone(){
-    //   var phone = document.getElementsById("phone");
-    //   var phoneRegExp = /^([0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}[-\s\.]?[0-9]{1}){9,11}$/;
-    //
-    //   if(phone.value.test(phoneRegExp)){
-    //     return true;
-    //   }
-    //   else{
-    //     return false;
-    //   }
-    // }
-    //
-    // function validateMessage(){
-    //   var message = document.getElementsById("message");
-    //   var messageRegExp =
-    //
-    //   if(){
-    //     document.getElementsById()
-    //   }
-    //
-    // }
-    const form = document.getElementById('form');
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-
-      checkInputs();
-    });
-
-   function checkInputs() {
-	// trim to remove the whitespaces
-	   const nameValue = name.value.trim();
-	   const emailValue = email.value.trim();
-
-
-  var wordCount = document.getElementById("name").trim().split(/\s+/).length;
-  if( wordCount < 3 ) {
-    setErrorFor(name,'Name must be at least 3 letters')
-  }
-  else{
-    setSuccessFor(name);
-  }
-
-  if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
-	} else {
-		setSuccessFor(email);
-	}
-}
-
-  function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
-}
-
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
-}
-
-function isEmail(email) {
-	return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
-}
-
-
-
-    </script>
+    <script src="input.js"></script>
   </body>
 </html>

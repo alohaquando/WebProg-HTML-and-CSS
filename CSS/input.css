@@ -407,6 +407,9 @@ input:-ms-input-placeholder {
   visibility: hidden;
   position: absolute;
 }
+.styled-input-text error small{
+  visibility: visible;
+}
 
 
 /* Form submit and reset */
