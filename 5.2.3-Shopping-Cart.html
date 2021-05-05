@@ -32,8 +32,9 @@
               <input
                 type="button"
                 value="-"
-                id="minus"
+                id="minus_airtag"
                 class="value_adjust_button"
+                onclick="change_product_value('-','airtag-value')"
               /><input
                 type="number"
                 step="1"
@@ -42,18 +43,65 @@
                 required
                 value="localStorage.getItem(product_name)"
                 class="product-in-cart-value"
-                id="[product_name]"
+                id="airtag_value"
               /><input
                 type="button"
                 value="+"
-                id="plus"
+                id="plus_airtag"
                 class="value_adjust_button"
+                onclick="change_product_value('+','airtag-value')"
               />
             </div>
           </div>
         </div>
         <!-- End Product -->
+
+        <!-- Product 2 -->
+        <div class="product-in-cart">
+          <img src="Asset/keyboard1.jpg" />
+          <div class="product-in-cart-detail">
+            <h4>Razer Elite Keyboard</h4>
+            <p class="CaptionBlackXS">Razer</p>
+            <p class="CaptionBlackSmall">1.000.000 VND</p>
+            <div class="product-in-cart-buttons">
+              <input
+                type="button"
+                value="-"
+                id="minus_keyboard"
+                class="value_adjust_button"
+                onclick="change_product_value('-','keyboard-value')"
+              /><input
+                type="number"
+                step="1"
+                min="1"
+                max="99"
+                required
+                value="localStorage.getItem(product_name)"
+                class="product-in-cart-value"
+                id="keyboard_value"
+              /><input
+                type="button"
+                value="+"
+                id="plus_keyboard"
+                class="value_adjust_button"
+                onclick="change_product_value('+','keyboard-value')"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- End Product 2 -->
         <hr />
+
+        <div class="styled-input-text">
+          <label for="coupon">Coupon</label><br />
+          <input
+            type="text"
+            id="coupon"
+            name="coupon"
+            placeholder="Enter your coupon • COSC2430-HD / COSC2430-DI"
+            optional
+          />
+        </div>
 
         <div class="total-price">
           <h5>Total</h5>
