@@ -18,18 +18,22 @@ $(function () {
 // Shopping cart add and remove
 function wcqib_refresh_quantity_increments() {
   jQuery(
-    "div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)"
+    "div.quantity:not(.product-in-cart-buttons), td.quantity:not(.product-in-cart-buttons)"
   ).each(function (a, b) {
     var c = jQuery(b);
-    c.addClass("buttons_added"),
+    c.addClass("product-in-cart-buttons"),
       c
         .children()
         .first()
-        .before('<input type="button" value="-" class="minus" />'),
+        .before(
+          '<input type="button" value="-" id="minus" class="value_adjust_button" />'
+        ),
       c
         .children()
         .last()
-        .after('<input type="button" value="+" class="plus" />');
+        .after(
+          '<input type="button" value="+" id="plus" class="value_adjust_button" />'
+        );
   });
 }
 
