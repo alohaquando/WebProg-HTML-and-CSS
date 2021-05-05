@@ -1,15 +1,18 @@
+//
+  var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
+  var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
+  var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
+  var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$);
+  var zipRegExp = new RegExp(/^\d{4,6}$);
+
 
   // const form = document.getElementById('form').value;
-const name = document.getElementById('name'); //Find an element by element id
-const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-
-var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
-var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
-var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
 
 //for name validation
 function nameValidation(){
+  var name = document.getElementById('name'); //Find an element by element id
+  var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
+
   if (nameRegExp.test(name)){
     return true;
   }
@@ -18,9 +21,12 @@ function nameValidation(){
     return false;
   }
 }
-
+//
 //for email validation
 function emailValidation(){
+  const email = document.getElementById('email');
+  var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
+
   if (emailRegExp.test(email)) {
     return true;
   }
@@ -31,6 +37,9 @@ function emailValidation(){
 }
 //for phone Validation
 function phoneValidation(){
+  const phone = document.getElementById('phone');
+  var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
+
   if (phoneRegExp.test(phone)) {
     return true;
   }
@@ -54,6 +63,10 @@ for(var i=0;i<x.length;i++){
  }
 };
 
+function passwordValidation(){
+  var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$);
+}
+
 // name.addEventListener("input",function(event)
 //Final
 submit = document.querySelector("#submit");
@@ -70,3 +83,11 @@ submit.addEventListener("click",function(event){
     alert("invalid");
   }
 });
+
+  const form = document.getElementById('form');
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+
+  form.addEventListener('submit',(e) => {
+    e.preventDefault()
+  });
