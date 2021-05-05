@@ -40,3 +40,63 @@
   flex-basis: 23%;
   /* margin: 0 auto; */
 }
+.prod_list_modal {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  height: 30%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 1);
+}
+.prod_list_modal .choice {
+  overflow: hidden;
+  margin: 16px 0;
+}
+.reset {
+  display: inline-block;
+  background-color: #b1b1b1;
+  text-decoration: none;
+  outline: 0;
+  height: 56px;
+  border-radius: 15px;
+  padding: 12px 32px;
+  margin: 16px 4px;
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--white) !important;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.prod_list_modal .choice span {
+  display: inline-block;
+  outline: 0;
+  height: 56px;
+  border-radius: 15px;
+  padding: 12px 32px;
+  margin: 16px 4px;
+  background-color: #f694a4;
+  font-family: "DM Sans";
+  font-size: 21.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: var(--white) !important;
+  cursor: pointer;
+  transition: 0.35s;
+}

@@ -83,11 +83,23 @@ function close_modal() {
   }
 }
 // Add item to cart with noti
-let addcart = document.querySelectorAll(".button-secondary");
+// let addcart = document.querySelectorAll(".button-secondary");
+//
+// for (let i = 0; i < addcart.length; i++) {
+//   addcart[i].addEventListener("click", () => {
+//     console.log("pls ra di, im so tired :((");
+//     alert("Add dc roi thg loz dung bam nua ");
+//   });
+// }
 
-for (let i = 0; i < addcart.length; i++) {
-  addcart[i].addEventListener("click", () => {
-    console.log("pls ra di, im so tired :((");
-    alert("Add dc roi thg loz dung bam nua ");
-  });
-}
+let prodbtn = $(".button-secondary");
+prodbtn.click(function () {
+  $(".prod_list_modal").fadeIn("slow");
+  console.log("Work, please!");
+  setTimeout(function () {
+    $(".prod_list_modal").fadeOut("slow");
+  }, 2000);
+});
+$(".choice").click(function () {
+  $(".prod_list_modal").fadeOut("slow");
+});
