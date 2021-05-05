@@ -39,13 +39,13 @@
 
         <!-- Name -->
         <div class="styled-input-text">
-          <label for="name">Name</label><br />
+          <label for="name">Name</label><br/>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Name"/>
-          <small>Name must be at least 3 letters</small>
+          <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
         <!-- Email -->
@@ -58,7 +58,7 @@
             placeholder="youremail@domain.com"
             required
           />
-          <small>Invalid email</small>
+          <!-- <small>Invalid email</small> -->
         </div>
 
         <!-- Phone -->
@@ -71,7 +71,7 @@
             placeholder="123 456 789"
             required
           />
-          <small>Invalid phone number</small>
+          <!-- <small>Invalid phone number</small> -->
         </div>
 
         <!-- Contact method -->
@@ -168,44 +168,6 @@
       </form>
     </div>
     <footer id="mall_footer"></footer>
-    <!-- <script src="input.js">
-    </script> -->
-    <script>
-    var form = document.getElementById('form');
-    var name = document.getElementById('name');
-    var email = document.getElementById('email');
-    var phone = document.getElementById('phone');
-
-    // name.addEventListener("input",function(event)
-    // submit.addEventListener("click",function(){
-      function validate(){
-    var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
-    var emailRegExp = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-
-    if (nameRegExp.test(name)){
-      alert("valid");
-
-    }else {
-      alert("invalid");
-    }
-    //for radio validation
-    var valid = false;
-    var x = document.myform.perf_contact;
-
-    for(var i=0;i<x.length;i++){
-      if(x[i].checked){
-        valid = true; //valid when only one option is selected
-        break;
-      }
-    }
-    if(valid){
-      return true;
-    }
-    else{
-      alert("Please select a contact option");
-      return false;
-    }
-    };
-    </script>
+    <script src="input.js"></script>
   </body>
 </html>

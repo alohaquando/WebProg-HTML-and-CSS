@@ -233,17 +233,6 @@ input:-ms-input-placeholder {
   border: solid var(--field-border-thickness) var(--field-color-invalid);
 }
 
-.styled-input-text small {
-  color: var(--black);
-	position: absolute;
-	visibility: hidden;
-}
-
-.styled-input-text.error small {
-  color: var(--field-color-invalid);
-	visibility: visible;
-}
-
 /* Dropdown list */
 .styled-select {
   margin: var(--field-margin);
