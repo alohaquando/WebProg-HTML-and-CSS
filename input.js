@@ -91,3 +91,8 @@ submit.addEventListener("click",function(event){
   form.addEventListener('submit',(e) => {
     e.preventDefault()
   });
+
+//additional fields for store owner
+function owner(){
+  
+}
