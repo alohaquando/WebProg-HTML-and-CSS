@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <header id="nav_header"></header>
@@ -17,7 +18,7 @@
       </div>
 
       <!-- Begin form -->
-      <form action="action.php" method="get">
+      <form id="contact-form" onsubmit="console.log('hello');">
         <!-- Contact purpose -->
         <form class="form" id="form">
         <div class="styled-select">
@@ -43,7 +44,9 @@
             type="text"
             id="name"
             name="name"
-            placeholder="Name"/>
+            placeholder="Name"
+            pattern="^[a-zA-Z]{3,}$"/>
+            
           <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
@@ -157,17 +160,21 @@
             maxlength="500"
             required
           ></textarea>
+          <div id = 'remaining-char'></div>
         </div>
 
         <!-- Buttons - Submit -->
         <div class="form-buttons">
-          <input type="submit" value="Submit" id="submit" onsubmit="return validate()"/>
-          <input type="reset" />
+          <!-- <input type="submit" value="Submit" id="submit" onsubmit="return validate()"/> -->
+          <!-- <input type="submit" value="Submit" id="submit" onsubmit=""/> -->
+          <button type="submit" value="Submit" id="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <!-- <button id="test-button">Test button</button> -->
         </div>
       </form>
     </div>
     <footer id="mall_footer"></footer>
-    <script src="script.js"></script>
+    
     <script src="input.js"></script>
   </body>
 </html>
