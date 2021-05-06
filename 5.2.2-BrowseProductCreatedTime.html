@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script><script src="JS/cookie.js"></script>
+
   </head>
 
   <body>
@@ -22,14 +23,16 @@
         <div class="HeaderH1_Left_With_Spacing">
           <h1>Products • Sorted by Created Time</h1>
         </div>
-        <select class="styled-select">
-          <option value="" disabled selected hidden>
-            Browse products by... ▾
-          </option>
-          <option>Newest First</option>
-          <option>Oldest First</option>
-        </select>
-      </div>
+        
+        <div class="styled-select">
+          <select >
+            <option value="0" disabled selected hidden>
+              Browse products by... ▾
+            </option>
+            <option value="new">Newest First</option>
+            <option value="old">Oldest First</option>
+          </select>
+        </div>
 
       <div class="row">
         <div class="col-4 store-card">
@@ -134,5 +137,6 @@
       <div id="store_footer"></div>
       <div id="mall_footer"></div>
     </footer>
-  </body>
+  <div id="cookie-consent-message"></div></body>
+
 </html>
