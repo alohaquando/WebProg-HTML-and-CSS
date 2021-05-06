@@ -41,16 +41,23 @@
          />
        </div>
 
-      <h5>password</5>
+       <!-- passowrd -->
+       <div class="styled-input-text">
+      <h5>password</h5>
        <input type="password"
         name="password"
+        id = "password"
         placeholder="password"
         minlength="8"
         required/>
+        </div>
 
-      <h5>Confirm password</5>
+        <!-- confirm passowrd -->
+        <div class="styled-input-text">
+      <h5>Confirm password</h5>
        <input type="hidden"
        name="password"
+       id = "confirmpassword"
        placeholder="password"
        minlength="8"
        required/>
@@ -66,22 +73,23 @@
       value="pic"
       onchange="return change_img(this)">
 
-
+      <div class="styled-input-text">
        <div class = "name">
         <h5><label for="fname">First name</label></h5>
-        <input type="text" placeholder = "First name" name="fname">
+        <input type="text" id="fname" placeholder = "First name" name="fname">
         <h5><label for="lname">Last name</label></h5>
-        <input type="text" placeholder = "Last name"name="lname">
+        <input type="text" id = "lname" placeholder = "Last name"name="lname" >
+       </div>
        </div>
 
       <h5>Address</h5>
-       <input type="text" placeholder="123 Street" name="address">
+       <input type="text" id="address" placeholder="123 Street" name="address">
 
       <h5>city</h5>
-       <input type="text" placeholder="New York" name="city">
+       <input type="text" id = "city" placeholder="New York" name="city">
 
       <h5>zipcode</h5>
-       <input type="text" placeholder = "000000" pattern="[0-9]{4,6}">
+       <input type="text" id = "zipcode" placeholder = "000000" pattern="[0-9]{4,6}">
 
       <h5>Country</h5>
        <div class="custom-select">
@@ -346,6 +354,7 @@
             value="shopper"
             id="shopper"
           />
+
           <label for="perf_phone">Shopper </label>
           <input
             type="radio"
@@ -357,8 +366,9 @@
           />
           <label for="perf_email">Store owner </label>
         </div>
-
-    <div>
+    
+    
+    <div class = "reveal-if-active">
       <h4>Store information</h4>
 
        <h5>Business name</h5>
@@ -385,6 +395,7 @@
     </div>
     <button input type="submit">Create account</button>
     <secondary-button type="reset" value="reset">Reset</secondary-button>
+</form>
 </div>
   </body>
   <footer id="mall_footer"></footer>
@@ -392,17 +403,7 @@
 
 
   <script>
-  var email = document.myform.email.value;
-  var phone = document.myform.phone.value;
-  var password = document.myform.password.value;
-
-  if(password.length<8){
-    alert("Password must be at least 8 characters long.");
-    return false;
-  }else if(password.){
-    alert("password must contain" )
-  }
-
+  
 var imageAvatar = document.querySelector('#oval-img');
 
 function check_img_input(input) {

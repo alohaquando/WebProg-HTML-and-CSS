@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="CSS/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="script.js"></script>
+    
   </head>
   <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
       <!-- Header -->
-      <div class="HeaderH1_Left_With_Spacing">
+<div class="HeaderH1_Left_With_Spacing">
         <h1>Contact Us • Marché! Mall</h1>
         <p>We're right here to help</p>
       </div>
 
       <!-- Begin form -->
-      <form id="contact-form" onsubmit="console.log('hello');">
+      <form id="contact-form" onsubmit="console.log('hello');" action="action.php" method="get">
         <!-- Contact purpose -->
         <form class="form" id="form">
         <div class="styled-select">
@@ -46,7 +46,6 @@
             name="name"
             placeholder="Name"
             pattern="^[a-zA-Z]{3,}$"/>
-
           <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
@@ -87,6 +86,7 @@
             value="perf_phone"
             required
           />
+
           <label for="perf_phone">Phone</label>
           <br />
           <input
@@ -167,15 +167,15 @@
         <!-- Buttons - Submit -->
         <div class="form-buttons">
           <!-- <input type="submit" value="Submit" id="submit" onsubmit="return validate()"/> -->
-          <!-- <input type="submit" value="Submit" id="submit" onsubmit=""/> -->
-          <button type="submit" value="Submit" id="submit">Submit</button>
+          <!-- <input type="submit" value="Submit" id="contact-submit" onsubmit=""/> -->
+          <button type="submit" value="Submit" id="contact-submit">Submit</button>
           <button type="reset">Reset</button>
           <!-- <button id="test-button">Test button</button> -->
         </div>
       </form>
     </div>
     <footer id="mall_footer"></footer>
-
+    <script src="script.js"></script>
     <script src="input.js"></script>
   </body>
 </html>
