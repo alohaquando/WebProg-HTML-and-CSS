@@ -34,14 +34,20 @@
   padding: 24px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
-  transition: 0.5s;
-  cursor: pointer;
 }
 
-.wrapper_card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.45);
+@media only screen and (min-width: 768px) {
+  .wrapper_card {
+    flex-basis: 1;
+    max-width: 40%;
+    margin: 16px 24px;
+  }
+}
 
-  transition: 0.5s;
+@media only screen and (max-width: 767px) {
+  .wrapper_card {
+    margin: 16px 0px 16px 0;
+  }
 }
 
 .snumber {
@@ -50,6 +56,7 @@
   font-stretch: normal;
   font-style: normal;
   letter-spacing: 0.07px;
+  color: var(--brand-red);
   color: var(--brand-red);
 }
 .name {
@@ -73,19 +80,7 @@
   color: var(--light-black);
 }
 
-.paracontent_modal {
-  font-family: "DM Sans";
-  font-size: 17px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: -0.36px;
-  color: var(--black);
-  margin-top: 16px;
-}
-
-.card_flex_container {
+.card-flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -93,68 +88,4 @@
 
 .content_wrapper {
   margin-left: 16px;
-}
-.modal {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-  justify-content: center;
-  align-items: center;
-  transition: 5s;
-}
-
-.wrapper_card_modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 12px;
-  padding: 24px 8px;
-  background-color: var(--white);
-  overflow: auto;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.35);
-  transition: 5s;
-}
-
-.content_wrapper_modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.close_button {
-  width: 100%;
-  display: flex;
-  height: 24px;
-  padding-left: 16px;
-  padding-top: 16px;
-  color: var(--black);
-}
-
-@media only screen and (min-width: 768px) {
-  .wrapper_card {
-    flex-basis: 1;
-    max-width: 40%;
-    margin: 16px 24px;
-  }
-  .wrapper_card_modal {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .wrapper_card {
-    margin: 16px 0px 16px 0;
-  }
-  .wrapper_card_modal {
-    width: 85%;
-  }
-}
-.close_button {
-  cursor: pointer;
 }

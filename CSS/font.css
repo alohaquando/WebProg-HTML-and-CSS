@@ -28,10 +28,10 @@ a {
   letter-spacing: -0.41px;
   color: var(--black);
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
 }
 
-a:after {
+/* a:after {
   content: "";
   position: absolute;
   background-color: black;
@@ -44,7 +44,7 @@ a:after {
 
 a:hover:after {
   width: 100%;
-}
+} */
 
 h1 {
   font-family: "DM Sans", sans-serif;
