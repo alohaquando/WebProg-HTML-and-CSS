@@ -1,7 +1,7 @@
 //
   var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
   var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
-  var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
+  var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/);
   // var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$);
   // var zipRegExp = new RegExp(/^\d{4,6}$);
 
@@ -86,13 +86,13 @@ textarea.addEventListener('input',() => {
     const remaining50 = Min_Chars - textarea.value.length;
     let x = textarea.value.length;
     if (x < 50) {
-        remainingCharsText.textContent = ` ${50 - x} more lettrs are needed.`; 
+        remainingCharsText.textContent = ` ${50 - x} more lettrs are needed.`;
     }
     else if (50 < x && x < 500) {
-        remainingCharsText.textContent = `You can type ${500 - x} more letters.`; 
+        remainingCharsText.textContent = `You can type ${500 - x} more letters.`;
     }
     else if (x > 500) {
-        remainingCharsText.textContent = `Deleting ${x - 500} letters is needed.`; 
+        remainingCharsText.textContent = `Deleting ${x - 500} letters is needed.`;
     }
 });
 // name.addEventListener("input",function(event)
