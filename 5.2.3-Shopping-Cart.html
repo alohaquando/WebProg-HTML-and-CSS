@@ -34,14 +34,14 @@
                 value="-"
                 id="minus_airtag"
                 class="value_adjust_button"
-                onclick="change_product_value('-','airtag-value')"
+                onclick="change_product_value('-','airtag_value')"
               /><input
                 type="number"
                 step="1"
                 min="1"
                 max="99"
                 required
-                value="localStorage.getItem(product_name)"
+                value="9"
                 class="product-in-cart-value"
                 id="airtag_value"
               /><input
@@ -49,7 +49,7 @@
                 value="+"
                 id="plus_airtag"
                 class="value_adjust_button"
-                onclick="change_product_value('+','airtag-value')"
+                onclick="change_product_value('+','airtag_value')"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@
                 min="1"
                 max="99"
                 required
-                value="localStorage.getItem(product_name)"
+                value="5"
                 class="product-in-cart-value"
                 id="keyboard_value"
               /><input
@@ -91,7 +91,6 @@
         </div>
         <!-- End Product 2 -->
         <hr />
-
         <div class="styled-input-text">
           <label for="coupon">Coupon</label><br />
           <input
@@ -105,13 +104,19 @@
 
         <div class="total-price">
           <h5>Total</h5>
-          <h1>50.000.000VND</h1>
-          <input type="submit" value="Checkout" />
+          <input
+            value="[total_price] VND"
+            id="total_price"
+            class="total_price_style"
+            readonly
+          />
         </div>
+        <input type="submit" value="Checkout" />
       </form>
     </div>
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
     <script src="script.js"></script>
+    <script src="JS/cart.js"></script>
   </body>
 </html>
