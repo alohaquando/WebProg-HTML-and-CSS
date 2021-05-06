@@ -60,11 +60,15 @@
           preferred typing experience.
         </p>
         <div class="button-primary-and-secondary">
-          <button type="button">
+          <button type="button" onclick="add_to_cart('Keyboard')">
             <a href="5.2.3-Shopping-Cart.html">Buy now</a>
           </button>
-          <button type="button" class="button-secondary">
-            <a href="5.2.3-Shopping-Cart.html">Add to Cart</a>
+          <button
+            type="button"
+            class="button-secondary"
+            onclick="add_to_cart('Keyboard'); show_toast('Keyboard')"
+          >
+            <a>Add to Cart</a>
           </button>
         </div>
       </div>
@@ -118,5 +122,14 @@
     <div id="store_footer"></div>
     <div id="mall_footer"></div>
   </footer>
+
+  <!--Notification when cart is added  -->
+  <div class="toast" id="toast">
+    <div class="toast-elements">
+      <p id="toast-message">Added!</p>
+      <a href="5.2.3-Shopping-Cart.html">View cart</a>
+    </div>
+  </div>
   <div id="cookie-consent-message"></div>
+  <script src="JS/product_cart.js"></script>
 </body>

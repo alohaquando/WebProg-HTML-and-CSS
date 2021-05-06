@@ -49,8 +49,8 @@ String.prototype.getDecimals ||
   jQuery(document).on("updated_wc_div", function () {
     wcqib_refresh_quantity_increments();
   }),
-  jQuery(document).on("click", ".plus, .minus", function () {
-    var a = jQuery(this).closest(".quantity").find(".qty"),
+  jQuery(document).on("click", "#plus, #minus", function () {
+    var a = jQuery(this).find("#product-in-cart-value"),
       b = parseFloat(a.val()),
       c = parseFloat(a.attr("max")),
       d = parseFloat(a.attr("min")),
@@ -60,7 +60,7 @@ String.prototype.getDecimals ||
       ("" !== d && "NaN" !== d) || (d = 0),
       ("any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e)) ||
         (e = 1),
-      jQuery(this).is(".plus")
+      jQuery(this).is("#plus")
         ? c && b >= c
           ? a.val(c)
           : a.val((b + parseFloat(e)).toFixed(e.getDecimals()))
@@ -86,24 +86,3 @@ function close_modal() {
     modal[i].style.display = "none";
   }
 }
-// Add item to cart with noti
-// let addcart = document.querySelectorAll(".button-secondary");
-//
-// for (let i = 0; i < addcart.length; i++) {
-//   addcart[i].addEventListener("click", () => {
-//     console.log("pls ra di, im so tired :((");
-//     alert("Add dc roi thg loz dung bam nua ");
-//   });
-// }
-
-let prodbtn = $(".button-secondary");
-prodbtn.click(function () {
-  $(".prod_list_modal").fadeIn("slow");
-  console.log("Work, please!");
-  setTimeout(function () {
-    $(".prod_list_modal").fadeOut("slow");
-  }, 2000);
-});
-$(".choice").click(function () {
-  $(".prod_list_modal").fadeOut("slow");
-});
