@@ -1,5 +1,7 @@
 .slider{
   box-sizing: border-box;
+  height: auto;
+  width: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -22,7 +24,7 @@
     
 @keyframes slider{
   0%{
-    transform: translateX(0);
+    transform: translateX(20%);
   }
   100%{
     transform: translate(-50%);
