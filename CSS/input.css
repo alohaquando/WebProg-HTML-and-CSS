@@ -391,7 +391,7 @@ input:-ms-input-placeholder {
 }
 
 /* Form submit and reset */
-input[type="reset"] {
+button[type="reset"] {
   outline: 0;
   height: 56px;
   border-radius: 10px;
