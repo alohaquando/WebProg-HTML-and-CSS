@@ -1,10 +1,8 @@
-var nameRegExp = /^[a-zA-Z]{3,}$/;
-var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
-var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
-var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$/);
-
-var atleast3charRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
-
+// var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
+// var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
+// var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
+// var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$/);
+// var atleast3charRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
 
 //for name validation
 function nameValidation(){
@@ -18,15 +16,9 @@ function nameValidation(){
   }
 }
 
-// Step 1: Get the element you want to listen
-// var nameInput = document.getElementById('name').value;
-// console.log(nameInput.value);
-// nameInput.addEventListener('input', nameValidation);
-//
-
 //for email validation
 function emailValidation(){
-  const email = document.getElementById('email');
+  const email = document.getElementById('email').value;
   var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
 
   if (emailRegExp.test(email)) {
@@ -39,6 +31,7 @@ function emailValidation(){
     return false;
   }
 }
+
 //for phone Validation
 function phoneValidation(){
   const phone = document.getElementById('phone');
@@ -53,27 +46,29 @@ function phoneValidation(){
 // for radio validation
 function radioValidation(){
 var valid = false;
+var x = document.getElementById("radio");
 
 for(var i=0;i<x.length;i++){
   if(x[i].checked){
-    valid = true; //valid when only one option is selected
     console.log("yesss")
+    valid = true; //valid when only one option is selected
     break;
   }
   else{
+    console.log("no")
     return false;
   }
  }
 };
 
-const textarea = document.getElementById('Message');
-const remainingCharsText = document.getElementById('remaining-char');
-const Max_Chars = 500;
-const Min_Chars = 50;
+var textarea = document.getElementById('Message');
+var remainingCharsText = document.getElementById('remaining-char');
+var Max_Chars = 500;
+var Min_Chars = 50;
 
 textarea.addEventListener('input',() => {
-    const remaining500 = Max_Chars - textarea.value.length;
-    const remaining50 = Min_Chars - textarea.value.length;
+    var remaining500 = Max_Chars - textarea.value.length;
+    var remaining50 = Min_Chars - textarea.value.length;
     let x = textarea.value.length;
     if (x < 50) {
         remainingCharsText.textContent = ` ${50 - x} more lettrs are needed.`;
@@ -144,11 +139,8 @@ function zipcodevalidation(){
   return false;
 }
 
-// name.addEventListener("input",function(event)
 //Final
 var submit = document.getElementById("contact-submit");
-// console.log(submit);
-// var contactForm = document.getElementById("contact-form");
 
 submit.addEventListener("click", function(e){
   e.preventDefault()
