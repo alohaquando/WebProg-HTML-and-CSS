@@ -74,6 +74,7 @@ button a {
   text-align: center;
   cursor: pointer;
   border: solid 2px var(--black);
+  color: black;
 }
 
 .button-secondary a {

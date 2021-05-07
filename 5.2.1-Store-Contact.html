@@ -21,109 +21,152 @@
         <h2>Contact Ziugei Tech Store</h2>
         <form action="action.php" method="get">
 
-        <h5>Contact purpose</h5>
+          <!-- Contact purpose -->
+          <form class="form" id="form">
+          <div class="styled-select">
+            <label for="purpose">Contact purpose</label>
+            <select name="purpose" id="purpose">
+              <option value="0" disabled selected hidden>
+                Contact purpose... ▾
+              </option>
+              <option value="1">Your Account</option>
+              <option value="2">Your order</option>
+              <option value="3">Shipping & Delivery</option>
+              <option value="4">Return & Refund</option>
+              <option value="5">Payments</option>
+              <option value="6">Product</option>
+              <option value="7">Others</option>
+            </select>
+          </div>
 
-            <div class="custom-select">
-              <select name="category-list" class="styled-select">
-                <option value="0" disabled selected hidden>
-                  Contact purpose... ▾            </option>
+          <!-- Name -->
+          <div class="styled-input-text">
+            <label for="name">Name</label><br/>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              pattern="^[a-zA-Z]{3,}$"/>
+            <!-- <small>Name must be at least 3 letters</small> -->
+          </div>
 
-            <option value="0" selected>Contact purpose</option>
-            <option value="1">Your Account</option>
-            <option value="2">Your order</option>
-            <option value="3">Shipping & Delivery</option>
-            <option value="4">Return & Refund</option>
-            <option value="5">Payments</option>
-            <option value="6">Product</option>
-            <option value="7">Others</option>
-          </select>
-        </div>
+          <!-- Email -->
+          <div class="styled-input-text">
+            <label for="email">Email</label><br/>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+            <!-- <small>Invalid email</small> -->
+          </div>
 
-        <h5>Name</h5>
-        <input type="text" placeholder="Name" />
+          <!-- Phone -->
+          <div class="styled-input-text">
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123 456 789"
+              pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$"
+              required
+            />
+            <!-- <small>Invalid phone number</small> -->
+          </div>
 
-        <h5>Email</h5>
-        <input type="email" placeholder="example@email.com" name="email" />
+          <!-- Contact method -->
+          <div class="styled-radio">
+            <p>Preferred contact method</p>
+            <input
+              type="radio"
+              id="perf_phone"
+              name="perf_contact"
+              value="perf_phone"
+              required
+            />
 
-        <h5>Phone number</h5>
-        <input
-          type="tel"
-          placeholder="123 456 789"
-          name="phone">
+            <label for="perf_phone">Phone</label>
+            <br />
+            <input
+              type="radio"
+              id="perf_email"
+              name="perf_contact"
+              value="perf_email"
+            />
+            <label for="perf_email">Email</label>
+          </div>
 
-        <div class="h5-for-input">
-          <h5>Preferred contact method</h5>
-          <input
-            type="radio"
-            name="perf_contact"
-            value="perf_phone"
-            id="perf_phone"
-          />
-          <label for="perf_phone">Phone </label>
-          <input
-            type="radio"
-            name="perf_contact"
-            value="perf_email"
-            value="perf_email"
-          />
-          <label for="perf_email">Email </label>
-        </div>
+          <!-- Contact days -->
+          <div class="styled-checkbox">
+            <p>Contact days</p>
+            <label class="checkbox"
+              >Monday
+              <input
+                type="checkbox"
+                checked="checked"
+                name="contact_day"
+                id="mon"
+                value="mon"
+              />
+              <span class="checkmark"></span>
+            </label>
 
-        <h5>Contact days</h5>
-        <label class="contain"
-          >Monday
-          <input type="checkbox" checked="checked" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Tuesday
+              <input type="checkbox" name="contact_day" id="tue" value="tue" />
+              <span class="checkmark"></span>
+            </label>
 
-        <label class="contain"
-          >Tuesday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Wednesday
+              <input type="checkbox" name="contact_day" id="wed" value="wed" />
+              <span class="checkmark"></span>
+            </label>
 
-        <label class="contain"
-          >Wednesday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Thursday
+              <input type="checkbox" name="contact_day" id="thu" value="thu" />
+              <span class="checkmark"></span>
+            </label>
 
-        <label class="contain"
-          >Thursday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Friday
+              <input type="checkbox" name="contact_day" id="fri" value="fri" />
+              <span class="checkmark"></span>
+            </label>
 
-        <label class="contain"
-          >Friday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Saturday
+              <input type="checkbox" name="contact_day" id="sat" value="sat" />
+              <span class="checkmark"></span>
+            </label>
 
-        <label class="contain"
-          >Saturday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+            <label class="checkbox"
+              >Sunday
+              <input type="checkbox" name="contact_day" id="sun" value="sun" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
 
-        <label class="contain"
-          >Sunday
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
+          <!-- Message -->
+          <div class="styled-textarea">
+            <label for="message">Message</label><br />
+            <textarea
+              name="Message"
+              id="Message"
+              placeholder="What's your message?"
+              minlength="50"
+              maxlength="500"
+              required
+            ></textarea>
+            <div id = 'remaining-char'></div>
+          </div>
 
-        <h5>Message</h5>
-        <!-- <div class="message">
-          <input
-            type="text"
-            placeholder="What's your message?"
-            name="Message"
-            value="Message"
-          />
-        </div> -->
-        <textarea name="Message" id="comment-box" class="form-control" placeholder="What's your message?" maxlength="300"></textarea>
-        <br>
-        <button input type="submit">Send</button>
+        <button type="submit">Send</button>
         <secondary-button type="reset" value="reset">Reset</secondary-button>
     </form>
     </div>
