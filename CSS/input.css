@@ -11,20 +11,6 @@
   object-fit: cover;
 }
 
-#fname {
-  float: left;
-  margin-right: 10px;
-  width: 158px;
-  height: 56px;
-  margin: 8px 0 0;
-}
-#lname {
-  float: left;
-  width: 158px;
-  height: 56px;
-  margin: 8px 0 0;
-}
-
 .select-arrow {
   pointer-events: none;
   border-width: 8px 5px 0 5px;
@@ -449,7 +435,8 @@ input[type="submit"] {
   margin-top: 48px;
 }
 
-.reveal-if-active {
+/* reveal */
+/* .reveal-if-active {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -457,6 +444,6 @@ input[type="submit"] {
 
 input[type="radio"]:checked ~ .reveal-if-active{
   opacity: 1;
-  max-height: 100px; /* little bit of a magic number :( */
+  max-height: 100%;
   overflow: visible;
-}
+} */
