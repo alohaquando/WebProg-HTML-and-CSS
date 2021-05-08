@@ -36,15 +36,3 @@ function show_toast(pName) {
   ${localStorage.getItem(pName)} ${pName} in cart`;
   setTimeout(hide_toast, 5000);
 }
-
-// Toast on add to cart
-// let prodbtn = $(".button-secondary");
-// prodbtn.click(function () {
-//   $(".toast").fadeIn("0.1s");
-//   setTimeout(function () {
-//     $(".toast").fadeOut("0.1s");
-//   }, 2000);
-// });
-// $(".choice").click(function () {
-//   $(".toast").fadeOut("0.1s");
-// });

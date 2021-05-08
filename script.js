@@ -31,24 +31,14 @@ function close_modal() {
     modal[i].style.display = "none";
   }
 }
-// Add item to cart with noti
-// let addcart = document.querySelectorAll(".button-secondary");
-//
-// for (let i = 0; i < addcart.length; i++) {
-//   addcart[i].addEventListener("click", () => {
-//     console.log("pls ra di, im so tired :((");
-//     alert("Add dc roi thg loz dung bam nua ");
-//   });
-// }
 
-let prodbtn = $(".button-secondary");
-prodbtn.click(function () {
-  $(".prod_list_modal").fadeIn("slow");
-  console.log("Work, please!");
-  setTimeout(function () {
-    $(".prod_list_modal").fadeOut("slow");
-  }, 2000);
-});
-$(".choice").click(function () {
-  $(".prod_list_modal").fadeOut("slow");
-});
+// Hide shopping cart before logged in
+switch (localStorage.getItem("account_state")) {
+  case "in":
+    break;
+  default:
+    document.querySelectorAll(".cart-access")[0].style.display = "none";
+    document.querySelectorAll(".cart-access")[1].style.display = "none";
+
+    break;
+}

@@ -9,17 +9,10 @@
       src="https://kit.fontawesome.com/f43db195aa.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      function openNav() {
-        document.getElementById("sidenav").style.width = "300px";
-        document.body.style.backgroundColor = "white";
-      }
 
-      function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-        document.body.style.backgroundColor = "white";
-      }
-    </script>
+    <script src="JS/logged_in_behavior.js"></script>
+    <script src="JS/mobile_nav.js"></script>
+
   </head>
 
   <body>
@@ -78,13 +71,13 @@
             <li><a href="5.1.5-FAQs.html">FAQs</a></li>
             <li><a href="5.1.6-Contact.html">Contact</a></li>
             <hr class="sidebar_hr" />
-            <li>
+            <li class="cart-access">
               <a href="5.2.3-Shopping-Cart.html"
                 ><i class="fa fa-shopping-cart"></i>‎‎‏‏‎ ‏‏‎ ‎‎Shopping cart</a
               >
             </li>
             <li>
-              <a href="5.1.7-My-account-Logged-in.html"
+              <a href="5.1.7-My-account-Logged-in.html" id="account-text"
                 ><i class="fa fa-user"></i>‎‎‏‏‎ ‏‏‎ ‎‎My account</a
               >
             </li>
@@ -104,15 +97,17 @@
         </div>
         <div class="nav_elements_right">
           <h5 class="nav_cart_icon">
-            <a href="5.2.3-Shopping-Cart.html">
+            <a href="5.2.3-Shopping-Cart.html" class="cart-access">
               <i class="fas fa-shopping-cart"></i>
             </a>
           </h5>
           <a href="5.1.7-My-account-Logged-in.html"
-            ><img src="Asset/avatar.jpg" class="avatar_logged_in"
+            ><img id="account-img" src="Asset/avatar.jpg" class="avatar_logged_in"
           /></a>
         </div>
       </div>
     </nav>
+
+
   </body>
 </html>
