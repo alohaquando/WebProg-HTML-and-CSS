@@ -1,26 +1,17 @@
-// // var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
-// // var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
-// // var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
-// // var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$/);
-// // var atleast3charRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
-//
-// .......................................
 
 var submit = document.getElementById("contact-submit");
 
 submit.addEventListener("click", function(e) {
   e.preventDefault()
-
+  
   if (
     nameValidation() &&
     emailValidation() &&
     phoneValidation() &&
     radioValidation() &&
-    textvalid()
   ) {
     return true;
   } else {
-    alert("Please check your input");
     return false;
   }
 });
@@ -60,41 +51,21 @@ function phoneValidation(){
 
   if (phoneRegExp.test(phone)) {
     return true;
-    console.log("yess")
-
   }
   return false;
-  console.log("no")
-
 }
 
-// for radio validation
-// function radioValidation(){
-// var valid = false;
-// var x = document.getElementById("radio");
+// const textarea = document.getElementById('Message');
+// const remainingCharsText = document.getElementById('remaining-char');
+// const Max_Chars = 500;
+// const Min_Chars = 50;
 //
-// for(var i=0;i<x.length;i++){
-//   if(x[i].checked){
-//     console.log("yesss")
-//     valid = true; //valid when only one option is selected
-//     break;
-//   }
-//   else{
-//     console.log("no")
-//     return false;
-//   }
-//  }
-// };
-
-// var textarea = document.getElementById('Message');
-// var remainingCharsText = document.getElementById('remaining-char');
-// var Max_Chars = 500;
-// var Min_Chars = 50;
+// textarea.addEventListener('input', () => {
 //
-// textarea.addEventListener('input',() => {
-//     var remaining500 = Max_Chars - textarea.value.length;
-//     var remaining50 = Min_Chars - textarea.value.length;
+//     const remaining500 = Max_Chars - textarea.value.length;
+//     const remaining50 = Min_Chars - textarea.value.length;
 //     let x = textarea.value.length;
+//
 //     if (x < 50) {
 //         remainingCharsText.textContent = ` ${50 - x} more lettrs are needed.`;
 //     }
@@ -111,7 +82,7 @@ var remainingCharsText = document.getElementById('remaining-char');
 var Max_Chars = 500;
 var Min_Chars = 50;
 
-textarea.addEventListener('input',textvalid())
+textarea.addEventListener('input',()=>{
 
 function textvalid(){
     var remaining500 = Max_Chars - textarea.value.length;
@@ -126,7 +97,7 @@ function textvalid(){
     else if (x > 500) {
         remainingCharsText.textContent = `Deleting ${x - 500} letters is needed.`;
     }
-}
+});
 
 //for password validation
 function passwordValidation(){
@@ -153,7 +124,6 @@ function conPassword(){
 function atleast3char(){
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
-  var address = document.getElementById("address").value;
   var city = document.getElementById("city").value;
 
   var atleast3charRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
@@ -173,6 +143,17 @@ function atleast3char(){
   else {
     return false;
   }
+}
+
+//for Address
+function addressvalidation(){
+  var address = document.getElementById("address").value;
+  var addressValid = new RegExp(/^[a-zA-Z\ad]{3,}$/)
+
+  if (addressValid.test(address)){
+    return true;
+  }
+  return false;
 }
 
 //for zipcode

@@ -27,6 +27,7 @@
             <option value="0" disabled selected hidden>
               Contact purpose... ▾
             </option>
+
             <option value="1">Your Account</option>
             <option value="2">Your order</option>
             <option value="3">Shipping & Delivery</option>
@@ -45,7 +46,7 @@
             id="name"
             name="name"
             placeholder="Name"
-            pattern="^[a-zA-Z]{3,}$"/>
+            pattern="^[a-zA-Z]{3,}$" required/>
           <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
@@ -86,7 +87,6 @@
             value="perf_phone"
             required
           />
-
           <label for="perf_phone">Phone</label>
           <br />
           <input
@@ -94,6 +94,7 @@
             id="perf_email"
             name="perf_contact"
             value="perf_email"
+            required
           />
           <label for="perf_email">Email</label>
         </div>
@@ -160,7 +161,7 @@
             minlength="50"
             maxlength="500"
             required
-          ></textarea>
+          /></textarea>
           <div id = 'remaining-char'></div>
         </div>
 
