@@ -1,14 +1,3 @@
-// Hide buttons if user not logged in
-switch (localStorage.getItem("account_state")) {
-  case "in":
-    break;
-  default:
-    document.getElementsByClassName(
-      "button-primary-and-secondary"
-    )[0].style.display = "none";
-    break;
-}
-
 // Add product to localStorage
 function add_to_cart(pName) {
   // Define amount
