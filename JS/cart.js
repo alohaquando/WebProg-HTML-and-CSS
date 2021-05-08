@@ -1,12 +1,11 @@
-// Product value adjust
-function change_product_value(operator, product_value_id, localStorageID) {
+// Start Increment/ Decrement
+function change_product_value(operator, product_value_id) {
   let product_amount = parseInt(
     document.getElementById(product_value_id).value
   );
   switch (operator) {
     case "+":
       result = product_amount + 1;
-      localStorage.setItem("");
       break;
     case "-":
       if (product_amount <= 1) {
@@ -18,8 +17,10 @@ function change_product_value(operator, product_value_id, localStorageID) {
   }
   document.getElementById(product_value_id).value = result;
 }
+// Start Increment/ Decrement
 
-// Coupon validate
+// Start Coupon Validation Check
+
 function couponValidation() {
   let status = document.getElementById("coupon_status");
   let coupon = document.getElementById("coupon");
@@ -54,3 +55,18 @@ document.getElementById("coupon").addEventListener("keypress", function (e) {
 document.getElementById("coupon_button").addEventListener("click", function () {
   couponValidation();
 });
+
+// End Coupon Validation Check
+
+// Total Amount Order
+
+function totalPrice() {
+  var total = 0;
+  var quantity = parseInt(
+    document.querySelector("#airtag_value").getAttribute("value")
+  );
+  var price = parseInt(
+    document.querySelector("#airtag_price").getAttribute("value")
+  );
+  total = total + price * quantity;
+}

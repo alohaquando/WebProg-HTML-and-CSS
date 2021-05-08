@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/f43db195aa.js"
       crossorigin="anonymous"
     ></script>
+    <script src="JS/mobile_nav.js"></script>
   </head>
 
   <body>
@@ -26,10 +27,10 @@
             <li><a href="5.2.1-Store-Home.html">Home</a></li>
             <li>
               <div class="dropdown">
-                <button class="dropbtn">
+                <button class="dropbtn" onclick="openProduct()">
                   <h5>Products <i class="fa fa-caret-down"></i></h5>
                 </button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id="openprod">
                   <a href="5.2.2-BrowseProductCategory.html"
                     >‎Products by Category</a
                   >
