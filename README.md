@@ -22,8 +22,8 @@ Our footer sticks to the bottom by making the whole body a flexbox, and then mak
 - Copy the following code to your `<head>`
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="script.js"></script><script src="JS/1-cookie.js"></script>
+
+<script src="JS/load-header-and-footer.js"></script><script src="JS/1-cookie.js"></script>
 
 ```
 
