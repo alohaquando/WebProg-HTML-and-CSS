@@ -94,6 +94,9 @@ function textvalid(){
     }
 });
 
+var password = document.getElementById("password").value;
+var confirmPassword = document.getElementById("confirmpassword").value;
+
 //for password validation
 function passwordValidation(){
   var passwordRegExp = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}$/);
@@ -107,10 +110,9 @@ function passwordValidation(){
 }
 
 function conPassword(){
-  var password = document.getElementById("password");
-  var confirmPassword = document.getElementById("confirmpassword");
 
   if (password != confirmpassword){
+    document.getElementById("confirmpassword").style.border = "#fe6c6c";
     document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
@@ -131,9 +133,6 @@ function atleast3char(){
   if (atleast3charRegExp.test(lname)){
     return true;
   }
-  if (atleast3charRegExp.test(address)){
-    return true;
-  }
   if (atleast3charRegExp.test(city)){
     return true;
   }
@@ -151,7 +150,10 @@ function addressvalidation(){
   if (addressValid.test(address)){
     return true;
   }
-  return false;
+  else {
+    document.getElementById("error").innerHTML = name.errorMessage;
+    return false;
+  }
 }
 
 //for zipcode
@@ -162,11 +164,14 @@ function zipcodevalidation(){
   if(zipRegExp.test(zipcode)){
     return true;
   }
-  return false;
+  else{
+    document.getElementById("error").innerHTML = name.errorMessage;
+    return false;
+  }
 }
 
 //for the additional fields
-var hiddenfields = document.getElementById("hidden");
+var hiddenfields = document.getElementByClassName("reveal-if-active");
 
 function hiddenfield(){
   if (document.getElementById("perf_email").checked){

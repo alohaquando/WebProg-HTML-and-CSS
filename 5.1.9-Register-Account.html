@@ -9,6 +9,7 @@
   <link href="CSS/main.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="input.js"></script>
   <script src="script.js"></script>
 </head>
 
@@ -48,7 +49,7 @@
         <!-- passowrd -->
         <div class="styled-input-text">
           <h5>password</h5>
-          <input type="password" name="password" id="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}" required />
+          <input type="password" name="password" id="password" placeholder="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$" required />
           <p id="error"></p>
 
         </div>
@@ -356,30 +357,10 @@
           </select>
         </div>
 
-        <!-- Contact method -->
-        <!-- <div class="styled-radio">
-          <p>I am a...</p>
-          <input
-            type="radio"
-            id="shopper"
-            name="perf_contact"
-            value="shopper"
-            required
-          />
-          <label for="perf_phone">Shopper</label>
-
-          <br />
-          <input
-            type="radio"
-            id="store owner"
-            name="perf_contact"
-            value="store owner"
-          />
-          <label for="perf_email">Store owner</label>
-        </div> -->
+        <br>
 
         <div class="styled-radio">
-          <p>Preferred contact method</p>
+          <p>I am a...</p>
           <input
             type="radio"
             id="perf_phone"
@@ -387,6 +368,7 @@
             value="perf_phone"
             required
           />
+
           <label for="perf_phone">Shopper</label>
           <br />
           <input
@@ -425,11 +407,13 @@
             </div>
           </div>
         </div>
+
     </div>
     <button input type="submit" id="register-submit">Create account</button>
     <button type="reset" value="reset">Reset</button>
     </form>
+    <footer id="mall_footer"></footer>
 </body>
-<footer id="mall_footer"></footer>
+
 
 </html>
