@@ -115,3 +115,7 @@ switch (localStorage.getItem("Keyboard")) {
   </div>`;
     break;
 }
+
+// Hide add to cart button on product page when user is not logged in
+document.querySelector("#product-cart-button").style.display = "none";
+break;
