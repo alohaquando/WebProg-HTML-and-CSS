@@ -66,7 +66,7 @@ document.getElementById(
 		>
 	  </li>
 	  <li>
-		<a href="5.1.7-My-account-Logged-in.html"  id="account-access-mobile"
+		<a href="5.1.7-My-account-Logged-in.html" id="account-text" id="account-access-mobile"
 		  ><i class="fa fa-user"></i>‎‎‏‏‎ ‏‏‎ ‎‎My account</a
 		>
 	  </li>
