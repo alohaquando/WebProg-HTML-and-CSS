@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
     <script src="script.js"></script>
     <script src="JS/cookie.js"></script>
   </head>
@@ -21,6 +22,7 @@
       <!-- Begin form -->
       <form action="action.php" method="get">
         <!-- Contact purpose -->
+        <form class="form" id="form">
         <div class="styled-select">
           <label for="purpose">Contact purpose</label>
           <select name="purpose" id="purpose">
@@ -39,14 +41,13 @@
 
         <!-- Name -->
         <div class="styled-input-text">
-          <label for="name">Name</label><br />
+          <label for="name">Name</label><br/>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
-            required
-          />
+            placeholder="Name"/>
+          <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
         <!-- Email -->
@@ -59,6 +60,7 @@
             placeholder="youremail@domain.com"
             required
           />
+          <!-- <small>Invalid email</small> -->
         </div>
 
         <!-- Phone -->
@@ -71,6 +73,7 @@
             placeholder="123 456 789"
             required
           />
+          <!-- <small>Invalid phone number</small> -->
         </div>
 
         <!-- Contact method -->
@@ -153,19 +156,22 @@
             name="Message"
             id="Message"
             placeholder="What's your message?"
-            maxlength="300"
+            minlength="50"
+            maxlength="500"
             required
           ></textarea>
         </div>
 
         <!-- Buttons - Submit -->
         <div class="form-buttons">
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit" onsubmit="return validate()"/>
           <input type="reset" />
         </div>
       </form>
     </div>
     <footer id="mall_footer"></footer>
+    <script src="input.js"></script>
+
     <div id="cookie-consent-message"></div>
   </body>
 </html>
