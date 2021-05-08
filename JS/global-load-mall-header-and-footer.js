@@ -33,6 +33,7 @@ document.getElementById(
 		  </div>
 		</li>
 		<li><a href="5.1.2-Aboutus.html">About us</a></li>
+		<li><a href="5.1.4-Fees.html">Fees</a></li>
 		<li><a href="5.1.5-FAQs.html">FAQs</a></li>
 		<li><a href="5.1.6-Contact.html">Contact</a></li>
 	  </ul>
@@ -57,6 +58,7 @@ document.getElementById(
 	  </li>
 
 	  <li><a href="5.1.2-Aboutus.html">About us</a></li>
+	  <li><a href="5.1.4-Fees.html">Fees</a></li>
 	  <li><a href="5.1.5-FAQs.html">FAQs</a></li>
 	  <li><a href="5.1.6-Contact.html">Contact</a></li>
 	  <hr class="sidebar_hr" />
