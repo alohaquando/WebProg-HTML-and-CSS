@@ -1,12 +1,13 @@
-if (localStorage.getItem("cookie_state") == "accepted") {
-} else if (localStorage.getItem("cookie_state") == "rejected") {
-  $(function () {
-    $("#cookie-consent-message").load("./cookie-consent.html");
-  });
-} else {
-  $(function () {
-    $("#cookie-consent-message").load("./cookie-consent.html");
-  });
+switch (localStorage.getItem("cookie_state")) {
+  case "accepted":
+    break;
+  case "rejected":
+    break;
+  default:
+    $(function () {
+      $("#cookie-consent-message").load("./cookie-consent.html");
+    });
+    break;
 }
 
 function accept_cookie() {
