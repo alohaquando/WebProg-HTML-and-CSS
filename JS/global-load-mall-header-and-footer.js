@@ -66,7 +66,7 @@ document.getElementById(
 		>
 	  </li>
 	  <li>
-		<a href="5.1.7-My-account-Logged-in.html" id="account-text"
+		<a href="5.1.7-My-account-Logged-in.html"  id="account-access-mobile"
 		  ><i class="fa fa-user"></i>‎‎‏‏‎ ‏‏‎ ‎‎My account</a
 		>
 	  </li>
@@ -90,7 +90,7 @@ document.getElementById(
 		<i class="fas fa-shopping-cart"></i>
 	  </a>
 	</h5>
-	<a href="5.1.7-My-account-Logged-in.html"
+	<a href="5.1.7-My-account-Logged-in.html" id="account-access-desktop"
 	  ><img id="account-img" src="Asset/avatar.jpg" class="avatar_logged_in"
 	/></a>
   </div>
