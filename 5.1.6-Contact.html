@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Contact Mall</title>
-    <link rel="stylesheet" href="CSS/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="input.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <header id="nav_header"></header>
-    <div class="body_spacing">
-      <!-- Header -->
-<div class="HeaderH1_Left_With_Spacing">
-        <h1>Contact Us • Marché! Mall</h1>
-        <p>We're right here to help</p>
-      </div>
 
-      <!-- Begin form -->
-      <form id="contact-form" action="action.php" method="get">
-        <!-- Contact purpose -->
-        <form class="form" id="form">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Mall</title>
+  <link rel="stylesheet" href="CSS/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header id="nav_header"></header>
+  <div class="body_spacing">
+    <!-- Header -->
+    <div class="HeaderH1_Left_With_Spacing">
+      <h1>Contact Us • Marché! Mall</h1>
+      <p>We're right here to help</p>
+    </div>
+
+    <!-- Begin form -->
+    <form id="contact-form" action="action.php" method="get">
+      <!-- Contact purpose -->
+      <form class="form" id="form">
         <div class="styled-select">
           <label for="purpose">Contact purpose</label>
           <select name="purpose" id="purpose">
@@ -41,112 +41,69 @@
 
         <!-- Name -->
         <div class="styled-input-text">
-          <label for="name">Name</label><br/>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            pattern="^[a-zA-Z]{3,}$" required/>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" placeholder="Name" pattern="^[a-zA-Z]{3,}$" required />
           <!-- <small>Name must be at least 3 letters</small> -->
         </div>
 
         <!-- Email -->
         <div class="styled-input-text">
-          <label for="email">Email</label><br/>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@email.com"
-            required
-          />
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
           <!-- <small>Invalid email</small> -->
         </div>
 
         <!-- Phone -->
         <div class="styled-input-text">
           <label for="phone">Phone number</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="123 456 789"
-            pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$"
-            required
-          />
+          <input type="tel" id="phone" name="phone" placeholder="123 456 789" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" required />
           <!-- <small>Invalid phone number</small> -->
         </div>
 
         <!-- Contact method -->
         <div class="styled-radio">
           <p>Preferred contact method</p>
-          <input
-            type="radio"
-            id="perf_phone"
-            name="perf_contact"
-            value="perf_phone"
-            required
-          />
+          <input type="radio" id="perf_phone" name="perf_contact" value="perf_phone" required />
           <label for="perf_phone">Phone</label>
           <br />
-          <input
-            type="radio"
-            id="perf_email"
-            name="perf_contact"
-            value="perf_email"
-            required
-          />
+          <input type="radio" id="perf_email" name="perf_contact" value="perf_email" required />
           <label for="perf_email">Email</label>
         </div>
 
         <!-- Contact days -->
         <div class="styled-checkbox">
           <p>Contact days</p>
-          <label class="checkbox"
-            >Monday
-            <input
-              type="checkbox"
-              checked="checked"
-              name="contact_day"
-              id="mon"
-              value="mon"
-            />
+          <label class="checkbox">Monday
+            <input type="checkbox" checked="checked" name="contact_day" id="mon" value="mon" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Tuesday
+          <label class="checkbox">Tuesday
             <input type="checkbox" name="contact_day" id="tue" value="tue" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Wednesday
+          <label class="checkbox">Wednesday
             <input type="checkbox" name="contact_day" id="wed" value="wed" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Thursday
+          <label class="checkbox">Thursday
             <input type="checkbox" name="contact_day" id="thu" value="thu" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Friday
+          <label class="checkbox">Friday
             <input type="checkbox" name="contact_day" id="fri" value="fri" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Saturday
+          <label class="checkbox">Saturday
             <input type="checkbox" name="contact_day" id="sat" value="sat" />
             <span class="checkmark"></span>
           </label>
 
-          <label class="checkbox"
-            >Sunday
+          <label class="checkbox">Sunday
             <input type="checkbox" name="contact_day" id="sun" value="sun" />
             <span class="checkmark"></span>
           </label>
@@ -155,15 +112,8 @@
         <!-- Message -->
         <div class="styled-textarea">
           <label for="message">Message</label><br />
-          <textarea
-            name="Message"
-            id="Message"
-            placeholder="What's your message?"
-            minlength="50"
-            maxlength="500"
-            required
-          /></textarea>
-          <div id = 'remaining-char'></div>
+          <textarea name="Message" id="Message" placeholder="What's your message?" minlength="50" maxlength="500" required /></textarea>
+          <div id='remaining-char'></div>
         </div>
 
         <!-- Buttons - Submit -->
@@ -173,8 +123,11 @@
         </div>
 
       </form>
-    </div>
-    <footer id="mall_footer"></footer>
-  </body>
+  </div>
+  <footer id="mall_footer"></footer>
+
+</body>
+<script src="input.js"></script>
+<script src="script.js"></script>
 
 </html>

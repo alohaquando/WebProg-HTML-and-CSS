@@ -1,34 +1,4 @@
-var submit_contact = document.getElementById("contact-submit");
-submit.addEventListener("click", function(e) {
-  e.preventDefault()
 
-  if (
-    nameValidation() &&
-    emailValidation() &&
-    phoneValidation() &&
-  ) {
-    return true;
-  } else {
-    alert("Please check your information");
-    return false;
-  }
-});
-
-var submit_register = document.getElementById("register-submit");
-submit.addEventListener("click", function(e) {
-  e.preventDefault()
-
-  if (
-    nameValidation() &&
-    emailValidation() &&
-    phoneValidation() &&
-  ) {
-    return true;
-  } else {
-    alert("no");
-    return false;
-  }
-});
 
 var errorMessage = "Please check your information again";
 
@@ -55,6 +25,7 @@ function emailValidation(){
   }
 
   else {
+    console.log("noooo");
     document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
@@ -77,9 +48,7 @@ var remainingCharsText = document.getElementById('remaining-char');
 var Max_Chars = 500;
 var Min_Chars = 50;
 
-textarea.addEventListener('input',()=>{
-
-function textvalid(){
+textarea.addEventListener('input', () =>{
     var remaining500 = Max_Chars - textarea.value.length;
     var remaining50 = Min_Chars - textarea.value.length;
     let x = textarea.value.length;
@@ -169,12 +138,35 @@ function zipcodevalidation(){
     return false;
   }
 }
-
-//for the additional fields
-var hiddenfields = document.getElementByClassName("reveal-if-active");
-
-function hiddenfield(){
-  if (document.getElementById("perf_email").checked){
-    document.getElementById("perf_email").innerHTML = hiddenfields;
-  }
-}
+//
+// var submit_contact = document.getElementById("contact-submit");
+// submit.addEventListener("click", function(e) {
+//   e.preventDefault()
+//
+//   if (
+//     nameValidation() &&
+//     emailValidation() &&
+//     phoneValidation() &&
+//   ) {
+//     return true;
+//   } else {
+//     alert("Please check your information");
+//     return false;
+//   }
+// });
+//
+// var submit_register = document.getElementById("register-submit");
+// submit.addEventListener("click", function(e) {
+//   e.preventDefault()
+//
+//   if (
+//     nameValidation() &&
+//     emailValidation() &&
+//     phoneValidation() &&
+//   ) {
+//     return true;
+//   } else {
+//     alert("no");
+//     return false;
+//   }
+// });

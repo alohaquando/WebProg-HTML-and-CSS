@@ -9,8 +9,7 @@
   <link href="CSS/main.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="input.js"></script>
-  <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -27,16 +26,11 @@
         <!-- <div class="items"> -->
         <h4>Account</h4>
 
+        <!-- Email -->
         <div class="styled-input-text">
-          <label for="email">Email</label><br/>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@email.com"
-            required
-          />
-          <p id="error"></p>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+          <!-- <small>Invalid email</small> -->
         </div>
 
         <!-- Phone -->
@@ -72,7 +66,7 @@
         <div class="styled-input-text">
           <!-- <div class="name"> -->
           <h5><label for="fname">First name</label></h5>
-          <input type="text" id="fname" placeholder="First name" name="fname" pattern = "[\da-zA-Z\s]{3,}">
+          <input type="text" id="fname" placeholder="First name" name="fname" pattern="[\da-zA-Z\s]{3,}">
           <p id="error"></p>
 
         </div>
@@ -80,16 +74,16 @@
         <!-- last name -->
         <div class="styled-input-text">
           <h5><label for="lname">Last name</label></h5>
-          <input type="text" id="lname" placeholder="Last name" name="lname" pattern = "[a-zA-Z\s]{3,}">
+          <input type="text" id="lname" placeholder="Last name" name="lname" pattern="[a-zA-Z\s]{3,}">
           <p id="error"></p>
 
         </div>
 
         <div class="styled-input-text">
           <h5>Address</h5>
-          <input type="text" id="address" placeholder="123 Street" name="address" pattern = "[a-zA-Z0-9\s]{3,}">
+          <input type="text" id="address" placeholder="123 Street" name="address" pattern="[a-zA-Z0-9\s]{3,}">
           <h5>city</h5>
-          <input type="text" id="city" placeholder="New York" name="city" pattern = "[a-zA-Z\s]{3,}">
+          <input type="text" id="city" placeholder="New York" name="city" pattern="[a-zA-Z\s]{3,}">
           <p id="error"></p>
 
           <h5>zipcode</h5>
@@ -361,28 +355,19 @@
 
         <div class="styled-radio">
           <p>I am a...</p>
-          <input
-            type="radio"
-            id="perf_phone"
-            name="perf_contact"
-            value="perf_phone"
-            required
-          />
+          <input type="radio" id="perf_phone" name="perf_contact" value="perf_phone" required />
 
           <label for="perf_phone">Shopper</label>
           <br />
-          <input
-            type="radio"
-            id="perf_email"
-            name="perf_contact"
-            value="perf_email"
-          />
-          <label for="perf_email">Store owner</label>
         </div>
+
+          <input type="radio" id="perf_email" name="perf_contact" value="perf_email" />
+          <label for="perf_email">Store owner</label>
 
 
         <!-- additional fields for store owner -->
-        <div class="reveal-if-active" id="hidden">
+        <div class="reveal-if-active">
+
           <div class="h5-for-input">
             <h5>Business name</h5>
             <input type="text" name="bus_name" id="bus_name" placeholder="Awesome Business" />
@@ -408,12 +393,15 @@
           </div>
         </div>
 
+
     </div>
     <button input type="submit" id="register-submit">Create account</button>
     <button type="reset" value="reset">Reset</button>
     </form>
     <footer id="mall_footer"></footer>
-</body>
 
+</body>
+<script src="input.js"></script>
+<script src="script.js"></script>
 
 </html>
