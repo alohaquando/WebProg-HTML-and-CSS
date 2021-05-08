@@ -41,7 +41,7 @@
                 min="1"
                 max="99"
                 required
-                value="9"
+                value="1"
                 class="product-in-cart-value"
                 id="airtag_value"
               /><input
@@ -69,14 +69,14 @@
                 value="-"
                 id="minus_keyboard"
                 class="value_adjust_button"
-                onclick="change_product_value('-','keyboard-value')"
+                onclick="change_product_value('-','keyboard_value')"
               /><input
                 type="number"
                 step="1"
                 min="1"
                 max="99"
                 required
-                value="5"
+                value="1"
                 class="product-in-cart-value"
                 id="keyboard_value"
               /><input
@@ -84,23 +84,13 @@
                 value="+"
                 id="plus_keyboard"
                 class="value_adjust_button"
-                onclick="change_product_value('+','keyboard-value')"
+                onclick="change_product_value('+','keyboard_value')"
               />
             </div>
           </div>
         </div>
         <!-- End Product 2 -->
         <hr />
-        <div class="styled-input-text">
-          <label for="coupon">Coupon</label><br />
-          <input
-            type="text"
-            id="coupon"
-            name="coupon"
-            placeholder="Enter your coupon • COSC2430-HD / COSC2430-DI"
-            optional
-          />
-        </div>
 
         <div class="total-price">
           <h5>Total</h5>
@@ -113,6 +103,21 @@
         </div>
         <input type="submit" value="Checkout" />
       </form>
+      <hr />
+      <div class="styled-input-text">
+        <label for="coupon">Coupon</label><br />
+        <input
+          type="text"
+          id="coupon"
+          name="coupon"
+          placeholder="Press ENTER to apply your coupon"
+          optional
+        />
+        <div id="coupon_status"></div>
+        <button class="button-secondary" id="coupon_button">
+          Apply coupon
+        </button>
+      </div>
     </div>
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
