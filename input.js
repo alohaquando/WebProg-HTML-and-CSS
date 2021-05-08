@@ -1,20 +1,36 @@
-
-var submit = document.getElementById("contact-submit");
-
+var submit_contact = document.getElementById("contact-submit");
 submit.addEventListener("click", function(e) {
   e.preventDefault()
-  
+
   if (
     nameValidation() &&
     emailValidation() &&
     phoneValidation() &&
-    radioValidation() &&
   ) {
     return true;
   } else {
+    alert("Please check your information");
     return false;
   }
 });
+
+var submit_register = document.getElementById("register-submit");
+submit.addEventListener("click", function(e) {
+  e.preventDefault()
+
+  if (
+    nameValidation() &&
+    emailValidation() &&
+    phoneValidation() &&
+  ) {
+    return true;
+  } else {
+    alert("no");
+    return false;
+  }
+});
+
+var errorMessage = "Please check your information again";
 
 //for name validation
 function nameValidation(){
@@ -24,6 +40,7 @@ function nameValidation(){
   if (nameRegExp.test(name)){
     return true;
   } else{
+    document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
 }
@@ -34,12 +51,11 @@ function emailValidation(){
   var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
 
   if (emailRegExp.test(email)) {
-    console.log("no")
     return true;
   }
 
   else {
-    console.log("yes")
+    document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
 }
@@ -52,30 +68,9 @@ function phoneValidation(){
   if (phoneRegExp.test(phone)) {
     return true;
   }
+  document.getElementById("error").innerHTML = name.errorMessage;
   return false;
 }
-
-// const textarea = document.getElementById('Message');
-// const remainingCharsText = document.getElementById('remaining-char');
-// const Max_Chars = 500;
-// const Min_Chars = 50;
-//
-// textarea.addEventListener('input', () => {
-//
-//     const remaining500 = Max_Chars - textarea.value.length;
-//     const remaining50 = Min_Chars - textarea.value.length;
-//     let x = textarea.value.length;
-//
-//     if (x < 50) {
-//         remainingCharsText.textContent = ` ${50 - x} more lettrs are needed.`;
-//     }
-//     else if (50 < x && x < 500) {
-//         remainingCharsText.textContent = `You can type ${500 - x} more letters.`;
-//     }
-//     else if (x > 500) {
-//         remainingCharsText.textContent = `Deleting ${x - 500} letters is needed.`;
-//     }
-// });
 
 var textarea = document.getElementById('Message');
 var remainingCharsText = document.getElementById('remaining-char');
@@ -107,6 +102,7 @@ function passwordValidation(){
   if (passwordRegExp.test(password)){
     return true;
   }
+  document.getElementById("error").innerHTML = name.errorMessage;
   return false;
 }
 
@@ -115,6 +111,7 @@ function conPassword(){
   var confirmPassword = document.getElementById("confirmpassword");
 
   if (password != confirmpassword){
+    document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
   return true;
@@ -126,7 +123,7 @@ function atleast3char(){
   var lname = document.getElementById("lname").value;
   var city = document.getElementById("city").value;
 
-  var atleast3charRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
+  var atleast3charRegExp = new RegExp(/^[a-zA-Z\s]{3,}$/);
 
   if (atleast3charRegExp.test(fname)){
     return true;
@@ -141,6 +138,7 @@ function atleast3char(){
     return true;
   }
   else {
+    document.getElementById("error").innerHTML = name.errorMessage;
     return false;
   }
 }
@@ -148,7 +146,7 @@ function atleast3char(){
 //for Address
 function addressvalidation(){
   var address = document.getElementById("address").value;
-  var addressValid = new RegExp(/^[a-zA-Z\ad]{3,}$/)
+  var addressValid = new RegExp(/^[a-zA-Z0-9\s]{3,}$/)
 
   if (addressValid.test(address)){
     return true;
@@ -165,4 +163,13 @@ function zipcodevalidation(){
     return true;
   }
   return false;
+}
+
+//for the additional fields
+var hiddenfields = document.getElementById("hidden");
+
+function hiddenfield(){
+  if (document.getElementById("perf_email").checked){
+    document.getElementById("perf_email").innerHTML = hiddenfields;
+  }
 }

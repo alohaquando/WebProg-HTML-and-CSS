@@ -35,26 +35,30 @@
             placeholder="example@email.com"
             required
           />
-          <!-- <small>Invalid email</small> -->
+          <p id="error"></p>
         </div>
 
         <!-- Phone -->
         <div class="styled-input-text">
           <label for="phone">Phone number</label>
           <input type="tel" id="phone" name="phone" placeholder="123 456 789" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" required />
-          <!-- <small>Invalid phone number</small> -->
+          <p id="error"></p>
         </div>
 
         <!-- passowrd -->
         <div class="styled-input-text">
           <h5>password</h5>
-          <input type="password" name="password" id="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,20}" required />
+          <input type="password" name="password" id="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}" required />
+          <p id="error"></p>
+
         </div>
 
         <!-- confirm passowrd -->
         <div class="styled-input-text">
           <h5>Confirm password</h5>
-          <input type="password" name="con_password" id="confirmpassword" placeholder="confirm password" required />
+          <input type="password" name="con_password" id="confirmpassword" placeholder="confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}" required />
+          <p id="error"></p>
+
         </div>
 
 
@@ -67,29 +71,39 @@
         <div class="styled-input-text">
           <!-- <div class="name"> -->
           <h5><label for="fname">First name</label></h5>
-          <input type="text" id="fname" placeholder="First name" name="fname" pattern = "[\da-zA-Z]{3,}">
+          <input type="text" id="fname" placeholder="First name" name="fname" pattern = "[\da-zA-Z\s]{3,}">
+          <p id="error"></p>
+
         </div>
 
         <!-- last name -->
         <div class="styled-input-text">
           <h5><label for="lname">Last name</label></h5>
-          <input type="text" id="lname" placeholder="Last name" name="lname" pattern = "[a-zA-Z]{3,}">
+          <input type="text" id="lname" placeholder="Last name" name="lname" pattern = "[a-zA-Z\s]{3,}">
+          <p id="error"></p>
+
         </div>
 
         <div class="styled-input-text">
           <h5>Address</h5>
-          <input type="text" id="address" placeholder="123 Street" name="address" pattern = "[a-zA-Z]{3,}">
+          <input type="text" id="address" placeholder="123 Street" name="address" pattern = "[a-zA-Z0-9\s]{3,}">
           <h5>city</h5>
-          <input type="text" id="city" placeholder="New York" name="city" pattern = "[a-zA-Z]{3,}">
+          <input type="text" id="city" placeholder="New York" name="city" pattern = "[a-zA-Z\s]{3,}">
+          <p id="error"></p>
 
           <h5>zipcode</h5>
           <input type="text" id="zipcode" placeholder="000000" pattern="[0-9]{4,6}">
+          <p id="error"></p>
+
         </div>
 
-        <h5>Country</h5>
-        <div class="custom-select">
-          <select name='category-list' class="styled-select">
-            <option>select country... ▾</option>
+        <div class="styled-select">
+          <label for="purpose">Contact purpose</label>
+          <select name="purpose" id="purpose">
+            <option value="0" disabled selected hidden>
+              Select country... ▾
+            </option>
+
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
             <option value="AL">Albania</option>
@@ -386,7 +400,7 @@
 
 
         <!-- additional fields for store owner -->
-        <div class="reveal-if-active">
+        <div class="reveal-if-active" id="hidden">
           <div class="h5-for-input">
             <h5>Business name</h5>
             <input type="text" name="bus_name" id="bus_name" placeholder="Awesome Business" />
@@ -412,8 +426,8 @@
           </div>
         </div>
     </div>
-    <button input type="submit">Create account</button>
-    <button type="reset" value="reset">Reset</secondary-button>
+    <button input type="submit" id="register-submit">Create account</button>
+    <button type="reset" value="reset">Reset</button>
     </form>
 </body>
 <footer id="mall_footer"></footer>
