@@ -1,3 +1,7 @@
+// -----------------------------
+// HIDE ITEMS BEFORE LOGGING IN
+// -----------------------------
+
 // Hide shopping cart before logged in
 switch (localStorage.getItem("account_state")) {
   case "in":
