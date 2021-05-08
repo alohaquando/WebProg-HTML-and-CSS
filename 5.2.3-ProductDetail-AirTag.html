@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="script.js"></script>
+
     <script src="JS/cookie.js"></script>
   </head>
 </html>
@@ -53,54 +53,60 @@
         </p>
         <div class="button-primary-and-secondary">
           <button type="button">
-            <a href="5.2.3-Shopping-Cart.html">Buy now</a>
+            <a onclick="add_to_cart('Airtag')" href="5.2.3-Shopping-Cart.html"
+              >Buy now</a
+            >
           </button>
-          <button type="button" class="button-secondary">
-            <a href="5.2.3-Shopping-Cart.html">Add to Cart</a>
+          <button
+            type="button"
+            class="button-secondary"
+            onclick="add_to_cart('Airtag'); show_toast('Airtag')"
+          >
+            <a>Add to Cart</a>
           </button>
         </div>
       </div>
-    </div>
 
-    <!-- Recommended Products -->
-    <br />
-    <hr />
-    <div class="small-container">
-      <h3>Recommended products</h3>
-      <div class="row">
-        <div class="col-4 store-card">
-          <a href="5.2.3-ProductDetail.html">
-            <img src="Asset/keyboard1.jpg" />
-            <h4>Razer Elite Keyboard</h4>
-            <p class="CaptionBlackXS">Razer</p>
-            <p class="CaptionBlackSmall">1.000.000 VND</p>
-          </a>
-        </div>
-        <div class="col-4 store-card">
-          <a href="5.2.3-ProductDetail.html">
-            <img src="Asset/keyboard3.jpg" />
-            <h4>Razer Cynosa</h4>
-            <p class="CaptionBlackXS">Store C</p>
-            <p class="CaptionBlackSmall">3.000.000 VND</p>
-          </a>
-        </div>
+      <!-- Recommended Products -->
+      <br />
+      <hr />
+      <div class="small-container">
+        <h3>Recommended products</h3>
+        <div class="row">
+          <div class="col-4 store-card">
+            <a href="5.2.3-ProductDetail.html">
+              <img src="Asset/keyboard1.jpg" />
+              <h4>Razer Elite Keyboard</h4>
+              <p class="CaptionBlackXS">Razer</p>
+              <p class="CaptionBlackSmall">1.000.000 VND</p>
+            </a>
+          </div>
+          <div class="col-4 store-card">
+            <a href="5.2.3-ProductDetail.html">
+              <img src="Asset/keyboard3.jpg" />
+              <h4>Razer Cynosa</h4>
+              <p class="CaptionBlackXS">Store C</p>
+              <p class="CaptionBlackSmall">3.000.000 VND</p>
+            </a>
+          </div>
 
-        <div class="col-4 store-card">
-          <a href="5.2.3-ProductDetail.html">
-            <img src="Asset/headphone4.jpg" />
-            <h4>Razer Nari</h4>
-            <p class="CaptionBlackXS">Store K</p>
-            <p class="CaptionBlackSmall">3.100.000 VND</p>
-          </a>
-        </div>
+          <div class="col-4 store-card">
+            <a href="5.2.3-ProductDetail.html">
+              <img src="Asset/headphone4.jpg" />
+              <h4>Razer Nari</h4>
+              <p class="CaptionBlackXS">Store K</p>
+              <p class="CaptionBlackSmall">3.100.000 VND</p>
+            </a>
+          </div>
 
-        <div class="col-4 store-card">
-          <a href="5.2.3-ProductDetail.html">
-            <img src="Asset/headphone5.jpg" />
-            <h4>Razer Kaira</h4>
-            <p class="CaptionBlackXS">Store L</p>
-            <p class="CaptionBlackSmall">4.100.000 VND</p>
-          </a>
+          <div class="col-4 store-card">
+            <a href="5.2.3-ProductDetail.html">
+              <img src="Asset/headphone5.jpg" />
+              <h4>Razer Kaira</h4>
+              <p class="CaptionBlackXS">Store L</p>
+              <p class="CaptionBlackSmall">4.100.000 VND</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -110,5 +116,17 @@
     <div id="store_footer"></div>
     <div id="mall_footer"></div>
   </footer>
+
+  <!--Notification when cart is added  -->
+  <div class="toast" id="toast">
+    <div class="toast-elements">
+      <p id="toast-message">Added!</p>
+      <a href="5.2.3-Shopping-Cart.html">View cart</a>
+    </div>
+  </div>
+
+  <!-- Scripts and cookies -->
   <div id="cookie-consent-message"></div>
+  <script src="script.js"></script>
+  <script src="JS/product_cart.js"></script>
 </body>

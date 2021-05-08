@@ -13,96 +13,115 @@
   <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
-      <h5>
-        <a href="javascript:history.go(-1)">
-          <span class="checkicon2"><i class="fas fa-angle-left"></i> </span>
-          Continue Shopping
-        </a>
-      </h5>
-      <h3>Your cart</h3>
-      <div class="cart-wrapper">
-        <div class="product-name">
-          <h4 class="name-edit">Razer Laptop</h4>
-          <h5 class="font-edit">Razer</h5>
-          <p class="para-edit">25.000.000VND</p>
-          <div class="button-wrap">
-            <div class="quantity buttons_added">
-              <input type="button" value="-" class="minus" /><input
+      <form action="5.2.4-Order-Placement-Thank-you.html" method="get">
+        <h5>
+          <a href="javascript:history.go(-1)">
+            <i class="fas fa-angle-left"></i>
+            ‎ ‏‎ ‏Continue Shopping
+          </a>
+        </h5>
+        <h3>Your cart</h3>
+        <!-- Product -->
+        <div class="product-in-cart">
+          <img src="Asset/airtag3.webp" />
+          <div class="product-in-cart-detail">
+            <h4>Apple AirTag</h4>
+            <p class="CaptionBlackXS">Apple</p>
+            <p class="CaptionBlackSmall">799.000 VND</p>
+            <div class="product-in-cart-buttons">
+              <input
+                type="button"
+                value="-"
+                id="minus_airtag"
+                class="value_adjust_button"
+                onclick="change_product_value('-','airtag_value')"
+              /><input
                 type="number"
                 step="1"
                 min="1"
-                max=""
-                name="quantity"
+                max="99"
+                required
                 value="1"
-                title="Qty"
-                class="input-text qty text"
-                size="4"
-                pattern=""
-                inputmode=""
-              /><input type="button" value="+" class="plus" />
+                class="product-in-cart-value"
+                id="airtag_value"
+              /><input
+                type="button"
+                value="+"
+                id="plus_airtag"
+                class="value_adjust_button"
+                onclick="change_product_value('+','airtag_value')"
+              />
             </div>
           </div>
         </div>
-        <div class="specific-card">
-          <img
-            src="Asset/product.jpg"
-            alt="mouse10"
-            class="card-product"
-            width="173px"
-            height="158px"
-          />
-        </div>
-      </div>
-      <div class="cart-wrapper">
-        <div class="product-name">
-          <h4 class="name-edit">Razer Laptop</h4>
-          <h5 class="font-edit">Razer</h5>
-          <p class="para-edit">25.000.000VND</p>
-          <div class="button-wrap">
-            <div class="quantity buttons_added">
-              <input type="button" value="-" class="minus" /><input
+        <!-- End Product -->
+
+        <!-- Product 2 -->
+        <div class="product-in-cart">
+          <img src="Asset/keyboard1.jpg" />
+          <div class="product-in-cart-detail">
+            <h4>Razer Elite Keyboard</h4>
+            <p class="CaptionBlackXS">Razer</p>
+            <p class="CaptionBlackSmall">1.000.000 VND</p>
+            <div class="product-in-cart-buttons">
+              <input
+                type="button"
+                value="-"
+                id="minus_keyboard"
+                class="value_adjust_button"
+                onclick="change_product_value('-','keyboard_value')"
+              /><input
                 type="number"
                 step="1"
                 min="1"
-                max=""
-                name="quantity"
+                max="99"
+                required
                 value="1"
-                title="Qty"
-                class="input-text qty text"
-                size="4"
-                pattern=""
-                inputmode=""
-              /><input type="button" value="+" class="plus" />
+                class="product-in-cart-value"
+                id="keyboard_value"
+              /><input
+                type="button"
+                value="+"
+                id="plus_keyboard"
+                class="value_adjust_button"
+                onclick="change_product_value('+','keyboard_value')"
+              />
             </div>
           </div>
         </div>
-        <div class="specific-card">
-          <img
-            src="Asset/product.jpg"
-            alt="mouse10"
-            class="card-product"
-            width="173px"
-            height="158px"
+        <!-- End Product 2 -->
+        <hr />
+
+        <div class="total-price">
+          <h5>Total</h5>
+          <input
+            value="[total_price] VND"
+            id="total_price"
+            class="total_price_style"
+            readonly
           />
         </div>
-      </div>
+        <input type="submit" value="Checkout" />
+      </form>
       <hr />
-      <div class="total-money">
-        <h5>Total</h5>
-        <h1>50.000.000VND</h1>
-        <div class="order-button">
-          <button type="button" class="btn-od">
-            <a href="5.2.4-Order-Placement-Thank-you.html">
-              <span class="check_icon1">
-                <i class="fas fa-check"></i>
-              </span>
-              Order
-            </a>
-          </button>
-        </div>
+      <div class="styled-input-text">
+        <label for="coupon">Coupon</label><br />
+        <input
+          type="text"
+          id="coupon"
+          name="coupon"
+          placeholder="Press ENTER to apply your coupon"
+          optional
+        />
+        <div id="coupon_status"></div>
+        <button class="button-secondary" id="coupon_button">
+          Apply coupon
+        </button>
       </div>
     </div>
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
+    <script src="script.js"></script>
+    <script src="JS/cart.js"></script>
   </body>
 </html>

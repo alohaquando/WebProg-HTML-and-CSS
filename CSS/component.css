@@ -83,7 +83,7 @@ input[type="reset"] {
   background-color: white;
   font-family: "DM Sans";
   font-size: 21.3px;
-  font-weight: bold;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.51;
@@ -91,6 +91,7 @@ input[type="reset"] {
   text-align: center;
   cursor: pointer;
   border: solid 2px var(--black);
+  color: var(--brand-navy) !important;
 }
 
 .button-secondary:hover {

@@ -1,3 +1,4 @@
+
 //
   var nameRegExp = new RegExp(/^[a-zA-Z]{3,}$/);
   var emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/);
@@ -36,6 +37,7 @@ function emailValidation(){
   }
 }
 //for phone Validation
+
 function phoneValidation(){
   const phone = document.getElementById('phone');
   var phoneRegExp = new RegExp(/^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$/)
@@ -47,6 +49,7 @@ function phoneValidation(){
 }
 
 //for radio validation
+
 function radioValidation(){
 var valid = false;
 var x = document.myform.perf_contact;
