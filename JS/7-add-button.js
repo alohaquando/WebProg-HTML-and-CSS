@@ -4,12 +4,13 @@ function add_to_cart(pName) {
   let amount = parseFloat(localStorage.getItem(`${pName}`));
   // Switch cases
   switch (localStorage.getItem(`${pName}`)) {
+    // If product is not in localStorage, add it
     case null:
       localStorage.setItem(`${pName}`, "1");
       break;
+    // Increase the amount by 1 if it is already available
     default:
       amount++;
-
       localStorage.setItem(`${pName}`, `${String(amount)}`);
       break;
   }
@@ -33,7 +34,9 @@ var cart_list = document.querySelector("#cart-list");
 
 // Add Airtag to cart
 switch (localStorage.getItem("Airtag")) {
+  case "0":
   case null:
+    localStorage.setItem("Airtag", "0");
     break;
   default:
     cart_list.innerHTML += `<div class="product-in-cart" id="airtag-in-cart">
@@ -48,7 +51,7 @@ switch (localStorage.getItem("Airtag")) {
           value="-"
           id="minus_airtag"
           class="value_adjust_button"
-          onclick="change_product_value('-','airtag_value')"
+          onclick="change_product_value('-','airtag_value', 'Airtag')"
         /><input
           type="number"
           step="1"
@@ -63,7 +66,7 @@ switch (localStorage.getItem("Airtag")) {
           value="+"
           id="plus_airtag"
           class="value_adjust_button"
-          onclick="change_product_value('+','airtag_value')"
+          onclick="change_product_value('+','airtag_value', 'Airtag')"
         />
       </div>
     </div>
@@ -71,8 +74,11 @@ switch (localStorage.getItem("Airtag")) {
     break;
 }
 
+// Add Keyboard to cart
 switch (localStorage.getItem("Keyboard")) {
+  case "0":
   case null:
+    localStorage.setItem("Keyboard", "0");
     break;
   default:
     cart_list.innerHTML += `<div class="product-in-cart" id="keyboard-in-cart">
@@ -87,7 +93,7 @@ switch (localStorage.getItem("Keyboard")) {
           value="-"
           id="minus_keyboard"
           class="value_adjust_button"
-          onclick="change_product_value('-','keyboard_value')"
+          onclick="change_product_value('-','keyboard_value', 'Keyboard')"
         /><input
           type="number"
           step="1"
@@ -102,39 +108,10 @@ switch (localStorage.getItem("Keyboard")) {
           value="+"
           id="plus_keyboard"
           class="value_adjust_button"
-          onclick="change_product_value('+','keyboard_value')"
+          onclick="change_product_value('+','keyboard_value', 'Keyboard')"
         />
       </div>
     </div>
   </div>`;
     break;
 }
-
-if (cart_list.innerHTML == "") {
-  cart_list.innerHTML = `
-    <div class="cart-text">
-    <p>Your cart currently empty</p>
-    
-    <p>Try adding to cart the "Razer Elite Keyboard" or the "Apple AirTag"</p>
-    <a href="5.2.2-BrowseProductCategory.html">View Product</a>
-    </div>`;
-} else {
-  cart_list.innerHTML = `<a id="clear-cart">Clear cart</a>`;
-}
-
-function clear_cart() {
-  cart_list.innerHTML = `
-  <div class="cart-text">
-  <p>Your cart currently empty</p>
-  
-  <p>Try adding to cart the "Razer Elite Keyboard" or the "Apple AirTag"</p>
-  <a href="5.2.2-BrowseProductCategory.html">View Product</a>
-  </div>`;
-  document.querySelector("#clear-cart").style.display = "none";
-  localStorage.removeItem("Keyboard");
-  localStorage.removeItem("Airtag");
-}
-
-document.querySelector("#clear-cart").addEventListener("click", function () {
-  clear_cart();
-});

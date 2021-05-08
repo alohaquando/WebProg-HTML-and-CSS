@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="JS/cookie.js"></script>
+    <script src="JS/1-cookie.js"></script>
   </head>
   <body>
     <header id="nav_header"></header>
@@ -22,22 +22,19 @@
         </h5>
         <h3>Your cart</h3>
         <div id="cart-list"></div>
-        <!-- Product will be added to cart-list via product_cart.js -->
-        <hr />
 
-        <div class="total-price">
+        <!-- Product will be added to cart-list via 7-add-button.js -->
+
+        <div id="total-block" class="total-price">
+          <hr />
           <h5>Total</h5>
-          <input
-            value="[total_price] VND"
-            id="total_price"
-            class="total_price_style"
-            readonly
-          />
+          <h1 id="total">0123456</h1>
+          <input type="submit" value="Checkout" id="checkout" />
         </div>
-        <input type="submit" value="Checkout" />
       </form>
-      <hr />
-      <div class="styled-input-text">
+
+      <div id="coupon-block" class="styled-input-text">
+        <hr />
         <label for="coupon">Coupon</label><br />
         <input
           type="text"
@@ -55,7 +52,7 @@
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
     <script src="script.js"></script>
-    <script src="JS/cart.js"></script>
-    <script src="JS/product_cart.js"></script>
+    <script src="JS/7-add-button.js"></script>
+    <script src="JS/8-total-coupon.js"></script>
   </body>
 </html>
