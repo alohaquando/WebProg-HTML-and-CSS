@@ -79,6 +79,7 @@ input[type="number"] {
 }
 
 .cart-text {
+  margin-top: 24px;
   align-items: center;
   text-align: center;
   height: 120px;

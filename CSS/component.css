@@ -176,9 +176,14 @@ td {
   justify-content: space-between;
 }
 
-.h5-for-input h5 {
-  margin-top: 40px;
+.account-info h5 {
+  margin-top: 16px;
   margin-bottom: 8px;
+}
+
+.account-info .col-2 {
+  margin: 8px;
+  margin-left: 0;
 }
 
 .button-group-for-input {
@@ -213,4 +218,12 @@ td {
 .featured-store-color {
   box-shadow: 0 5px 24px 0 rgba(0, 26, 57, 0.4);
   background-color: var(--brand-navy);
+}
+
+.account-profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 40px auto;
 }
