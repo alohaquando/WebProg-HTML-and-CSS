@@ -140,19 +140,18 @@
 }
 
 /* Radio */
-.styled-radio {
+/* .styled-radio {
   margin: var(--field-margin);
-  margin-bottom: 32px;
-}
+} */
 
-.styled-radio input {
+/* .styled-radio input {
   font-family: inherit;
   margin: var(--field-margin);
   padding: var(--field-padding);
   border-radius: var(--field-border-radius);
   font-size: var(--field-font-size);
   transition: var(--field-transition);
-}
+} */
 
 .styled-radio p {
   font-family: "DM Sans", sans-serif;
@@ -171,6 +170,7 @@
 .styled-checkbox {
   margin: var(--field-margin);
   margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .styled-checkbox p {
@@ -298,7 +298,7 @@ input[type="submit"] {
   border: solid 2px var(--brand-navy);
 }
 button[type="reset"] {
-  color: var(--black);
+  color: var(--black) !important;
   outline: 0;
   height: 56px;
   border-radius: 10px;
