@@ -1,3 +1,6 @@
+/*TODO*/
+/*MAKE THE SLIDER GO MORE SMOOTHLY AND ACUTALLY LOOPED USING JS*/
+
 //const root = document.documentElement;
 //const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 //const marqueeContent = document.querySelector("ul.marquee-content");
