@@ -91,7 +91,7 @@ input[type="reset"] {
   text-align: center;
   cursor: pointer;
   border: solid 2px var(--black);
-  color: var(--brand-navy) !important;
+  color: var(--black) !important;
 }
 
 .button-secondary:hover {

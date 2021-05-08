@@ -21,75 +21,8 @@
           </a>
         </h5>
         <h3>Your cart</h3>
-        <!-- Product -->
-        <div class="product-in-cart">
-          <img src="Asset/airtag3.webp" />
-          <div class="product-in-cart-detail">
-            <h4>Apple AirTag</h4>
-            <p class="CaptionBlackXS">Apple</p>
-            <p class="CaptionBlackSmall">799.000 VND</p>
-            <div class="product-in-cart-buttons">
-              <input
-                type="button"
-                value="-"
-                id="minus_airtag"
-                class="value_adjust_button"
-                onclick="change_product_value('-','airtag_value')"
-              /><input
-                type="number"
-                step="1"
-                min="1"
-                max="99"
-                required
-                value="1"
-                class="product-in-cart-value"
-                id="airtag_value"
-              /><input
-                type="button"
-                value="+"
-                id="plus_airtag"
-                class="value_adjust_button"
-                onclick="change_product_value('+','airtag_value')"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- End Product -->
-
-        <!-- Product 2 -->
-        <div class="product-in-cart">
-          <img src="Asset/keyboard1.jpg" />
-          <div class="product-in-cart-detail">
-            <h4>Razer Elite Keyboard</h4>
-            <p class="CaptionBlackXS">Razer</p>
-            <p class="CaptionBlackSmall">1.000.000 VND</p>
-            <div class="product-in-cart-buttons">
-              <input
-                type="button"
-                value="-"
-                id="minus_keyboard"
-                class="value_adjust_button"
-                onclick="change_product_value('-','keyboard_value')"
-              /><input
-                type="number"
-                step="1"
-                min="1"
-                max="99"
-                required
-                value="1"
-                class="product-in-cart-value"
-                id="keyboard_value"
-              /><input
-                type="button"
-                value="+"
-                id="plus_keyboard"
-                class="value_adjust_button"
-                onclick="change_product_value('+','keyboard_value')"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- End Product 2 -->
+        <div id="cart-list"></div>
+        <!-- Product will be added to cart-list via product_cart.js -->
         <hr />
 
         <div class="total-price">
@@ -123,5 +56,6 @@
     <div id="cookie-consent-message"></div>
     <script src="script.js"></script>
     <script src="JS/cart.js"></script>
+    <script src="JS/product_cart.js"></script>
   </body>
 </html>

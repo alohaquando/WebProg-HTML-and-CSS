@@ -77,3 +77,13 @@ input[type="number"] {
   color: var(--black);
   font-weight: 500;
 }
+
+.cart-text {
+  align-items: center;
+  text-align: center;
+  height: 120px;
+}
+
+#clear-cart {
+  cursor: pointer;
+}

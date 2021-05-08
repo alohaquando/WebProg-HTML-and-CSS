@@ -1,10 +1,12 @@
-function change_product_value(operator, product_value_id) {
+// Product value adjust
+function change_product_value(operator, product_value_id, localStorageID) {
   let product_amount = parseInt(
     document.getElementById(product_value_id).value
   );
   switch (operator) {
     case "+":
       result = product_amount + 1;
+      localStorage.setItem("");
       break;
     case "-":
       if (product_amount <= 1) {
@@ -17,6 +19,7 @@ function change_product_value(operator, product_value_id) {
   document.getElementById(product_value_id).value = result;
 }
 
+// Coupon validate
 function couponValidation() {
   let status = document.getElementById("coupon_status");
   let coupon = document.getElementById("coupon");

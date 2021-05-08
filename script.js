@@ -15,4 +15,3 @@ $(function () {
   $("#store_header").load("./store_header.html");
 });
 
-// About Us Modal
