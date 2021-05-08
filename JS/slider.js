@@ -1,12 +1,29 @@
-/*TODO*/
-/*MAKE THE SLIDER GO MORE SMOOTHLY AND ACUTALLY LOOPED USING JS*/
+/* DRAFT JAVA
+/*
+(function(){
 
-//const root = document.documentElement;
-//const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-//const marqueeContent = document.querySelector("ul.marquee-content");
+    $('#slider').slider({ interval: 2000 });
+    $('#slider').slider({ interval: 3600 });
+  }());
+  
+  (function(){
+    $('.slider-move .item').each(function(){
+      var itemToClone = $(this);
+  
+      for (var i=1;i<4;i++) {
+        itemToClone = itemToClone.next();
+  
+        // wrap around if at end of item collection
+        if (!itemToClone.length) {
+          itemToClone = $(this).siblings(':first');
+        }
+  
+        // grab item, clone, add marker class, add to collection
+        itemToClone.move(':first-item').clone()
+          .addClass("cloneditem-"+(i))
+          .appendTo($(this));
+      }
+    });
+  }());
 
-//root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-//for(let i=0; i<marqueeElementsDisplayed; i++) {
-//  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-//}
+*/
