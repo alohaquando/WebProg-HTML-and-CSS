@@ -332,9 +332,9 @@ input[type="radio"]:checked ~ .reveal-if-active{
   overflow: visible;
 }
 
-#left{
+/* #left{
   width: 50%;
 }
 #right{
   width: 50%;
-}
+} */
