@@ -16,7 +16,7 @@ function add_to_cart(pName) {
   }
 }
 
-// Hide toast
+// Hide toast function
 function hide_toast() {
   document.getElementById("toast").style.display = "none";
 }
