@@ -59,3 +59,7 @@ document.getElementById("store_footer").innerHTML = `<div class="store_footer">
 	</div>
   </div>
 </div>`;
+
+function openProduct() {
+  document.querySelector("#openprod").style.display = "block";
+}
