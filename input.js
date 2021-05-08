@@ -1,7 +1,4 @@
 
-
-var errorMessage = "Please check your information again";
-
 //for name validation
 function nameValidation(){
   var name = document.getElementById('name').value;
