@@ -15,13 +15,13 @@
 .slider-content:hover{
       animation-play-state: paused;
  }
-      
+
 .slider-tag{
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-    
+
 @keyframes slider{
   0%{
     transform: translateX(20%);
