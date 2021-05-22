@@ -3,12 +3,13 @@
 // -----------------------------
 
 // Load store header
+
 document.getElementById("store_header").innerHTML = `<nav class="nav_store">
   <div class="nav_store_wrapper">
 	<div class="nav_store_elements_left">
-	  <div class="nav_store_logo"></div>
+	 <div class="nav_store_logo"></div>
 	  <div>
-		<h4>Ziugei Tech Store</h4>
+		<h4 id="store_name">[Store Name Here]</h4>
 	  </div>
 	</div>
 
@@ -54,7 +55,7 @@ document.getElementById("store_footer").innerHTML = `<div class="store_footer">
 	</div>
 	<div class="footer_elements_right">
 	  <p class="BodyLight-Black15">
-		Copyright © 2021 Ziugei Tech Store. All rights reserved.
+		Copyright © All rights reserved.
 	  </p>
 	</div>
   </div>
