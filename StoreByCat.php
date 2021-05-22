@@ -2,23 +2,12 @@
 <?php
 session_start();
 require "PHP/CSV.php";
+require "PHP/display_stores.php";
 
 if (isset($_GET["category"])) {
     $selected_category_id = $_GET["category"];
 } else {
     $selected_category_id = "0";
-}
-
-function display_store($store)
-{
-    echo "<div class=\"col-4 store-card\">";
-    echo "<a href=\"storeHome.php?id=$store[id]\">";
-    echo "<img src=\"Asset/store_placeholder_icon_2.png\" />";
-    echo "<h4>$store[name]</h4>";
-    $category_name = get_item_field("categories", "$store[category_id]", "name");
-    echo "<p class=\"CaptionBlackXS\">$category_name</p>";
-    echo "</a>";
-    echo "</div>";
 }
 ?>
 <html lang="en">
@@ -87,7 +76,6 @@ function display_store($store)
                 break;
             }
             ?>
-
 
         </div>
     </div>
