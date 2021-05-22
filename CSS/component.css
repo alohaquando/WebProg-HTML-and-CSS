@@ -227,3 +227,10 @@ td {
   overflow: hidden;
   margin: 40px auto;
 }
+
+.name-selected {
+  color: white !important;
+  background-color: #222222;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}

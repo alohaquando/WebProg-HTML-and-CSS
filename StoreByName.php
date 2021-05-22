@@ -7,16 +7,17 @@ require "PHP/CSV.php";
 require "PHP/display_stores.php";
 
 if (isset($_GET["character"])) {
-    $select_character = $_GET["character"];
-    switch ($select_character) {
+    $selected_character = $_GET["character"];
+    switch ($selected_character) {
     case "num":
       $character_regex = "/^\d.+$/";
       break;
     default:
-      $character_regex = "/^$select_character.+$/";
+      $character_regex = "/^$selected_character.+$/";
       break;
   }
 } else {
+    $selected_character = "none";
 }
 ?>
 
@@ -39,13 +40,35 @@ if (isset($_GET["character"])) {
         <!--------Sort Stores-------->
         <div class="letter-spacing">
             <ul class="letter-spacing">
-                <li><a href="StoreByName.php">All</a></li>
-                <li><a href="StoreByName.php?character=num">#</a></li>
-                <?php foreach (range("A", "Z") as $letter) {
-    echo "<li>";
-    echo "<a href=\"StoreByName.php?character=$letter\">$letter</a>";
-    echo "</li>";
-} ?>
+
+                <?php
+                switch ($selected_character) {
+                  case "none":
+                    echo "<li><a class=\"name-selected\" href=\"StoreByName.php?\">All</a></li>";
+                    echo "<li><a href=\"StoreByName.php?character=num\">#</a></li>";
+                    break;
+                  case "num":
+                    echo "<li><a href=\"StoreByName.php\">All</a></li>";
+                    echo "<li><a class=\"name-selected\" href=\"StoreByName.php?character=num\">#</a></li>";
+
+                    break;
+                  default:
+                    echo "<li><a href=\"StoreByName.php\">All</a></li>
+                    <li><a href=\"StoreByName.php?character=num\">#</a></li>";
+                }
+
+                foreach (range("A", "Z") as $letter) {
+                    if ($letter == $selected_character) {
+                        echo "<li>";
+                        echo "<a class=\"name-selected\" href=\"StoreByName.php?character=$letter\">$letter</a>";
+                        echo "</li>";
+                    } else {
+                        echo "<li>";
+                        echo "<a href=\"StoreByName.php?character=$letter\">$letter</a>";
+                        echo "</li>";
+                    }
+                }
+                ?>
             </ul>
         </div>
         <!--------Sort Stores-------->
