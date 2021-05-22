@@ -23,10 +23,10 @@ document.getElementById(
 			  <h5>Browse <i class="fa fa-caret-down"></i></h5>
 			</button>
 			<div class="dropdown-content">
-			  <a href="5.1.1-BrowseStoreByName.html"
+			  <a href="StoreByName.php"
 				>‎Browse Stores by Name</a
 			  >
-			  <a href="5.1.1-BrowseStoreByCategory.html"
+			  <a href="StoreByCat.php"
 				>Browse Stores by Category</a
 			  >
 			</div>
@@ -47,12 +47,12 @@ document.getElementById(
 	  </li>
 
 	  <li class="nav_menu_link_extra_padding">
-		<a href="5.1.1-BrowseStoreByName.html"
+		<a href="StoreByName.php"
 		  >‏‏‎‎Browse Stores by Name</a
 		>
 	  </li>
 	  <li class="nav_menu_link_extra_padding">
-		<a href="5.1.1-BrowseStoreByCategory.html"
+		<a href="StoreByCat.php"
 		  >‏‏Browse Stores by Category</a
 		>
 	  </li>

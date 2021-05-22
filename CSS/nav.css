@@ -260,7 +260,7 @@ header {
 }
 
 .nav_store_logo {
-  background-image: url("../Asset/storeLogo.png");
+  background-image: url("../Asset/store_placeholder_icon.png");
   height: 48px;
   width: 48px;
   background-position: center;

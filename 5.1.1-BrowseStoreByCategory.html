@@ -20,21 +20,16 @@
         <div class="HeaderH1_Left_With_Spacing">
           <h1>Store • Sorted by Category</h1>
         </div>
-        <select class="styled-select">
-          <option value="" disabled selected hidden>
-            Showing stores in... ▾
-          </option>
-          <option>All stores</option>
-          <option>Appliances</option>
-          <option>Phones and Tablets</option>
-          <option>Beauty and Health Care</option>
-          <option>Fashion</option>
-          <option>Watches and Accessories</option>
-          <option>International Goods</option>
-          <option>Books</option>
-          <option>Sports</option>
-        </select>
+        <div class="styled-select">
+          <select name="purpose" id="purpose">
+            <option value="0" disabled selected hidden>All category ▾</option>
+          </select>
+        </div>
       </div>
+
+      <?php
+      echo "Hello World!";
+      ?>
 
       <div class="row">
         <div class="col-4 store-card">
@@ -127,10 +122,10 @@
     </div>
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
-      <script src="JS/global-load-mall-header-and-footer.js"></script>
-  <script src="JS/global-load-store-header-and-footer.js"></script>
-  <script src="JS/global-mobile-nav.js"></script>
-  <script src="JS/global-logged-in-behavior.js"></script>
+    <script src="JS/global-load-mall-header-and-footer.js"></script>
+    <script src="JS/global-load-store-header-and-footer.js"></script>
+    <script src="JS/global-mobile-nav.js"></script>
+    <script src="JS/global-logged-in-behavior.js"></script>
     <script src="JS/1-cookie.js"></script>
   </body>
 </html>
