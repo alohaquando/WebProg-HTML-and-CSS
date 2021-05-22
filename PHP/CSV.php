@@ -26,7 +26,8 @@ function create_associative_array($data)
   // While $row = fgetcsv can still be run (isn't false)
   while (($row = fgetcsv($file)) !== false) {
     // Combine the header and the row into an array, then add to result
-    $result[] = array_combine($header, $row);
+    // The id of the store/cat./products is the number of the row in the associative array
+    $result[$row[0]] = array_combine($header, $row);
   }
   return $result;
 }
@@ -35,6 +36,11 @@ function create_associative_array($data)
 function get_item($data, $id)
 {
   $associative_array = create_associative_array($data);
-  $item = $associative_array[$id - 1];
+  $item = $associative_array[$id];
   return $item;
 }
+
+echo "<pre>";
+$test = create_associative_array("categories");
+print_r($test[1]["name"]);
+echo "</pre>";
