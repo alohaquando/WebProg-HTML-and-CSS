@@ -1,18 +1,21 @@
 <?php
 
+// Move to the document root, so that the data files can be taken correctly no matter where the function is called from
+chdir($_SERVER["DOCUMENT_ROOT"]);
+
 // Create associative array containing many rows of store/cat./products inside.
 function create_associative_array($data)
 {
   // Pick which CSV file to run
   switch ($data) {
     case $data == "stores":
-      $file = fopen("../Data/stores.csv", "r");
+      $file = fopen("Data/stores.csv", "r");
       break;
     case $data == "products":
-      $file = fopen("../Data/products.csv", "r");
+      $file = fopen("Data/products.csv", "r");
       break;
     case $data == "categories":
-      $file = fopen("../Data/categories.csv", "r");
+      $file = fopen("Data/categories.csv", "r");
       break;
     default:
       exit("Pick between 'stores', 'products', 'categories'");
@@ -35,7 +38,3 @@ function get_item($data, $id)
   $item = $associative_array[$id - 1];
   return $item;
 }
-
-echo "<pre>";
-print_r(get_item("stores", 12));
-echo "</pre>";
