@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-require "PHP/CSV.php";
+require "PHP_functions/CSV.php";
 $store_detail = get_item("stores", $_GET["id"]);
 $store_name = get_item_field("stores", $_GET["id"], "name");
 ?>

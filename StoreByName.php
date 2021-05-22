@@ -3,8 +3,8 @@
 
 <?php
 session_start();
-require "PHP/CSV.php";
-require "PHP/display_stores.php";
+require "PHP_functions/CSV.php";
+require "PHP_functions/display_stores.php";
 
 if (isset($_GET["character"])) {
     $selected_character = $_GET["character"];
