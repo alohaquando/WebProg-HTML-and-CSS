@@ -69,7 +69,7 @@ $current_store = $_GET["store_id"];
                             break;
                         }
 
-                        echo "<input type=\"hidden\" id=\"current_store\" name=\"current_store\" value=\"$current_store\">";
+                        echo "<input type=\"hidden\" id=\"store_id\" name=\"store_id\" value=\"$current_store\">";
                         ?>
                     </select>
                 </div>
