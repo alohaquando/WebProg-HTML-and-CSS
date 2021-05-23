@@ -209,15 +209,16 @@ td {
   margin-left: 8px;
 }
 
-.featured-store-color h3,
+/* .featured-store-color h3,
 .featured-store-color h4,
 .featured-store-color p {
   color: white;
 }
+*/
 
 .featured-store-color {
-  box-shadow: 0 5px 24px 0 rgba(0, 26, 57, 0.4);
-  background-color: var(--brand-navy);
+  border-radius: 18px;
+  border: 3px solid var(--brand-navy);
 }
 
 .account-profile-pic {

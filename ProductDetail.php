@@ -4,6 +4,7 @@ require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 session_start();
 $current_product_id = $_GET["product_id"];
+$product = get_item("products", $current_product_id);
 ?>
 <html lang="en">
 
@@ -40,24 +41,19 @@ $current_product_id = $_GET["product_id"];
             <!-- Product Detail Text -->
             <div class="product-detail-text col-2">
                 <?php
-                $product_name = get_item_field(
-    "products",
-    $current_product_id,
-    "name"
-);
-                $product_price = get_item_field(
-                    "products",
-                    $current_product_id,
-                    "price"
+                echo "<h1>$product[name]</h1>";
+                $product_store = get_item_field(
+                    "stores",
+                    $product["store_id"],
+                    "name"
                 );
-                echo "<h1>$product_name</h1>";
-                echo "<h4>\$$product_price</h4>";
-                ?>
-                <p class="BodyLight-Black17">
-                    Never worry again with the Product. Made from features, the Product lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!<br />
+                echo "<h4>From $product_store</h4>";
+                echo "<h4>\$$product[price]</h4>";
 
-                    If you want to have a good time, then you're in the right place. Designed to eliminate worry in record time, the Product was built to be the last solution you ever needed. Best of all, you can to have a good time without problems!<br />
-                </p>
+                echo "<p class=\"BodyLight-Black17\">
+                    Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
+                </p>";
+                ?>
                 <div class="button-primary-and-secondary" id="product-cart-button">
                     <button type="button" onclick="add_to_cart('Keyboard')" id="buy-now-button">
                         <a href="5.2.3-Shopping-Cart.html">Buy now</a>

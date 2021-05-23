@@ -9,7 +9,7 @@
 
 .slider-content {
   display: flex;
-  animation: slider 60s linear infinite running;
+  animation: slider 12s linear infinite running;
 }
 
 .slider-content:hover {

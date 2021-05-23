@@ -2,6 +2,8 @@
 <?php
 session_start();
 require "PHP_functions/CSV.php";
+require "PHP_functions/display.php";
+require "PHP_functions/time_sort.php";
 require "PHP_functions/dynamic_store_header.php";
 
 $current_store = $_GET["store_id"];
@@ -31,110 +33,42 @@ $current_store = $_GET["store_id"];
         <div class="small-container">
             <h3 class="teamtitle">New products!</h3>
             <div class="row">
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/keyboard1.jpg" />
-                        <h4>Razer Elite Keyboard</h4>
-                        <p class="CaptionBlackXS">Razer</p>
-                        <p class="CaptionBlackSmall">1.000.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail-AirTag.html">
-                        <img src="Asset/airtag4.webp" />
-                        <h4>Apple AirTag</h4>
-                        <p class="CaptionBlackXS">Apple</p>
-                        <p class="CaptionBlackSmall">799.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/keyboard3.jpg" />
-                        <h4>Razer Cynosa</h4>
-                        <p class="CaptionBlackXS">Store C</p>
-                        <p class="CaptionBlackSmall">3.000.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/keyboard4.jpg" />
-                        <h4>Razer Ornata</h4>
-                        <p class="CaptionBlackXS">Store D</p>
-                        <p class="CaptionBlackSmall">4.000.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/mouse1.jpg" />
-                        <h4>Razer Naga</h4>
-                        <p class="CaptionBlackXS">Store M</p>
-                        <p class="CaptionBlackSmall">2.500.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/mouse2.jpg" />
-                        <h4>Razer Atheris</h4>
-                        <p class="CaptionBlackXS">Store N</p>
-                        <p class="CaptionBlackSmall">3.600.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/mouse3.jpg" />
-                        <h4>Razer Basilisk</h4>
-                        <p class="CaptionBlackXS">Store O</p>
-                        <p class="CaptionBlackSmall">2.000.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/mouse4.jpg" />
-                        <h4>Razer Viper</h4>
-                        <p class="CaptionBlackXS">Store P</p>
-                        <p class="CaptionBlackSmall">3.000.000 VND</p>
-                    </a>
-                </div>
+                <?php
+                $count = 0;
+                $sorted_products = products_sorted_by_time_single_store(
+                    "newest_first",
+                    $current_store
+                );
+                foreach ($sorted_products as $product) {
+                    display_product($product);
+                    $count++;
+                    if ($count == 5) {
+                        break;
+                    }
+                }
+                ?>
             </div>
         </div>
         <!--------Featured Products-------->
         <div class="small-container featured-section featured-store-color">
             <h3 class="teamtitle">Featured products!</h3>
             <div class="row">
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/keyboard1.jpg" />
-                        <h4>Razer Elite Keyboard</h4>
-                        <p class="CaptionBlackXS">Razer</p>
-                        <p class="CaptionBlackSmall">1.000.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail-AirTag.html">
-                        <img src="Asset/airtag4.webp" />
-                        <h4>Apple AirTag</h4>
-                        <p class="CaptionBlackXS">Apple</p>
-                        <p class="CaptionBlackSmall">799.000 VND</p>
-                    </a>
-                </div>
 
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/headphone4.jpg" />
-                        <h4>Razer Nari</h4>
-                        <p class="CaptionBlackXS">Store K</p>
-                        <p class="CaptionBlackSmall">3.100.000 VND</p>
-                    </a>
-                </div>
+                <?php
+                $products = create_associative_array_matching(
+                    "products",
+                    "store_id",
+                    "stores",
+                    $current_store,
+                    "id"
+                );
+                foreach ($products as $product) {
+                    if ($product["featured_in_store"] == "TRUE") {
+                        display_product($product);
+                    }
+                }
+                ?>
 
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/headphone5.jpg" />
-                        <h4>Razer Kaira</h4>
-                        <p class="CaptionBlackXS">Store L</p>
-                        <p class="CaptionBlackSmall">4.100.000 VND</p>
-                    </a>
-                </div>
             </div>
         </div>
     </div>

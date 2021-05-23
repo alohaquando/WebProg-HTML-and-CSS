@@ -16,7 +16,7 @@ document.getElementById(
 	</div>
 	<div class="nav_links">
 	  <ul class="nav_links">
-		<li><a href="index.html">Home</a></li>
+		<li><a href="index.php">Home</a></li>
 		<li>
 		  <div class="dropdown">
 			<button class="dropbtn">
@@ -41,7 +41,7 @@ document.getElementById(
   </div>
   <div class="nav_menu_icon" id="sidenav">
 	<ul>
-	  <li><a href="index.html">Home</a></li>
+	  <li><a href="index.php">Home</a></li>
 	  <li>
 		<a>Browse</a>
 	  </li>
