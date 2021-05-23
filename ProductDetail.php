@@ -59,10 +59,10 @@ $current_product_id = $_GET["product_id"];
                     If you want to have a good time, then you're in the right place. Designed to eliminate worry in record time, the Product was built to be the last solution you ever needed. Best of all, you can to have a good time without problems!<br />
                 </p>
                 <div class="button-primary-and-secondary" id="product-cart-button">
-                    <button type="button" onclick="add_to_cart('Keyboard')">
+                    <button type="button" onclick="add_to_cart('Keyboard')" id="buy-now-button">
                         <a href="5.2.3-Shopping-Cart.html">Buy now</a>
                     </button>
-                    <button type="button" class="button-secondary" onclick="add_to_cart('Keyboard'); show_toast('Keyboard')">
+                    <button type="button" class="button-secondary" id="add-to-cart-button" onclick="add_to_cart('Keyboard'); show_toast('Keyboard')">
                         <a>Add to Cart</a>
                     </button>
                 </div>

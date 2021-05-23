@@ -23,7 +23,7 @@ switch (localStorage.getItem("account_state")) {
     document.querySelector("#account-access-desktop").href =
       "5.1.7 My-account-Not-yet-logged-in.html";
 
-    document.querySelector("#product-cart-button").style.display = "none";
+    document.querySelector("#add-to-cart-button").style.display = "none";
 
     break;
 }
