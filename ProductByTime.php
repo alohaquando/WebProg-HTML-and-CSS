@@ -12,7 +12,21 @@ if (isset($_GET["time"])) {
     $selected_time_sort = "none";
 }
 
-$current_store = $_GET["store_id"];
+$current_store = isset($_GET["store_id"]);
+
+// Pagination
+$current_page = isset($_GET["page"]) ? $_GET["page"] : 1;
+
+// Limit down array to 2 item
+function limit_products($products)
+{
+    $products_limited = array_chunk($products, 2);
+    array_unshift($products_limited, "");
+    unset($products_limited[0]);
+    return $products_limited;
+}
+
+// End Pagination
 ?>
 
 
@@ -35,6 +49,9 @@ $current_store = $_GET["store_id"];
         <?php load_dynamic_store_header($current_store); ?>
     </header>
     <div class="body_spacing">
+
+
+
         <!--------All Products-------->
         <div class="row_space_between">
             <div class="HeaderH1_Left_With_Spacing">
@@ -70,15 +87,19 @@ $current_store = $_GET["store_id"];
                         }
 
                         echo "<input type=\"hidden\" id=\"store_id\" name=\"store_id\" value=\"$current_store\">";
+                        echo "<input type=\"hidden\" id=\"page\" name=\"page\" value=\"$current_page\">";
                         ?>
                     </select>
                 </div>
             </form>
 
-            <div class="row">
-                <?php 
-                $count=0;
+            <div class="row-centered">
+
+                <!-- Product list -->
+                <?php
+                $count = 0;
                 switch ($selected_time_sort) {
+                  // When no sorting method is selected
                   case "none":
                     $products = create_associative_array_matching(
                         "products",
@@ -87,33 +108,80 @@ $current_store = $_GET["store_id"];
                         $current_store,
                         "id"
                     );
-                    foreach ($products as $product) {
+                    $total_pages = ceil(count($products) / 2); // Calculate total page
+                    $products_limited = limit_products($products);
+                    foreach ($products_limited[$current_page] as $product) {
                         display_product($product);
-                        $count++;
-                          if ($count == 2) {
-                            break;
-                          }
-                        
                     }
                     break;
+
+                  // When a sorting method is selected
                   default:
-                    $sorted_products = products_sorted_by_time_single_store(
+                    $products = products_sorted_by_time_single_store(
                         $selected_time_sort,
                         $current_store
                     );
-                    foreach ($sorted_products as $product) {
+                    $total_pages = ceil(count($products) / 2); // Calculate total page
+                    $products_limited = limit_products($products);
+                    foreach ($products_limited[$current_page] as $product) {
                         display_product($product);
-                        $count++;
-                          if ($count == 2) {
-                            break;
-                          }
                     }
-                } ?>
+                }
+                ?>
 
+                <!-- End product list -->
 
             </div>
+
+            <!-- Page numbering -->
+            <!-- Value like 'store_id' and 'sorting_method' is saved into the URL -->
+            <div class="letter-spacing">
+                <ul class="letter-spacing">
+                    <?php
+                    // Previous button
+                    switch ($current_page) {
+                      case 1:
+                        break;
+                      default:
+                        echo "<li>";
+                        $previous_page = $current_page - 1;
+                        echo "<a  href=\"ProductByTime.php?page=$previous_page&store_id=$current_store&time=$selected_time_sort\"><</a>";
+                        echo "</li>";
+                        break;
+                    }
+
+                    // Pages
+                    foreach (range(1, $total_pages) as $page) {
+                        if ($page == $current_page) {
+                            echo "<li>";
+                            echo "<a class=\"name-selected\" href=\"ProductByTime.php?page=$page&store_id=$current_store&time=$selected_time_sort\">$page</a>";
+                            echo "</li>";
+                        } else {
+                            echo "<li>";
+                            echo "<a href=\"ProductByTime.php?page=$page&store_id=$current_store&time=$selected_time_sort\">$page</a>";
+                            echo "</li>";
+                        }
+                    }
+
+                    // Next button
+                    switch ($current_page) {
+                      case $total_pages:
+                        break;
+                      default:
+                        echo "<li>";
+                        $next_page = $current_page + 1;
+                        echo "<a href=\"ProductByTime.php?page=$next_page&store_id=$current_store&time=$selected_time_sort\">></a>";
+                        echo "</li>";
+                        break;
+                    }
+                    ?>
+                </ul>
+            </div>
+            <!-- End page number -->
+
         </div>
     </div>
+
     <footer>
         <div id="store_footer"></div>
         <div id="mall_footer"></div>

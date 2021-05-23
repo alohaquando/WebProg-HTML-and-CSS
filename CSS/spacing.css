@@ -54,6 +54,14 @@ body {
   justify-content: flex-start;
 }
 
+.row-centered {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
 /* Col-2*/
 .col-2 {
   flex-basis: 45%;
