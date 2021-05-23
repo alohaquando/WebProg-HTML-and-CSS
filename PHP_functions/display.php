@@ -3,7 +3,7 @@
 function display_store($store)
 {
     echo "<div class=\"col-4 store-card\">";
-    echo "<a href=\"storeHome.php?id=$store[id]\">";
+    echo "<a href=\"storeHome.php?store_id=$store[id]\">";
     echo "<img src=\"Asset/store_placeholder_icon_2.png\" />";
     echo "<h4>$store[name]</h4>";
     $category_name = get_item_field("categories", "$store[category_id]", "name");
@@ -15,7 +15,7 @@ function display_store($store)
 function display_product($product)
 {
     echo "<div class=\"col-4 store-card\">";
-    echo "<a href=\"ProductDetail.php?id=$product[id]\">";
+    echo "<a href=\"ProductDetail.php?product_id=$product[id]\">";
     echo "<img src=\"Asset/product_placeholder_icon.png\" />";
     echo "<h4>$product[name]</h4>";
     $store_name = get_item_field("stores", $product["store_id"], "name");

@@ -2,8 +2,8 @@
 <?php
 session_start();
 require "PHP_functions/CSV.php";
-$store_detail = get_item("stores", $_GET["id"]);
-$store_name = get_item_field("stores", $_GET["id"], "name");
+$store_detail = get_item("stores", $_GET["store_id"]);
+$store_name = get_item_field("stores", $_GET["store_id"], "name");
 ?>
 <html lang="en">
 

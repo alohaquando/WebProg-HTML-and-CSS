@@ -25,7 +25,7 @@ document.getElementById("store_header").innerHTML = `<nav class="nav_store">
 			  <a href="5.2.2-BrowseProductCategory.html"
 				>‎Products by Category</a
 			  >
-			  <a href="5.2.2-BrowseProductCreatedTime.html"
+			  <a href="ProductByTime.php"
 				>Products by Created Time</a
 			  >
 			</div>
