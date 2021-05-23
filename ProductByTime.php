@@ -76,7 +76,9 @@ $current_store = $_GET["store_id"];
             </form>
 
             <div class="row">
-                <?php switch ($selected_time_sort) {
+                <?php 
+                $count=0;
+                switch ($selected_time_sort) {
                   case "none":
                     $products = create_associative_array_matching(
                         "products",
@@ -87,6 +89,11 @@ $current_store = $_GET["store_id"];
                     );
                     foreach ($products as $product) {
                         display_product($product);
+                        $count++;
+                          if ($count == 2) {
+                            break;
+                          }
+                        
                     }
                     break;
                   default:
@@ -96,6 +103,10 @@ $current_store = $_GET["store_id"];
                     );
                     foreach ($sorted_products as $product) {
                         display_product($product);
+                        $count++;
+                          if ($count == 2) {
+                            break;
+                          }
                     }
                 } ?>
 
