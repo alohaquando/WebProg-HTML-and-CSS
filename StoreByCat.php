@@ -2,7 +2,7 @@
 <?php
 session_start();
 require "PHP_functions/CSV.php";
-require "PHP_functions/display_stores.php";
+require "PHP_functions/display.php";
 
 if (isset($_GET["category"])) {
     $selected_category_id = $_GET["category"];

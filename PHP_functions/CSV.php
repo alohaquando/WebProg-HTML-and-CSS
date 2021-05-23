@@ -48,3 +48,26 @@ function get_item_field($data, $id, $field)
     $item_field = $item[$field];
     return $item_field;
 }
+
+function create_associative_array_matching(
+    $data,
+    $field,
+    $reference_array,
+    $reference_id,
+    $reference_field_name
+) {
+    $all = create_associative_array($data);
+    foreach ($all as $item) {
+        if (
+      $item[$field] ==
+      get_item_field($reference_array, $reference_id, $reference_field_name)
+    );
+        print_r($item);
+    }
+}
+
+echo "<pre>";
+print_r(
+    create_associative_array_matching("products", "store_id", "stores", 1, "id")
+);
+echo "</pre>";
