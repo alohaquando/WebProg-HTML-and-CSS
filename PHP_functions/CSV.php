@@ -48,3 +48,24 @@ function get_item_field($data, $id, $field)
     $item_field = $item[$field];
     return $item_field;
 }
+
+function create_associative_array_matching(
+    $data,
+    $field,
+    $reference_array,
+    $reference_id,
+    $reference_field_name
+) {
+    $all = create_associative_array($data);
+    $all_matched = [];
+    foreach ($all as $item) {
+        if (
+      $item[$field] ==
+      get_item_field($reference_array, $reference_id, $reference_field_name)
+    ) {
+            $all_matched[] = $item;
+        } else {
+        }
+    }
+    return $all_matched;
+}
