@@ -56,7 +56,7 @@ $product = get_item("products", $current_product_id);
                 ?>
                 <div class="button-primary-and-secondary" id="product-cart-button">
                     <button type="button" onclick="add_to_cart('Keyboard')" id="buy-now-button">
-                        <a href="5.2.3-Shopping-Cart.html">Buy now</a>
+                        <a href="Cart.php">Buy now</a>
                     </button>
                     <button type="button" class="button-secondary" id="add-to-cart-button" onclick="add_to_cart('Keyboard'); show_toast('Keyboard')">
                         <a>Add to Cart</a>
@@ -94,7 +94,7 @@ $product = get_item("products", $current_product_id);
     <div class="toast" id="toast">
         <div class="toast-elements">
             <p id="toast-message">Added!</p>
-            <a href="5.2.3-Shopping-Cart.html">View cart</a>
+            <a href="Cart.php">View cart</a>
         </div>
     </div>
     <div id="cookie-consent-message"></div>

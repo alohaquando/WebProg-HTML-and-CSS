@@ -4,7 +4,7 @@
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 require "PHP_functions/time_sort.php";
-require "PHP_functions/dynamic_store_header.php";
+require "PHP_functions/dynamic_store_nav.php";
 ?>
 
 <head>
@@ -13,7 +13,7 @@ require "PHP_functions/dynamic_store_header.php";
     <meta name="description" content="Mall Home" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="JS/cookie.js"></script>
     <script src="JS/slider.js"></script>

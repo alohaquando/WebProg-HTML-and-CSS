@@ -6,7 +6,7 @@ input[type="number"] {
 .product-in-cart {
   width: 100%;
   margin-bottom: 40px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -20,8 +20,9 @@ input[type="number"] {
   height: 150px;
   width: 25%;
   margin: 24px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+  /* box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05); */
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
   object-fit: cover;
 }
 

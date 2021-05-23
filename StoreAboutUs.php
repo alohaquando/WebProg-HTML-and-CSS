@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<?php
+session_start();
+require "PHP_functions/CSV.php";
+require "PHP_functions/dynamic_store_nav.php";
+
+$current_store = $_GET["store_id"];
+?>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Store About Us</title>
+    <meta name="description" content="Store About Us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="nav_header"></div>
+        <?php load_dynamic_store_header($current_store); ?>
+    </header>
+
+    <div class="body_spacing">
+        <div class="HeaderH1_Left_With_Spacing">
+            <h1>About us</h1>
+        </div>
+
+        <div>
+            <h4>The story</h4>
+            <p>
+                It was a coincidental meeting halfway around the world that inspired
+                the idea for Ziugei. On this trip, our founder, Filip Tysander, met an
+                intriguing British gentleman with impeccable yet understated style.
+                The man had a particular fondness for wearing his vintage watches on
+                old, weathered NATO straps. His name? Ziugei. Inspired by his new
+                acquaintance’s timeless style, Filip decided to create his own line of
+                watches. Minimalistic and refined, the classic design with
+                interchangeable straps that came to be has become a staple, with truly
+                wide-ranging appeal. A few years on, this design is still part of the
+                fabric of what makes Ziugei so special.
+            </p>
+
+            <h4>The Design</h4>
+
+            <p>
+                Ziugei represents detail oriented design at its finest. Coveted for
+                their tasteful allure, our iconic timepieces and accessories are worn
+                on all occasions by men and women all over the world. We believe in
+                keeping it simple, using clean lines, and letting the product speak
+                for itself. That is why all of our products are characterized by
+                simplicity and minimalism. This subtle set of qualities is what makes
+                a Ziugei a true classic to love for years to come.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <?php load_dynamic_store_footer($current_store); ?>
+        <div id="mall_footer"></div>
+    </footer>
+    <div id="cookie-consent-message"></div>
+    <script src="JS/global-load-mall-header-and-footer.js"></script>
+    <script src="JS/global-load-store-header-and-footer.js"></script>
+    <script src="JS/global-mobile-nav.js"></script>
+    <script src="JS/global-logged-in-behavior.js"></script>
+    <script src="JS/1-cookie.js"></script>
+</body>
+
+</html>

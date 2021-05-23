@@ -8,8 +8,8 @@ switch (localStorage.getItem("account_state")) {
     break;
   default:
     // Hide cart in nav
-    document.querySelectorAll(".cart-access")[0].style.display = "none";
-    document.querySelectorAll(".cart-access")[1].style.display = "none";
+    // document.querySelectorAll(".cart-access")[0].style.display = "none";
+    // document.querySelectorAll(".cart-access")[1].style.display = "none";
 
     // Change text in mobile nav
     document.querySelector("#account-text").textContent = "Log in";
@@ -23,7 +23,7 @@ switch (localStorage.getItem("account_state")) {
     document.querySelector("#account-access-desktop").href =
       "5.1.7 My-account-Not-yet-logged-in.html";
 
-    document.querySelector("#add-to-cart-button").style.display = "none";
+    // document.querySelector("#add-to-cart-button").style.display = "none";
 
     break;
 }

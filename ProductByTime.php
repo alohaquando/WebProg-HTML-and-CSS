@@ -4,7 +4,7 @@ session_start();
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 require "PHP_functions/time_sort.php";
-require "PHP_functions/dynamic_store_header.php";
+require "PHP_functions/dynamic_store_nav.php";
 
 if (isset($_GET["time"])) {
     $selected_time_sort = $_GET["time"];
@@ -12,7 +12,7 @@ if (isset($_GET["time"])) {
     $selected_time_sort = "none";
 }
 
-$current_store = isset($_GET["store_id"]);
+$current_store = $_GET["store_id"];
 
 // Pagination
 $current_page = isset($_GET["page"]) ? $_GET["page"] : 1;
@@ -183,7 +183,7 @@ function limit_products($products)
     </div>
 
     <footer>
-        <div id="store_footer"></div>
+        <?php load_dynamic_store_footer($current_store); ?>
         <div id="mall_footer"></div>
     </footer>
     <div id="cookie-consent-message"></div>

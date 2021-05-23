@@ -4,7 +4,7 @@ session_start();
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 require "PHP_functions/time_sort.php";
-require "PHP_functions/dynamic_store_header.php";
+require "PHP_functions/dynamic_store_nav.php";
 
 $current_store = $_GET["store_id"];
 ?>
@@ -73,7 +73,7 @@ $current_store = $_GET["store_id"];
         </div>
     </div>
     <footer>
-        <div id="store_footer"></div>
+        <?php load_dynamic_store_footer($current_store); ?>
         <div id="mall_footer"></div>
     </footer>
     <div id="cookie-consent-message"></div>

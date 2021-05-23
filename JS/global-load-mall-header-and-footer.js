@@ -63,7 +63,7 @@ document.getElementById(
 	  <li><a href="5.1.6-Contact.html">Contact</a></li>
 	  <hr class="sidebar_hr" />
 	  <li class="cart-access">
-		<a href="5.2.3-Shopping-Cart.html"
+		<a href="Cart.php"
 		  ><i class="fa fa-shopping-cart"></i>‎‎‏‏‎ ‏‏‎ ‎‎Shopping cart</a
 		>
 	  </li>
@@ -88,7 +88,7 @@ document.getElementById(
   </div>
   <div class="nav_elements_right">
 	<h5 class="nav_cart_icon">
-	  <a href="5.2.3-Shopping-Cart.html" class="cart-access">
+	  <a href="Cart.php" class="cart-access">
 		<i class="fas fa-shopping-cart"></i>
 	  </a>
 	</h5>
