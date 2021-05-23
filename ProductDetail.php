@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
+require "PHP_functions/CSV.php";
+require "PHP_functions/display.php";
 session_start();
-$current_product = $_GET["product_id"];
+$current_product_id = $_GET["product_id"];
 ?>
 <html lang="en">
 
@@ -37,8 +39,20 @@ $current_product = $_GET["product_id"];
 
             <!-- Product Detail Text -->
             <div class="product-detail-text col-2">
-                <h1>Razer Elite Keyboard</h1>
-                <h4>1.000.000 VND</h4>
+                <?php
+                $product_name = get_item_field(
+    "products",
+    $current_product_id,
+    "name"
+);
+                $product_price = get_item_field(
+                    "products",
+                    $current_product_id,
+                    "price"
+                );
+                echo "<h1>$product_name</h1>";
+                echo "<h4>\$$product_price</h4>";
+                ?>
                 <p class="BodyLight-Black17">
                     Never worry again with the Product. Made from features, the Product lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!<br />
 
@@ -61,40 +75,17 @@ $current_product = $_GET["product_id"];
         <div class="small-container">
             <h3>Recommended products</h3>
             <div class="row">
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail-AirTag.html">
-                        <img src="Asset/airtag4.webp" />
-                        <h4>Apple AirTag</h4>
-                        <p class="CaptionBlackXS">Apple</p>
-                        <p class="CaptionBlackSmall">799.000 VND</p>
-                    </a>
-                </div>
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/keyboard3.jpg" />
-                        <h4>Razer Cynosa</h4>
-                        <p class="CaptionBlackXS">Store C</p>
-                        <p class="CaptionBlackSmall">3.000.000 VND</p>
-                    </a>
-                </div>
-
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/headphone4.jpg" />
-                        <h4>Razer Nari</h4>
-                        <p class="CaptionBlackXS">Store K</p>
-                        <p class="CaptionBlackSmall">3.100.000 VND</p>
-                    </a>
-                </div>
-
-                <div class="col-4 store-card">
-                    <a href="5.2.3-ProductDetail.html">
-                        <img src="Asset/headphone5.jpg" />
-                        <h4>Razer Kaira</h4>
-                        <p class="CaptionBlackXS">Store L</p>
-                        <p class="CaptionBlackSmall">4.100.000 VND</p>
-                    </a>
-                </div>
+                <?php
+                $count = 0;
+                $products = create_associative_array("products");
+                foreach ($products as $product) {
+                    display_product($product);
+                    $count++;
+                    if ($count == 4) {
+                        break;
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>
