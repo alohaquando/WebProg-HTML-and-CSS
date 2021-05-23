@@ -57,17 +57,15 @@ function create_associative_array_matching(
     $reference_field_name
 ) {
     $all = create_associative_array($data);
+    $all_matched = [];
     foreach ($all as $item) {
         if (
       $item[$field] ==
       get_item_field($reference_array, $reference_id, $reference_field_name)
-    );
-        print_r($item);
+    ) {
+            $all_matched[] = $item;
+        } else {
+        }
     }
+    return $all_matched;
 }
-
-echo "<pre>";
-print_r(
-    create_associative_array_matching("products", "store_id", "stores", 1, "id")
-);
-echo "</pre>";

@@ -16,3 +16,16 @@ function products_sorted_by_time($method)
     usort($products, $method);
     return $products;
 }
+
+function products_sorted_by_time_single_store($method, $store_id)
+{
+    $products = create_associative_array_matching(
+        "products",
+        "store_id",
+        "stores",
+        $store_id,
+        "id"
+    );
+    usort($products, $method);
+    return $products;
+}

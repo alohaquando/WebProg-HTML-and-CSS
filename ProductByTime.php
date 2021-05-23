@@ -11,7 +11,7 @@ if (isset($_GET["time"])) {
     $selected_time_sort = "none";
 }
 
-$store = $_GET["store"];
+$current_store = $_GET["current_store"];
 ?>
 
 
@@ -39,11 +39,11 @@ $store = $_GET["store"];
             <div class="HeaderH1_Left_With_Spacing">
                 <h1>Products • Sorted by Created Time</h1>
             </div>
-
-            <form action="ProductByTime.php" method="GET">
+            <form action="ProductByTime.php?" method="GET">
                 <div class="styled-select">
                     <select name="time" id="time" onchange="this.form.submit()">
-                        <?php switch ($selected_time_sort) {
+                        <?php
+                        switch ($selected_time_sort) {
                           case "newest_first":
                             echo "<option value=\"none\" disabled hidden>
     Browse products by... ▾
@@ -66,7 +66,10 @@ $store = $_GET["store"];
                       <option value=\"newest_first\">Newest First</option>
                       <option value=\"oldest_first\">Oldest First</option>";
                             break;
-                        } ?>
+                        }
+
+                        echo "<input type=\"hidden\" id=\"current_store\" name=\"current_store\" value=\"$current_store\">";
+                        ?>
                     </select>
                 </div>
             </form>
@@ -74,14 +77,21 @@ $store = $_GET["store"];
             <div class="row">
                 <?php switch ($selected_time_sort) {
                   case "none":
-                    $products = create_associative_array("products");
+                    $products = create_associative_array_matching(
+                        "products",
+                        "store_id",
+                        "stores",
+                        $current_store,
+                        "id"
+                    );
                     foreach ($products as $product) {
                         display_product($product);
                     }
                     break;
                   default:
-                    $sorted_products = products_sorted_by_time(
-                        $selected_time_sort
+                    $sorted_products = products_sorted_by_time_single_store(
+                        $selected_time_sort,
+                        $current_store
                     );
                     foreach ($sorted_products as $product) {
                         display_product($product);
