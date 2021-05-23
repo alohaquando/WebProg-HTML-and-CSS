@@ -74,6 +74,7 @@ $product = get_item("products", $current_product_id);
                 <?php
                 $count = 0;
                 $products = create_associative_array("products");
+                shuffle($products);
                 foreach ($products as $product) {
                     display_product($product);
                     $count++;
