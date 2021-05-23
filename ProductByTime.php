@@ -4,6 +4,7 @@ session_start();
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 require "PHP_functions/time_sort.php";
+require "PHP_functions/dynamic_store_header.php";
 
 if (isset($_GET["time"])) {
     $selected_time_sort = $_GET["time"];
@@ -11,7 +12,7 @@ if (isset($_GET["time"])) {
     $selected_time_sort = "none";
 }
 
-$current_store = $_GET["current_store"];
+$current_store = $_GET["store_id"];
 ?>
 
 
@@ -31,7 +32,7 @@ $current_store = $_GET["current_store"];
 <body>
     <header>
         <div id="nav_header"></div>
-        <div id="store_header"></div>
+        <?php load_dynamic_store_header($current_store); ?>
     </header>
     <div class="body_spacing">
         <!--------All Products-------->

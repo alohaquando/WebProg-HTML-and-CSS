@@ -2,8 +2,9 @@
 <?php
 session_start();
 require "PHP_functions/CSV.php";
-$store_detail = get_item("stores", $_GET["store_id"]);
-$store_name = get_item_field("stores", $_GET["store_id"], "name");
+require "PHP_functions/dynamic_store_header.php";
+
+$current_store = $_GET["store_id"];
 ?>
 <html lang="en">
 
@@ -22,7 +23,7 @@ $store_name = get_item_field("stores", $_GET["store_id"], "name");
 <body>
     <header>
         <div id="nav_header"></div>
-        <div id="store_header"></div>
+        <?php load_dynamic_store_header($current_store); ?>
     </header>
 
     <div class="body_spacing">
