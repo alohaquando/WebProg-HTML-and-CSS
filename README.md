@@ -7,7 +7,8 @@ View here https://s3800978.github.io/WebProg-HTML-and-CSS/
 - Taehyeon Jeong • S3799019
 - Hoang Pham Duc Anh • S3877340
 
-Task allocation: https://trello.com/b/IR6MaV8S/to-do-javascript
+Task allocation #Assignment 2: https://trello.com/b/IR6MaV8S/to-do-javascript
+Task allocation #Assignment 3: https://trello.com/b/wbVqNQKM/fullstack-assignment
 
 # WebProg-HTML-and-CSS
 
