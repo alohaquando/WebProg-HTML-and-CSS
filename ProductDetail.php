@@ -2,9 +2,40 @@
 <?php
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
+
 session_start();
 $current_product_id = $_GET["product_id"];
 $product = get_item("products", $current_product_id);
+error_reporting(0);
+
+// Add to cart and update quantity function
+function add_to_cart($id)
+{
+  $product_to_cart = [];
+  $already_in_cart = "unknown";
+  $cart = $_SESSION["cart"];
+
+  // Check the cart to see if product already exist
+  foreach ($cart as $product_in_cart) {
+    // Increase quantity if product with the same id exist
+    if ($id == $product_in_cart["id"]) {
+      $already_in_cart = "yes"; // tell the function the product existed
+      $_SESSION["cart"][$id]["quantity"]++;
+      break;
+    }
+  }
+  // If product doesn't exist, then add it to cart
+  if ($already_in_cart == "unknown") {
+    $product_to_cart["id"] = $id;
+    $product_to_cart["quantity"] = 1;
+    $_SESSION["cart"][$product_to_cart["id"]] = $product_to_cart;
+  }
+}
+
+// Run add_to_cart function if "add_to_cart" is inside URL
+if (isset($_GET["add_to_cart"])) {
+  add_to_cart($current_product_id);
+}
 ?>
 <html lang="en">
 
@@ -43,9 +74,9 @@ $product = get_item("products", $current_product_id);
                 <?php
                 echo "<h1>$product[name]</h1>";
                 $product_store = get_item_field(
-                    "stores",
-                    $product["store_id"],
-                    "name"
+                  "stores",
+                  $product["store_id"],
+                  "name"
                 );
                 echo "<h4>From $product_store</h4>";
                 echo "<h4>\$$product[price]</h4>";
@@ -54,14 +85,16 @@ $product = get_item("products", $current_product_id);
                     Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
                 </p>";
                 ?>
+                <form method="get" action="ProductDetail.php">
                 <div class="button-primary-and-secondary" id="product-cart-button">
-                    <button type="button" onclick="add_to_cart('Keyboard')" id="buy-now-button">
+                    <?php echo "<input hidden name=\"product_id\" value=\"$current_product_id\" />"; ?>
+                    <button type="button" id="buy-now-button">
                         <a href="Cart.php">Buy now</a>
                     </button>
-                    <button type="button" class="button-secondary" id="add-to-cart-button" onclick="add_to_cart('Keyboard'); show_toast('Keyboard')">
-                        <a>Add to Cart</a>
+                    <button type="submit" class="button-secondary" id="add-to-cart-button" value="add" name="add_to_cart"> Add to Cart!
                     </button>
                 </div>
+                </form>
             </div>
         </div>
 
@@ -76,11 +109,11 @@ $product = get_item("products", $current_product_id);
                 $products = create_associative_array("products");
                 shuffle($products);
                 foreach ($products as $product) {
-                    display_product($product);
-                    $count++;
-                    if ($count == 4) {
-                        break;
-                    }
+                  display_product($product);
+                  $count++;
+                  if ($count == 4) {
+                    break;
+                  }
                 }
                 ?>
             </div>
