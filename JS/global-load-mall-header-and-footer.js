@@ -103,11 +103,11 @@ document.getElementById(
 document.getElementById("mall_footer").innerHTML = ` <div class="mall_footer">
   <div class="footer_wrapper">
 	<div class="footer_elements_left">
-	  <a href="5.1.3-Mall-Terms.html" class="BodyBlack15"
+	  <a href="Terms.php" class="BodyBlack15"
 		>Term of Service</a
 	  >
-	  <a href="5.1.3-Mall-Copyright.html" class="BodyBlack15">Copyright</a>
-	  <a href="5.1.3-Mall-Policy.html" class="BodyBlack15"
+	  <a href="Copyright.php" class="BodyBlack15">Copyright</a>
+	  <a href="Policy.php" class="BodyBlack15"
 		>Privacy Policy</a
 	  >
 	</div>

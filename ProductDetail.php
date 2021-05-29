@@ -5,13 +5,15 @@ require "PHP_functions/display.php";
 session_start();
 $current_product_id = $_GET["product_id"];
 $product = get_item("products", $current_product_id);
+$_SESSION["cart"][] = $_GET["product_id"];
+print_r($_SESSION["cart"]);
 ?>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Product Detail - Razer Elite Keyboard</title>
-    <meta name="description" content="Product Detail - Razer Elite Build Keyboard" />
+    <meta name="description" content="Product Detail" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
