@@ -6,6 +6,7 @@ require "PHP_functions/display.php";
 session_start();
 $current_product_id = $_GET["product_id"];
 $product = get_item("products", $current_product_id);
+
 error_reporting(0);
 
 // Add to cart and update quantity function
@@ -36,13 +37,14 @@ function add_to_cart($id)
 if (isset($_GET["add_to_cart"])) {
   add_to_cart($current_product_id);
 }
+
 ?>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Product Detail - Razer Elite Keyboard</title>
-    <meta name="description" content="Product Detail - Razer Elite Build Keyboard" />
+    <meta name="description" content="Product Detail" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>

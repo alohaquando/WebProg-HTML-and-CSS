@@ -196,6 +196,14 @@ td {
   margin-right: 24px;
 }
 
+.styled-radio input {
+  margin: 10px 0;
+}
+
+.styled-radio label {
+  margin-left: 4px;
+}
+
 .featured-section {
   margin-top: 32px;
   box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.2);
@@ -234,4 +242,72 @@ td {
   background-color: #222222;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+}
+
+.upload_file {
+  padding: 24px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--light-gray);
+  margin: 24px 0px;
+}
+
+.upload_file input {
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 16px;
+}
+
+.upload_file label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3px;
+  color: var(--black);
+}
+
+.bottom-24 {
+  margin-bottom: 24px !important;
+}
+
+.card {
+  padding: 8px 32px 40px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.card a {
+  margin-bottom: 8px !important;
+  display: inline-block;
+}
+
+.toast-large {
+  display: none;
+}
+
+.toast-large-elements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 24px auto;
+  z-index: 10;
+  padding: 10px 24px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: var(--brand-navy);
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.25);
+}
+
+.toast-large p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-right: 12px;
+}
+
+.toast-large a {
+  color: var(--white);
 }
