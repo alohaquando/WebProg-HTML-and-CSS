@@ -39,12 +39,7 @@ function display_product_in_cart($product)
         <p class=\"CaptionBlackXS\">$product_store</p>
         <p class=\"CaptionBlackSmall\">\$$product_detail[price]</p>
         <div class=\"product-in-cart-buttons\">
-            <input type=\"button\" value=\"-\" class=\"value_adjust_button\" onclick=\"[something]\" />
-            
-            <input type=\"number\" step=\"1\" min=\"1\" max=\"99\" required value=\"$product[quantity]\" class=\"product-in-cart-value\" />
-            
-            <input type=\"button\" value=\"+\"
-            class=\"value_adjust_button\" onclick=\"[something]\" />
+         <input type=\"number\" step=\"1\" min=\"1\" max=\"99\" required value=\"$product[quantity]\" name=\"$product[id]\" class=\"product-in-cart-value\" onchange=\"update_cart()\" />
         </div>
     </div>
 </div>";

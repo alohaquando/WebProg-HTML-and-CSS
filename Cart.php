@@ -20,8 +20,13 @@ function calculate_total()
   }
   return $total;
 }
-?>
 
+if (!empty($_POST)) {
+  foreach ($_SESSION["cart"] as $product) {
+    $_SESSION["cart"][$product["id"]]["quantity"] = $_POST[$product["id"]];
+  }
+}
+?>
 <head>
     <meta charset="utf-8" />
     <title>Your Shopping cart!</title>
@@ -29,12 +34,16 @@ function calculate_total()
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
+    <script>
+    function update_cart() {
+      document.querySelector("#cart_update").click()
+  }</script>
 </head>
 
 <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
-        <form action="5.2.4-Order-Placement-Thank-you.html" method="get">
+        
             <h5>
                 <a href="javascript:history.go(-1)">
                     <i class="fas fa-angle-left"></i>
@@ -42,8 +51,9 @@ function calculate_total()
                 </a>
             </h5>
             <h3>Your cart</h3>
-            <div id="cart-list">
             
+            <div id="cart-list">
+            <form method="POST" action="Cart.php" >
                 <?php if (isset($_SESSION["cart"])) {
                   $cart = $_SESSION["cart"];
                   foreach ($cart as $product_in_cart) {
@@ -52,22 +62,32 @@ function calculate_total()
                 } else {
                   echo "<p>Your cart is empty</p>";
                 } ?>
-            
+                <input type="submit" id="cart_update" hidden>
+            </form>
             </div>
 
-       
             <div id="total-block" class="total-price">
                 <hr />
                 <h5>Total</h5>
-                <h1 id="total">$
+                <h1>$</h1>
+                <h1 id="total_shown">
                     <?php
                     $total = calculate_total();
                     echo $total;
                     ?>
                 </h1>
+                
+                <?php
+                $total = calculate_total();
+                echo "<input hidden id=\"total\" value=\"$total\" />";
+                ?>
+                
+                <script>document.querySelector("#total_shown").innerHTML = `${parseFloat(document.querySelector("#total").value).toLocaleString(
+                    "en-US")}`;
+                </script>
+                </div>
                 <input type="submit" value="Checkout" id="checkout" />
-            </div>
-        </form>
+            
 
         <div id="coupon-block" class="styled-input-text">
             <hr />
