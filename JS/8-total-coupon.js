@@ -39,7 +39,7 @@ function couponValidation() {
   }
 }
 
-// Validate coupon on "Enter"
+// Validate coupon on "Enter" Test
 document.getElementById("coupon").addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     couponValidation();

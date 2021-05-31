@@ -19,6 +19,16 @@ function calculate_total()
   }
   return $total;
 }
+
+
+// Test
+
+if (!empty($_POST)) {
+  foreach ($_SESSION["cart"] as $product) {
+    $_SESSION["cart"][$product["id"]]["quantity"] = $_POST[$product["id"]];
+  }
+}
+
 ?>
 
 <head>
