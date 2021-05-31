@@ -12,7 +12,7 @@
 //     <a href="ProductByCat.php">View Product</a>
 //     </div>`;
 //   hide_total();
-}
+// }
 // Add a Clear Cart button if cart is not empty
 // else {
 //   cart_list.innerHTML += `<a id="clear-cart">× Clear cart</a>`;
