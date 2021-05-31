@@ -49,6 +49,7 @@ input[type="number"] {
 #total-block h1 {
   display: inline-block;
   vertical-align: top;
+  /* test */
 }
 
 .value_adjust_button {
@@ -62,6 +63,7 @@ input[type="number"] {
 .total-price {
   margin-top: 40px;
 }
+
 .total-price h5 {
   margin-bottom: 8px;
 }

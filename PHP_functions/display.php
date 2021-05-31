@@ -45,3 +45,5 @@ function display_product_in_cart($product)
     </div>
 </div>";
 }
+
+// Test
