@@ -49,7 +49,6 @@ input[type="number"] {
 #total-block h1 {
   display: inline-block;
   vertical-align: top;
-  /* test */
 }
 
 .value_adjust_button {
