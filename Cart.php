@@ -5,6 +5,21 @@
 session_start();
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
+
+function calculate_total()
+{
+  $total = 0;
+  if (isset($_SESSION["cart"])) {
+    $cart = $_SESSION["cart"];
+    foreach ($cart as $product_in_cart) {
+      $price = get_item_field("products", $product_in_cart["id"], "price");
+      $quantity = $product_in_cart["quantity"];
+      $single_product_total = $price * $quantity;
+      $total += $single_product_total;
+    }
+  }
+  return $total;
+}
 ?>
 
 <head>
@@ -27,21 +42,29 @@ require "PHP_functions/display.php";
                 </a>
             </h5>
             <h3>Your cart</h3>
-            <div id="cart-list"></div>
+            <div id="cart-list">
+            
+                <?php if (isset($_SESSION["cart"])) {
+                  $cart = $_SESSION["cart"];
+                  foreach ($cart as $product_in_cart) {
+                    display_product_in_cart($product_in_cart);
+                  }
+                } else {
+                  echo "<p>Your cart is empty</p>";
+                } ?>
+            
+            </div>
 
-            <?php
-            display_product_in_cart(1);
-            display_product_in_cart(2);
-            display_product_in_cart(3);
-            display_product_in_cart(4);
-            display_product_in_cart(5);
-            ?>
-
-
+       
             <div id="total-block" class="total-price">
                 <hr />
                 <h5>Total</h5>
-                <h1 id="total">123456</h1>
+                <h1 id="total">$
+                    <?php
+                    $total = calculate_total();
+                    echo $total;
+                    ?> 
+                </h1>
                 <input type="submit" value="Checkout" id="checkout" />
             </div>
         </form>

@@ -43,8 +43,12 @@ input[type="number"] {
   text-align: center;
   border: 2px solid #efefef;
   border-radius: 8px;
-  margin: 0 8px;
   font-size: 15px;
+}
+
+#total-block h1 {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .value_adjust_button {
@@ -53,13 +57,6 @@ input[type="number"] {
   cursor: pointer;
   font-size: 15px;
   font-weight: 700;
-}
-
-.product-in-cart-buttonsinput input::-webkit-outer-spin-button,
-.product-in-cart-buttons input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
 }
 
 .total-price {
