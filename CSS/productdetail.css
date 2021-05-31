@@ -19,8 +19,15 @@
 }
 
 /* Product Image */
+
+/* .product-img {
+  display: flex;
+  justify-content: sapc;
+} */
+
 .product-img img {
   margin-bottom: 8px;
+  /* object-fit: cover; */
 }
 
 /* Image Gallery */
@@ -42,6 +49,7 @@
 
 .toast {
   display: none;
+  transition: 2s;
 }
 .toast-elements {
   display: flex;
