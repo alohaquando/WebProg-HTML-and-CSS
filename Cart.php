@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 session_start();
 require "PHP_functions/CSV.php";

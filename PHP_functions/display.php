@@ -32,6 +32,7 @@ function display_product_in_cart($product)
     $product_detail["store_id"],
     "name"
   );
+
   echo "<div class=\"product-in-cart\">
     <img src=\"Asset/product_placeholder_icon.png\" />
     <div class=\"product-in-cart-detail\">
