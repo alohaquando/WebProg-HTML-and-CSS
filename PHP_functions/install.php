@@ -20,14 +20,14 @@
       <div class="left">
         <form action="action.php" method="get">
           <div id="left">
-            <h2>Welcome ADMIN Register Page!</h2>
+            <h2>Welcome Admin Register Page!</h2>
 
             <!-- <div class="items"> -->
-            <h4>Account</h4>
+            <h4>Create Account</h4>
 
             <!-- Email -->
             <div class="styled-input-text">
-              <label for="username">ADMIN Username</label><br />
+              <label for="username">Admin Username</label><br />
               <input
                 type="username"
                 id="username"
@@ -68,20 +68,18 @@
 
             <br />
 
-                </div>
-              </div>
             </div>
           </div>
           <button input type="submit" id="register-submit" name="submit">
             Create account
           </button>
-          <button type="reset" value="reset">Reset</button>
         </form>
       </div>
 
       <div id="right"></div>
       <footer id="mall_footer"></footer>
     </div>
+
   </body>
   <script src="JS/input.js"></script>
   <script src="JS/global-load-mall-header-and-footer.js"></script>
