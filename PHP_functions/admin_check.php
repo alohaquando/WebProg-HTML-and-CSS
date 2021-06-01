@@ -1,13 +1,9 @@
 <?php
+$filename = "/path/to/install.php";
 
-add_action('template_redirect','my_non_logged_redirect');
-function my_non_logged_redirect()
-{
-     if ((in_category(1) && !is_user_logged_in() ))
-    {
-        wp_redirect( "............." );
-        die();
-    }
+if (file_exists($filename)) {
+    echo "The file $filename exists";
+} else {
+    echo "The file $filename does not exist";
 }
-
 ?>
