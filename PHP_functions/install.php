@@ -88,8 +88,6 @@ if (isset($_POST['submit'])){
     $password_hashed = password_hash( $password, PASSWORD_DEFAULT);
 
     $user_detail = array(
-            $email,
-        $phone,
         $password,
         $password_hashed,
         );
