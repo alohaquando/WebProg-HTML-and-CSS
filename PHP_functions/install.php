@@ -47,7 +47,7 @@
                             name="password"
                             id="password"
                             placeholder="Password"
-                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             required
                     />
                 </div>
@@ -60,10 +60,20 @@
                             name="con_password"
                             id="confirmpassword"
                             placeholder="Confirm Password"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             required
                     />
                 </div>
+
+                <div id="message">
+                  <h3>Password must contain the following:</h3>
+                  <p>A <b>lowercase</b> letter</p>
+                  <p>A <b>capital (uppercase)</b> letter</p>
+                  <p>A <b>number</b></p>
+                  <p>A <b>Speical Punctuation (!@#$%^&*) </b></p>
+                  <p>Minimum <b>8 characters</b></p>
+              </div>
+
 
             <br />
 

@@ -27,11 +27,11 @@
 
             <!-- Admin Username -->
             <div class="styled-input-text">
-              <label for="username">Admin Username</label><br />
+              <label for="Username">Admin Username</label><br />
               <input
-                type="username"
-                id="username"
-                name="username"
+                type="Username"
+                id="Username"
+                name="Username"
                 placeholder="Username"
                 required
               />
@@ -47,7 +47,7 @@
                             name="password"
                             id="password"
                             placeholder="Password"
-                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             required
                     />
                 </div>
@@ -57,13 +57,23 @@
                     <label for="confirmPassword">Confirm password</label>
                     <input
                             type="password"
-                            name="con_password"
-                            id="confirmpassword"
+                            name="password"
+                            id="password"
                             placeholder="Confirm Password"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             required
                     />
                 </div>
+
+                <div id="message">
+                  <h3>Password must contain the following:</h3>
+                  <p>A <b>lowercase</b> letter</p>
+                  <p>A <b>capital (uppercase)</b> letter</p>
+                  <p>A <b>number</b></p>
+                  <p>A <b>Speical Punctuation (!@#$%^&*) </b></p>
+                  <p>Minimum <b>8 characters</b></p>
+              </div>
+
 
             <br />
 
@@ -82,7 +92,7 @@
 
   <?php
 if (isset($_POST['submit'])){
-    $username = $_POST['username'];
+    $Username = $_POST['Username'];
     $password = $_POST['password'];
 
     $password_hashed = password_hash( $password, PASSWORD_DEFAULT);
