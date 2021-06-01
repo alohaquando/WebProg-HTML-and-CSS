@@ -16,15 +16,15 @@
       <div class="HeaderH1_Left_With_Spacing">
         <h1>Log in into CMS</h1>
       </div>
-      <form name="loginForm" action="Login_CMS.php">
+      <form name="loginForm" action="CMS.php">
         <!-- Login -->
         <!-- Username -->
         <div class="styled-input-text">
-          <label for="login_username">Username</label><br />
+          <label for="login_Username">Username</label><br />
           <input
-            type="login_username"
-            id="login_username"
-            name="login_username"
+            type="login_Username"
+            id="login_Username"
+            name="login_Username"
             placeholder="Username"
             pattern="(([^<>()[\]\\.,;:\s@\x22]+(\.[^<>()[\]\\.,;:\s@\x22]+)*)|(\x22.+\x22))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))"
             ;
