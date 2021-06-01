@@ -37,16 +37,15 @@ if (!empty($_POST)) {
     <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
     <script>
     function update_cart() {
-      document.querySelector("#cart_update").click()
+document.querySelector("#cart_update").click()
   }</script>
 </head>
 
 <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
-        
             <h5>
-                <a href="javascript:history.go(-1)">
+                <a href="javascript:history.back()">
                     <i class="fas fa-angle-left"></i>
                     ‎ ‏‎ ‏Continue Shopping
                 </a>

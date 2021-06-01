@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
@@ -8,7 +7,6 @@ $current_product_id = $_GET["product_id"];
 $product = get_item("products", $current_product_id);
 
 error_reporting(0);
-
 // Add to cart and update quantity function
 function add_to_cart($id)
 {
@@ -36,9 +34,24 @@ function add_to_cart($id)
 // Run add_to_cart function if "add_to_cart" is inside URL
 if (isset($_GET["add_to_cart"])) {
   add_to_cart($current_product_id);
+  echo '<script type="text/JavaScript">
+  function display_toast() {
+  document.querySelector("#toast").style.display = "flex";
+  setTimeout(function(){
+  document.querySelector("#toast").style.display = "none"
+      }, 2000);
+  }
+  </script>';
 }
 
+if (isset($_GET["buy_now"])) {
+  add_to_cart($current_product_id);
+  header("Location: Cart.php");
+  die();
+}
 ?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -63,6 +76,22 @@ if (isset($_GET["add_to_cart"])) {
         <div id="nav_header"></div>
     </header>
     <div class="body_spacing">
+      
+      <!--Notification when cart is added  --> 
+     <div class="toast-large" id="toast">
+       <div class="toast-large-elements">
+              <?php
+              $amount_in_cart =
+                $_SESSION["cart"][$current_product_id]["quantity"];
+              echo "<p id=\"toast-large-message\">  $amount_in_cart $product[name] currently in cart</p>";
+              echo "<a href=\"Cart.php\">View cart</a>";
+              ?>
+            </div>
+        </div>
+          <script>
+            display_toast()
+            </script>
+      
         <!-- Main Image -->
         <div class="row">
             <div class="col-2">
@@ -82,7 +111,6 @@ if (isset($_GET["add_to_cart"])) {
                 );
                 echo "<h4>From $product_store</h4>";
                 echo "<h4>\$$product[price]</h4>";
-
                 echo "<p class=\"BodyLight-Black17\">
                     Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
                 </p>";
@@ -90,8 +118,8 @@ if (isset($_GET["add_to_cart"])) {
                 <form method="get" action="ProductDetail.php">
                 <div class="button-primary-and-secondary" id="product-cart-button">
                     <?php echo "<input hidden name=\"product_id\" value=\"$current_product_id\" />"; ?>
-                    <button type="button" id="buy-now-button">
-                        <a href="Cart.php">Buy now</a>
+                    <button type="submit" id="buy-now-button"
+                    value="buy" name="buy_now">Buy now
                     </button>
                     <button type="submit" class="button-secondary" id="add-to-cart-button" value="add" name="add_to_cart"> Add to Cart!
                     </button>
@@ -126,13 +154,9 @@ if (isset($_GET["add_to_cart"])) {
         <div id="mall_footer"></div>
     </footer>
 
-    <!--Notification when cart is added  -->
-    <div class="toast" id="toast">
-        <div class="toast-elements">
-            <p id="toast-message">Added!</p>
-            <a href="Cart.php">View cart</a>
-        </div>
-    </div>
+    
+        
+        
     <div id="cookie-consent-message"></div>
     <script src="JS/global-load-mall-header-and-footer.js"></script>
     <script src="JS/global-load-store-header-and-footer.js"></script>
