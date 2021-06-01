@@ -24,16 +24,16 @@
             id="login_method_email"
             name="login_method"
             value="login_method_email"
-            required
             checked
-          />
+            require
+          
+            />
           <label for="login_email">Email</label>
           <br /><input
             type="radio"
             id="login_method_phone"
             name="login_method"
             value="login_method_phone"
-            disabled
           />
           <label for="login_phone">Phone</label>
         </div>
@@ -86,3 +86,10 @@
     <script src="JS/1-cookie.js"></script>
     <script src="JS/5-login.js"></script>
   </body>
+
+  <?php
+
+
+
+// if 
+?>
