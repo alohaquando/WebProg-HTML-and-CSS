@@ -14,22 +14,22 @@
     <header id="nav_header"></header>
     <div class="body_spacing">
       <div class="HeaderH1_Left_With_Spacing">
-        <h1>Log in</h1>
+        <h1>Log in into CMS</h1>
       </div>
-      <form name="loginForm" action="5.1.7-My-account-Logged-in.html">
-
-        <!-- Login method -->
-        <div class="styled-radio">
-          <p>Log in with</p>
+      <form name="loginForm" action="Login_CMS.php">
+        <!-- Login -->
+        <!-- Username -->
+        <div class="styled-input-text">
+          <label for="login_username">Username</label><br />
           <input
-            type="radio"
-            id="login_method_email"
-            name="login_method"
-            value="login_method_email"
+            type="login_username"
+            id="login_username"
+            name="login_username"
+            placeholder="Username"
+            pattern="(([^<>()[\]\\.,;:\s@\x22]+(\.[^<>()[\]\\.,;:\s@\x22]+)*)|(\x22.+\x22))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))"
+            ;
             required
-            checked
           />
-          <label for="login_phone">Phone</label>
         </div>
 
         <!-- Password -->
@@ -46,7 +46,6 @@
         </div>
 
         <div class="button-group-for-input">
-          <br />
           <button input type="submit">Log in</button>
         </div>
       </form>
