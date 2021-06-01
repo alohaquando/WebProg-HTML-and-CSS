@@ -18,7 +18,7 @@
     <div class="body_spacing">
       <div class="right"></div>
       <div class="left">
-        <form action="AdminRegister(no_PHP).html" method="get">
+        <form action="install.php" method="get">
           <div id="left">
             <h2>Welcome Admin Register Page!</h2>
 
@@ -88,8 +88,6 @@ if (isset($_POST['submit'])){
     $password_hashed = password_hash( $password, PASSWORD_DEFAULT);
 
     $user_detail = array(
-            $email,
-        $phone,
         $password,
         $password_hashed,
         );

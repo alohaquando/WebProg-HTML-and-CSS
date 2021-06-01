@@ -18,7 +18,7 @@
     <div class="body_spacing">
       <div class="right"></div>
       <div class="left">
-        <form action="install.php" method="get">
+        <form action="index.php" method="get">
           <div id="left">
             <h2>Welcome Admin Register Page!</h2>
 
@@ -27,11 +27,11 @@
 
             <!-- Admin Username -->
             <div class="styled-input-text">
-              <label for="username">Admin Username</label><br />
+              <label for="Username">Admin Username</label><br />
               <input
-                type="username"
-                id="username"
-                name="username"
+                type="Username"
+                id="Username"
+                name="Username"
                 placeholder="Username"
                 required
               />
@@ -82,7 +82,7 @@
 
   <?php
 if (isset($_POST['submit'])){
-    $username = $_POST['username'];
+    $Username = $_POST['Username'];
     $password = $_POST['password'];
 
     $password_hashed = password_hash( $password, PASSWORD_DEFAULT);
