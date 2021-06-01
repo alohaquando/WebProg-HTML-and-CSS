@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Admin Account</title>
+    <title>Register Account</title>
     <link href="CSS/main.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -18,14 +18,14 @@
     <div class="body_spacing">
       <div class="right"></div>
       <div class="left">
-        <form action="action.php" method="get">
+        <form action="install.php" method="get">
           <div id="left">
             <h2>Welcome Admin Register Page!</h2>
 
             <!-- <div class="items"> -->
             <h4>Create Account</h4>
 
-            <!-- Email -->
+            <!-- Admin Username -->
             <div class="styled-input-text">
               <label for="username">Admin Username</label><br />
               <input
@@ -38,33 +38,32 @@
               <!-- <small>Invalid Username</small> -->
             </div>
 
+                <!-- passowrd -->
+                <div class="styled-input-text">
+                    <!-- <h5>password</h5> -->
+                    <label for="password">Password</label>
+                    <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Password"
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$"
+                            required
+                    />
+                </div>
 
-            <!-- passowrd -->
-            <div class="styled-input-text">
-              <!-- <h5>password</h5> -->
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$"
-                required
-              />
-            </div>
-
-            <!-- confirm passowrd -->
-            <div class="styled-input-text">
-              <label for="confirmPassword">Confirm password</label>
-              <input
-                type="password"
-                name="con_password"
-                id="confirmpassword"
-                placeholder="Confirm Password"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}"
-                required
-              />
-            </div>
+                <!-- confirm passowrd -->
+                <div class="styled-input-text">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input
+                            type="password"
+                            name="con_password"
+                            id="confirmpassword"
+                            placeholder="Confirm Password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}"
+                            required
+                    />
+                </div>
 
             <br />
 
@@ -76,16 +75,32 @@
         </form>
       </div>
 
-      <?php 
-      // Display the alert box  
-      echo '<script>alert("Please delete this file after creating an admin account")</script>'; 
-      ?>
-
       <div id="right"></div>
       <footer id="mall_footer"></footer>
     </div>
-
   </body>
+
+  <?php
+if (isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $password_hashed = password_hash( $password, PASSWORD_DEFAULT);
+
+    $user_detail = array(
+            $email,
+        $phone,
+        $password,
+        $password_hashed,
+        );
+
+    $fp = fopen('Data/admin.csv', 'a');
+        fputcsv($fp, $user_detail);
+        fclose($fp);
+
+};
+?>
+
   <script src="JS/input.js"></script>
   <script src="JS/global-load-mall-header-and-footer.js"></script>
   <script src="JS/global-load-store-header-and-footer.js"></script>
