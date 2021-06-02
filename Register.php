@@ -18,17 +18,17 @@ if (isset($_POST["submit"])) {
     $country = $_POST["country"];
 
     $user_detail = [
-    $uid,
-    $email,
-    $phone,
-    $password_hashed,
-    $firstname,
-    $lastname,
-    $address,
-    $city,
-    $zipcode,
-    $country,
-  ];
+        $uid,
+        $email,
+        $phone,
+        $password_hashed,
+        $firstname,
+        $lastname,
+        $address,
+        $city,
+        $zipcode,
+        $country,
+    ];
 
     $file = "Data/users.csv";
     ($fp = fopen($file, "r+")) or die("unable open $file for writing");
@@ -36,19 +36,19 @@ if (isset($_POST["submit"])) {
 
     // check if email or phone already exist
     if (
-    stripos($contents, $email) !== false or
-    stripos($contents, $phone) !== false
-  ) {
+        stripos($contents, $email) !== false or
+        stripos($contents, $phone) !== false
+    ) {
         echo '<script type="text/JavaScript">
-                function display_toast() {
-                document.querySelector("#toast-error").style.display = "flex";}
-                </script>';
+                                function display_toast() {
+                                document.querySelector("#toast-error").style.display = "flex";}
+                                </script>';
     } else {
         fputcsv($fp, $user_detail);
         echo '<script type="text/JavaScript">
-        function display_toast() {
-        document.querySelector("#toast-ok").style.display = "flex";}
-        </script>';
+                function display_toast() {
+                document.querySelector("#toast-ok").style.display = "flex";}
+                </script>';
         header("Location:MyAccount_Login.php");
     }
 
@@ -91,7 +91,7 @@ if (isset($_POST["submit"])) {
             <form action="Register.php" method="post">
                 <div id="left">
                     <h2>Welcome to Shop!</h2>
-                    <p>Register now! Your vouchers are waiting for you!</p>
+                    <p>Register now and start buying!</p>
                     <!-- <div class="items"> -->
                     <h4>Account</h4>
 
