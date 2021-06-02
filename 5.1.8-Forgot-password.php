@@ -1,4 +1,13 @@
 <html lang="en">
+  <?php
+  session_start();
+
+  if (file_exists("install.php")) {
+    exit(
+      "Create an admin account and remove the install.php file before using this website"
+    );
+  }
+  ?>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

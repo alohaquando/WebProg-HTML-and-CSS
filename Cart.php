@@ -37,7 +37,7 @@ if (isset($_POST["value_adjust"])) {
 
 if (isset($_POST["checkout"])) {
     if (isset($_COOKIE["uid"])) {
-        header("location: 5.2.4-Order-Placement-Thank-you.html");
+        header("location: 5.2.4-Order-Placement-Thank-you.php");
     } else {
         header("location: Register.php");
     }

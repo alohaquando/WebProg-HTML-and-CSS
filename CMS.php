@@ -189,7 +189,7 @@ if (isset($_POST["content_page"])) {
             </form>
 
             <!-- Link -->
-            <a href="5.1.2-Aboutus.html">View About Us</a>
+            <a href="5.1.2-Aboutus.php">View About Us</a>
 
         </div>
 

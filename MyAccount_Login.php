@@ -141,7 +141,7 @@ if (isset($_POST["login"])) {
             </div>
 
             <div class="button-group-for-input">
-                <a href="5.1.8-Forgot-password.html">Forgot password?</a>
+                <a href="5.1.8-Forgot-password.php">Forgot password?</a>
                 <br />
                 <button input name="login" type="submit">Log in</button>
             </div>
