@@ -8,33 +8,42 @@ print_r($registered_users);
 echo "</pre>";
 
 
-$credential = $_POST["credential"];
-$password = $_POST["password"];
-
 if (isset($_POST["login"])) {
+    $credential = $_POST["credential"];
+    $password = $_POST["password"];
+
     foreach ($registered_users as $registered_user) {
-        if (
-      password_verify($password, $registered_user["password_hashed"]) and
+        if (password_verify($password, $registered_user["password_hashed"]) and
       (strpos($credential, $registered_user["email"]) !== false )){
+
+        // create a uniq value pair to prevent modification
+      $uniqid = uniqid();
+
+      // store the pair on the server for later validation
+      // note: the location is outside of document root
+    //   file_put_contents("", $uniqid);
+
        // create a cookie that expires after 7 days
-            setcookie(
-            "loggedin_user",
-            $_POST["credential"],
-            time() + 60 * 60 * 24 * 7;
-            header("location: MyAccount_Logged.php");
+        setcookie(
+        "loggedin_user",
+        $_POST["credential"],
+        time() + 60 * 60 * 24 * 7);
+        header("location: MyAccount_Logged.php");
+        setcookie('uniqid', $uniqid,time() + 60 * 60 * 24 * 7);
+
+        header("location: MyAccount_Logged.php");
+
       }
        else if(password_verify($password, $registered_user["password_hashed"]) and strpos($credential, $registered_user["phone"]) !== false){
+
         setcookie(
             "loggedin_user",
             $_POST["credential"],
-            time() + 60 * 60 * 24 * 7
-            ;
+            time() + 60 * 60 * 24 * 7);
 
         header("location: MyAccount_Logged.php");
        }
-       else {
-            $status = "Invalid username/password";
-        }
+        $status = "Invalid username/password";
     }
 }
 ?>
@@ -73,14 +82,13 @@ if (isset($_POST["login"])) {
             <!-- phone -->
             <div class="styled-input-text">
                 <label for="credential">Phone</label><br />
-                <input class="credential_phone" name="credential_phone" value = "credential_phone" placeholder="Type your phone" required />
-
+                <input class="credential_phone" name="credential" value = "credential_phone" placeholder="Type your phone" required />
             </div>
 
             <!-- Email -->
             <div class="styled-input-text">
                 <label id = "email" for="credential">Email</label><br />
-                <input type = "hidden" class="credential_email" name="credential_email" value = "credential_email" placeholder="Type your email" required />
+                <input type = "hidden" class="credential_email" name="credential" value = "credential_email" placeholder="Type your email" required />
             </div>
 
             <!-- Password -->
@@ -121,14 +129,13 @@ for(var i = 0; i < radio.length; i++) {
    radio[i].onclick = function() {
      var val = this.value;
      if(val == 'perf_phone' ){  
-        credential_phone.style.display = 'block';   // show
+        credential_phone.style.display = 'block';// show
         internetpayment.style.display = 'none';// hide
      }
      else if(val == 'perf_email'){
          credential_email.style.display = 'none';
          internetpayment.style.display = 'block';
      }    
-
   }
 }
 </script>

@@ -151,7 +151,7 @@ if (isset($_POST["submit"])) {
                     </div>
 
                     <div class="styled-select">
-                        <label for="purpose">Contact purpose</label>
+                        <lab el for="purpose">Contact purpose</lab>
                         <select name="purpose" id="purpose">
                             <option value="0" disabled selected hidden>
                                 Select country... ▾

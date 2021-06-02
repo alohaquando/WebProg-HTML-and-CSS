@@ -7,6 +7,8 @@ $registered_users = create_associative_array("users");
 if(isset($_SESSION[''])){
 get_item)
 }
+
+$field = get_field_object();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +33,13 @@ get_item)
             <div class="row">
                 <div class="col-2">
                     <h5>Email</h5>
-                    <p id="account-email">josephinerachel@gmail.com</p>
- 
+                    <p>
+                    <?php
+                    php echo 
+                    ?>
+                    </p>
+                    <!-- id="account-email">josephinerachel@gmail.com</p> -->
+                    
                 </div>
                 <div class="col-2">
                     <h5>Phone number</h5>
