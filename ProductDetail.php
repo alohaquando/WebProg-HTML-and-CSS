@@ -10,44 +10,44 @@ error_reporting(0);
 // Add to cart and update quantity function
 function add_to_cart($id)
 {
-  $product_to_cart = [];
-  $already_in_cart = "unknown";
-  $cart = $_SESSION["cart"];
+    $product_to_cart = [];
+    $already_in_cart = "unknown";
+    $cart = $_SESSION["cart"];
 
-  // Check the cart to see if product already exist
-  foreach ($cart as $product_in_cart) {
-    // Increase quantity if product with the same id exist
-    if ($id == $product_in_cart["id"]) {
-      $already_in_cart = "yes"; // tell the function the product existed
-      $_SESSION["cart"][$id]["quantity"]++;
-      break;
+    // Check the cart to see if product already exist
+    foreach ($cart as $product_in_cart) {
+        // Increase quantity if product with the same id exist
+        if ($id == $product_in_cart["id"]) {
+            $already_in_cart = "yes"; // tell the function the product existed
+            $_SESSION["cart"][$id]["quantity"]++;
+            break;
+        }
     }
-  }
-  // If product doesn't exist, then add it to cart
-  if ($already_in_cart == "unknown") {
-    $product_to_cart["id"] = $id;
-    $product_to_cart["quantity"] = 1;
-    $_SESSION["cart"][$product_to_cart["id"]] = $product_to_cart;
-  }
+    // If product doesn't exist, then add it to cart
+    if ($already_in_cart == "unknown") {
+        $product_to_cart["id"] = $id;
+        $product_to_cart["quantity"] = 1;
+        $_SESSION["cart"][$product_to_cart["id"]] = $product_to_cart;
+    }
 }
 
 // Run add_to_cart function if "add_to_cart" is inside URL
 if (isset($_GET["add_to_cart"])) {
-  add_to_cart($current_product_id);
-  echo '<script type="text/JavaScript">
-  function display_toast() {
-  document.querySelector("#toast").style.display = "flex";
-  setTimeout(function(){
-  document.querySelector("#toast").style.display = "none"
-      }, 2000);
-  }
-  </script>';
+    add_to_cart($current_product_id);
+    echo '<script type="text/JavaScript">
+    function display_toast() {
+    document.querySelector("#toast").style.display = "flex";
+    setTimeout(function(){
+    document.querySelector("#toast").style.display = "none"
+            }, 2000);
+    }
+    </script>';
 }
 
 if (isset($_GET["buy_now"])) {
-  add_to_cart($current_product_id);
-  header("Location: Cart.php");
-  die();
+    add_to_cart($current_product_id);
+    header("Location: Cart.php");
+    die();
 }
 ?>
 
@@ -76,22 +76,22 @@ if (isset($_GET["buy_now"])) {
         <div id="nav_header"></div>
     </header>
     <div class="body_spacing">
-      
-      <!--Notification when cart is added  --> 
-     <div class="toast-large" id="toast">
-       <div class="toast-large-elements">
-              <?php
-              $amount_in_cart =
-                $_SESSION["cart"][$current_product_id]["quantity"];
-              echo "<p id=\"toast-large-message\">  $amount_in_cart $product[name] currently in cart</p>";
-              echo "<a href=\"Cart.php\">View cart</a>";
-              ?>
+
+        <!--Notification when cart is added  -->
+        <div class="toast-large" id="toast">
+            <div class="toast-large-elements">
+                <?php
+                            $amount_in_cart =
+                                $_SESSION["cart"][$current_product_id]["quantity"];
+                            echo "<p id=\"toast-large-message\">  $amount_in_cart $product[name] currently in cart</p>";
+                            echo "<a href=\"Cart.php\">View cart</a>";
+                            ?>
             </div>
         </div>
-          <script>
-            display_toast()
-            </script>
-      
+        <script>
+        display_toast()
+        </script>
+
         <!-- Main Image -->
         <div class="row">
             <div class="col-2">
@@ -103,27 +103,26 @@ if (isset($_GET["buy_now"])) {
             <!-- Product Detail Text -->
             <div class="product-detail-text col-2">
                 <?php
-                echo "<h1>$product[name]</h1>";
-                $product_store = get_item_field(
-                  "stores",
-                  $product["store_id"],
-                  "name"
-                );
-                echo "<h4>From $product_store</h4>";
-                echo "<h4>\$$product[price]</h4>";
-                echo "<p class=\"BodyLight-Black17\">
-                    Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
-                </p>";
-                ?>
+                                echo "<h1>$product[name]</h1>";
+                                $product_store = get_item_field(
+                                    "stores",
+                                    $product["store_id"],
+                                    "name"
+                                );
+                                echo "<h4>From $product_store</h4>";
+                                echo "<h4>\$$product[price]</h4>";
+                                echo "<p class=\"BodyLight-Black17\">
+                                        Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
+                                </p>";
+                                ?>
                 <form method="get" action="ProductDetail.php">
-                <div class="button-primary-and-secondary" id="product-cart-button">
-                    <?php echo "<input hidden name=\"product_id\" value=\"$current_product_id\" />"; ?>
-                    <button type="submit" id="buy-now-button"
-                    value="buy" name="buy_now">Buy now
-                    </button>
-                    <button type="submit" class="button-secondary" id="add-to-cart-button" value="add" name="add_to_cart"> Add to Cart!
-                    </button>
-                </div>
+                    <div class="button-primary-and-secondary" id="product-cart-button">
+                        <?php echo "<input hidden name=\"product_id\" value=\"$current_product_id\" />"; ?>
+                        <button type="submit" id="buy-now-button" value="buy" name="buy_now">Buy now
+                        </button>
+                        <button type="submit" class="button-secondary" id="add-to-cart-button" value="add" name="add_to_cart"> Add to Cart!
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -135,17 +134,17 @@ if (isset($_GET["buy_now"])) {
             <h3>Recommended products</h3>
             <div class="row">
                 <?php
-                $count = 0;
-                $products = create_associative_array("products");
-                shuffle($products);
-                foreach ($products as $product) {
-                  display_product($product);
-                  $count++;
-                  if ($count == 4) {
-                    break;
-                  }
-                }
-                ?>
+                                $count = 0;
+                                $products = create_associative_array("products");
+                                shuffle($products);
+                                foreach ($products as $product) {
+                                    display_product($product);
+                                    $count++;
+                                    if ($count == 4) {
+                                        break;
+                                    }
+                                }
+                                ?>
             </div>
         </div>
     </div>
@@ -154,9 +153,8 @@ if (isset($_GET["buy_now"])) {
         <div id="mall_footer"></div>
     </footer>
 
-    
-        
-        
+
+
     <div id="cookie-consent-message"></div>
     <script src="JS/global-load-mall-header-and-footer.js"></script>
     <script src="JS/global-load-store-header-and-footer.js"></script>
