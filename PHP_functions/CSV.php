@@ -57,6 +57,9 @@ function create_associative_array($data)
     case "users":
       $file = fopen("../user.csv", "r");
       break;
+    case "admins":
+      $file = fopen("../admin.csv", "r");
+      break;
     default:
       exit("Pick between 'stores', 'products', 'categories'");
       break;

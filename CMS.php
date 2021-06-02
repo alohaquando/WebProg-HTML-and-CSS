@@ -1,25 +1,39 @@
 <?php
 session_start();
 
+if (file_exists("install.php")) {
+    exit(
+    "Create an admin account and remove the install.php file before using this website"
+  );
+}
+
+require "PHP_functions/CSV.php";
+
+$logged_in_admin = get_item("admins", $_COOKIE["aid"]);
+
+if (!isset($_COOKIE["aid"])) {
+    header("location: CMSLogin.php");
+}
+
 // Function to update photo
 function update_photo()
 {
     $photo = $_FILES["profile_photo"];
     $location = $_POST["photo_location"];
     switch ($location) {
-        case "photo_1":
-            $photo_name = "photo_1.jpg";
-            break;
-        case "photo_2":
-            $photo_name = "photo_2.jpg";
-            break;
-        case "photo_3":
-            $photo_name = "photo_3.jpg";
-            break;
-        case "photo_4":
-            $photo_name = "photo_4.jpg";
-            break;
-    }
+    case "photo_1":
+      $photo_name = "photo_1.jpg";
+      break;
+    case "photo_2":
+      $photo_name = "photo_2.jpg";
+      break;
+    case "photo_3":
+      $photo_name = "photo_3.jpg";
+      break;
+    case "photo_4":
+      $photo_name = "photo_4.jpg";
+      break;
+  }
     move_uploaded_file(
         $photo["tmp_name"],
         $_SERVER["DOCUMENT_ROOT"] . "/Asset/about/" . $photo_name
@@ -32,16 +46,16 @@ function mall_content()
     $content = $_POST["content"];
     $page = $_POST["content_page"];
     switch ($page) {
-        case "policy":
-            $page = "Data/policy.html";
-            break;
-        case "terms":
-            $page = "Data/terms.html";
-            break;
-        case "copyright":
-            $page = "Data/copyright.html";
-            break;
-    }
+    case "policy":
+      $page = "Data/policy.html";
+      break;
+    case "terms":
+      $page = "Data/terms.html";
+      break;
+    case "copyright":
+      $page = "Data/copyright.html";
+      break;
+  }
     file_put_contents($page, $content);
 }
 
@@ -98,7 +112,10 @@ if (isset($_POST["content_page"])) {
         <!-- Page header -->
         <div class="HeaderH1_Left_With_Spacing">
             <h1>Content Management System</h1>
-            <p>Welcome to the CMS for Marché! Mall, [name]</p>
+            <p>Welcome to the CMS for Marché! Mall!</p>
+            <p>
+                <?php echo "Your username is $logged_in_admin[username]"; ?>
+            </p>
         </div>
 
         <!-- Edit Mall Content -->

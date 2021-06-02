@@ -22,24 +22,24 @@
          // check if email or phone already exist
          if (stripos($contents, $username) !== false) {
              echo '<script type="text/JavaScript">
-                                      function display_toast() {
-                                      document.querySelector("#toast-error").style.display = "flex";}
-                                      </script>';
+                               function display_toast() {
+                               document.querySelector("#toast-error").style.display = "flex";}
+                               </script>';
          } else {
              fputcsv($fp, $admin_detail);
              echo '<script type="text/JavaScript">
-                      function display_toast() {
-                      document.querySelector("#toast-ok").style.display = "flex";}
-                      </script>';
+                  function display_toast() {
+                  document.querySelector("#toast-ok").style.display = "flex";}
+                  </script>';
          }
      } else {
          ($fp = fopen($file, "a+")) or die("unable open $file for writing");
          fputcsv($fp, $csv_1st_row);
          fputcsv($fp, $admin_detail);
          echo '<script type="text/JavaScript">
-                  function display_toast() {
-                  document.querySelector("#toast-ok").style.display = "flex";}
-                  </script>';
+               function display_toast() {
+               document.querySelector("#toast-ok").style.display = "flex";}
+               </script>';
      }
      fclose($fp);
  }
