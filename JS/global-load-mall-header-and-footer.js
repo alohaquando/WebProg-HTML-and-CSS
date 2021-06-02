@@ -93,8 +93,7 @@ document.getElementById(
 	  </a>
 	</h5>
 	<a href="MyAccount_Login.php" id="account-access-desktop"
-	  ><img id="account-img" src="Asset/avatar.jpg" class="avatar_logged_in"
-	/></a>
+	  ><i class="fa fa-user"></i>‎‎‏‏‎</a>
   </div>
 </div>
 </nav>`;

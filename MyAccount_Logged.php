@@ -1,14 +1,12 @@
 <?php
 require "PHP_functions/CSV.php";
-// require "Data/users.csv";
+$logged_in_user = get_item("users", $_COOKIE["uid"]);
 
-$registered_users = create_associative_array("users");
-
-if(isset($_SESSION[''])){
-get_item)
+if (isset($_POST["log_out"])) {
+    unset($_COOKIE["uid"]);
+    setcookie("uid", null, -1, "/");
+    header("location: MyAccount_Login.php");
 }
-
-$field = get_field_object();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,63 +32,80 @@ $field = get_field_object();
                 <div class="col-2">
                     <h5>Email</h5>
                     <p>
-                    <?php
-                    php echo 
-                    ?>
+                        <?php echo "$logged_in_user[email]"; ?>
                     </p>
-                    <!-- id="account-email">josephinerachel@gmail.com</p> -->
-                    
+
                 </div>
                 <div class="col-2">
                     <h5>Phone number</h5>
-                    <p>+84 345 342 4323</p>
+                    <p>
+                        <?php echo "$logged_in_user[phone]"; ?>
+
+                    </p>
                 </div>
             </div>
         </div>
 
         <h4>Personal Information</h4>
 
-        <div class="account-profile-pic">
+        <!-- <div class="account-profile-pic">
             <img class="profile" src="Asset/avatar.jpg" />
-        </div>
+        </div> -->
 
         <div class="account-info">
             <div class="row">
                 <div class="col-2">
                     <h5>First name</h5>
-                    <p>Josephine</p>
+                    <p>
+                        <?php echo "$logged_in_user[fname]"; ?>
+
+                    </p>
                 </div>
                 <div class="col-2">
                     <h5>Last Name</h5>
-                    <p>Rachel</p>
+                    <p>
+                        <?php echo "$logged_in_user[lname]"; ?>
+
+                    </p>
                 </div>
                 <div class="col-2">
                     <h5>Address</h5>
-                    <p>1192 Rosemary Road Courtside</p>
+                    <p>
+                        <?php echo "$logged_in_user[address]"; ?>
+
+                    </p>
                 </div>
                 <div class="col-2">
                     <h5>City</h5>
-                    <p>Honolulu</p>
+                    <p>
+                        <?php echo "$logged_in_user[city]"; ?>
+
+                    </p>
                 </div>
                 <div class="col-2">
                     <h5>Zipcode</h5>
-                    <p>69801</p>
+                    <p>
+                        <?php echo "$logged_in_user[zipcode]"; ?>
+
+                    </p>
                 </div>
                 <div class="col-2">
                     <h5>Country</h5>
-                    <p>United States</p>
+                    <p>
+                        <?php echo "$logged_in_user[country]"; ?>
+
+                    </p>
                 </div>
             </div>
         </div>
-        <form action="5.1.7 My-account-Not-yet-logged-in.html">
-            <button class="button-secondary" id="log_out_button">Log out</button>
+        <form method="post" action="MyAccount_Logged.php">
+            <button class="button-secondary" name="log_out">Log out</button>
         </form>
     </div>
 
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
     <script src="JS/global-load-mall-header-and-footer.js"></script>
-    <script src="JS/global-load-store-header-and-footer.js"></script>
     <script src="JS/global-mobile-nav.js"></script>
     <script src="JS/global-logged-in-behavior.js"></script>
     <script src="JS/1-cookie.js"></script>

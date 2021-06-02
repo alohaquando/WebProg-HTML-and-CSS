@@ -1,4 +1,4 @@
-   .box {
+.box {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -326,7 +326,7 @@ button[type="reset"] {
   overflow: hidden;
 }
 
-input[type="radio"]:checked ~ .reveal-if-active{
+input[type="radio"]:checked ~ .reveal-if-active {
   opacity: 1;
   max-height: 100%;
   overflow: visible;

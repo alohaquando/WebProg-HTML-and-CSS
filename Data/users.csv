@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0427b7b0faa34b820d1354ce7a202915aa511fb4444ffecf8f1e62d1b708a1fa
-size 619
+id,email,phone,password,fname,lname,address,city,zipcode,country
+1652350189,taehyeon@gmail.com,293049054,$2y$10$siOtrPvnn5ubp6g3B4r4IuDaFG9nPS5RRvixW3Ees50e3FLbEwizK,Tae,Heyon,Test,City,939459,AL
+1468147891,tae@gmail.com,299344039,$2y$10$r.aj/0lDOvZta1nO4SAHHuLRiYn2LnNdM986P5/chtw8G0Pdoxx9C,Tae,Heyon,jkflsj,kjlsk,024043,AX
+2131025756,liam@gmail.com,939403292,$2y$10$nlXP2588JLuqUiPCqKQ5kOboMGBsKwnY8Ap3Xrq.35hgoeicAAFTq,Tae,Heyon,jkflsj,kjls,024043,AX
+875419765,liamdo@gmail.com,939403234,$2y$10$lLQvjVtmFOEgfzYdwTjqAuDQHWd3FfnkOpLX6juiO0jp/z39SEfmS,Tae,Heyon,jkflsj,kjls,024043,AX
+1096044887,aloha.liamdo@gmail.com,0906825808,$2y$10$LpbDzu.rl4sjvoOS1ed/.OOaERj/levJO.xD2sYvRD5ocJgk0kRLO,Liam,"Do Hoang",Honolulu,Hawaii,934939,AL
+1007499991,aethyeon080@gmail.com,123123123,$2y$10$MCACTn1pF1T99arqpBFWr.M2zHtrQ52qIGeNU7jdBu1v50fuCrkhK,Taehyeon,jeong,123,Asdf,1231,AX

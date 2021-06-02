@@ -1,49 +1,53 @@
 <?php
 require "PHP_functions/CSV.php";
-// require "Data/users.csv";
-
 $registered_users = create_associative_array("users");
-echo "<pre>";
-print_r($registered_users);
-echo "</pre>";
 
+function login($uid)
+{
+    setcookie("uid", $uid, time() + 60 * 60 * 24 * 7);
+    $_SESSION["uid"] = $uid;
+    // redirect to login page
+    header("location: MyAccount_Logged.php");
+}
+
+if (isset($_COOKIE["uid"])) {
+    header("location: MyAccount_Logged.php");
+}
 
 if (isset($_POST["login"])) {
-    $credential = $_POST["credential"];
+    $correct = "unknown";
     $password = $_POST["password"];
 
-    foreach ($registered_users as $registered_user) {
-        if (password_verify($password, $registered_user["password_hashed"]) and
-      (strpos($credential, $registered_user["email"]) !== false )){
-
-        // create a uniq value pair to prevent modification
-      $uniqid = uniqid();
-
-      // store the pair on the server for later validation
-      // note: the location is outside of document root
-    //   file_put_contents("", $uniqid);
-
-       // create a cookie that expires after 7 days
-        setcookie(
-        "loggedin_user",
-        $_POST["credential"],
-        time() + 60 * 60 * 24 * 7);
-        header("location: MyAccount_Logged.php");
-        setcookie('uniqid', $uniqid,time() + 60 * 60 * 24 * 7);
-
-        header("location: MyAccount_Logged.php");
-
+    switch ($_POST["perf_contact"]) {
+    case "perf_phone":
+      foreach ($registered_users as $registered_user) {
+          if (
+          password_verify($password, $registered_user["password"]) and
+          strpos($_POST["phone"], $registered_user["phone"]) !== false
+        ) {
+              login($registered_user["id"]);
+              $correct = "yes";
+          }
       }
-       else if(password_verify($password, $registered_user["password_hashed"]) and strpos($credential, $registered_user["phone"]) !== false){
+      break;
 
-        setcookie(
-            "loggedin_user",
-            $_POST["credential"],
-            time() + 60 * 60 * 24 * 7);
-
-        header("location: MyAccount_Logged.php");
-       }
-        $status = "Invalid username/password";
+    case "perf_email":
+      foreach ($registered_users as $registered_user) {
+          if (
+          password_verify($password, $registered_user["password"]) and
+          strpos($_POST["email"], $registered_user["email"]) !== false
+        ) {
+              login($registered_user["id"]);
+              $correct = "yes";
+          }
+      }
+      break;
+  }
+    if ($correct != "yes") {
+        echo '<script type="text/JavaScript">
+    function display_toast() {
+    document.querySelector("#toast-error").style.display = "flex";}
+    </script>';
     }
 }
 ?>
@@ -58,37 +62,71 @@ if (isset($_POST["login"])) {
     <link rel="stylesheet" href="CSS/main.css" />
     <meta name="viewpoint" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/f43db195aa.js" crossorigin="anonymous"></script>
+    <script>
+    function show_email() {
+        document.querySelector("#login_email").innerHTML = `<div class="styled-input-text">
+        <label id="email" for="email">Email</label><br />
+        <input type="email" name="email" placeholder="Your email" required />
+    </div>`;
+        document.querySelector("#login_phone").innerHTML = "";
+    }
+
+    function show_phone() {
+        document.querySelector("#login_phone").innerHTML = `<div class="styled-input-text">
+        <label for="phone">Phone</label><br />
+        <input type="tel" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" name="phone" placeholder="Your phone number"  required />
+    </div>`;
+        document.querySelector("#login_email").innerHTML = "";
+    }
+    </script>
 </head>
 
 <body>
     <header id="nav_header"></header>
     <div class="body_spacing">
+
+        <!-- Toast -->
+        <div class="toast-large" id="toast-error">
+            <div class="toast-large-elements-error">
+                <?php echo "<p id=\"toast-large-message\">The email or phone number is not found. Please try again or start a new session</p>"; ?>
+            </div>
+        </div>
+        <script>
+        display_toast()
+        </script>
+
+        <!-- Header -->
         <div class="HeaderH1_Left_With_Spacing">
             <h1>Log in</h1>
-            <p>asdASD123!@#</p>
+            <p>
+                No account yet?<a href="Register.php">
+                    Create an account</a>
+            </p>
         </div>
+
         <form name="loginForm" method="post" action="MyAccount_Login.php">
+
             <!-- Login method -->
             <div class="styled-radio">
                 <p>Log in with</p>
-
-                <input type="radio" id="perf_phone" name="perf_contact" value="perf_phone" required checked />
-                <label for="perf_phone">Phone</label>
-
-                <input type="radio" id="perf_email" name="perf_contact" value="perf_email" />
-                <label for="perf_email">Email</label>
-                </div>
-
-            <!-- phone -->
-            <div class="styled-input-text">
-                <label for="credential">Phone</label><br />
-                <input class="credential_phone" name="credential" value = "credential_phone" placeholder="Type your phone" required />
+                <input type="radio" id="perf_phone" name="perf_contact" value="perf_phone" onclick="show_phone()" required checked />
+                <label for="perf_phone" onclick="show_phone()">Phone</label>
+                <br>
+                <input type="radio" id="perf_email" name="perf_contact" value="perf_email" onclick="show_email()" />
+                <label for="perf_email" onclick="show_email()">Email</label>
             </div>
 
-            <!-- Email -->
-            <div class="styled-input-text">
-                <label id = "email" for="credential">Email</label><br />
-                <input type = "hidden" class="credential_email" name="credential" value = "credential_email" placeholder="Type your email" required />
+            <!-- Phone LOGIN FIELD -->
+            <div id="login_phone">
+                <div class="styled-input-text">
+                    <label for="phone">Phone</label><br />
+                    <input type="tel" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" name="phone" placeholder="Your phone number" required />
+                </div>
+            </div>
+
+            <!-- Email LOGIN FIELD -->
+            <div id="login_email">
+
             </div>
 
             <!-- Password -->
@@ -103,39 +141,16 @@ if (isset($_POST["login"])) {
                 <button input name="login" type="submit">Log in</button>
             </div>
         </form>
-        <p>
-            No account yet?<a href="Register.php">
-                Create an account</a>
-        </p>
+
     </div>
     <footer id="mall_footer"></footer>
     <div id="cookie-consent-message"></div>
     <script src="JS/global-load-mall-header-and-footer.js"></script>
-    <script src="JS/global-load-store-header-and-footer.js"></script>
     <script src="JS/global-mobile-nav.js"></script>
     <script src="JS/global-logged-in-behavior.js"></script>
     <script src="JS/1-cookie.js"></script>
     <script src="JS/5-login.js"></script>
+
 </body>
+
 </html>
-
-<script type="text/javascript">
-
-var radio = document.getElementsByClassName("styled-radio");
-var credential_phone=  document.getElementById("perf_phone");
-var credential_email =  document.getElementById("perf_email");
-
-for(var i = 0; i < radio.length; i++) {
-   radio[i].onclick = function() {
-     var val = this.value;
-     if(val == 'perf_phone' ){  
-        credential_phone.style.display = 'block';// show
-        internetpayment.style.display = 'none';// hide
-     }
-     else if(val == 'perf_email'){
-         credential_email.style.display = 'none';
-         internetpayment.style.display = 'block';
-     }    
-  }
-}
-</script>
