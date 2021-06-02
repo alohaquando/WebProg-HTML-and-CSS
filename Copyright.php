@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<?php if (file_exists("install.php")) {
+    exit(
+    "Create an admin account and remove the install.php file before using this website"
+  );
+} ?>
 <html lang="en">
 
 <head>
