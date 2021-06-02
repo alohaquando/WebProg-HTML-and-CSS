@@ -41,10 +41,12 @@ if (isset($_POST["submit"])) {
         </script>';
     } else {
         fputcsv($fp, $user_detail);
-        echo '<script type="text/JavaScript">
-        function display_toast() {
-        document.querySelector("#toast-ok").style.display = "flex";}
-        </script>';
+        // echo '<script type="text/JavaScript">
+        // function display_toast() {
+        // document.querySelector("#toast-ok").style.display = "flex";}
+        // </script>';
+        header("Location:MyAccount_Login.php")
+        ;
     }
 
     fclose($fp);

@@ -1,25 +1,38 @@
 <?php
 require "PHP_functions/CSV.php";
+// require "Data/users.csv";
+
 $registered_users = create_associative_array("users");
+echo "<pre>";
+print_r($registered_users);
+echo "</pre>";
+
+
+$credential = $_POST["credential"];
+$password = $_POST["password"];
 
 if (isset($_POST["login"])) {
-    $credential = $_POST["credential"];
-    $password = $_POST["password"];
     foreach ($registered_users as $registered_user) {
         if (
       password_verify($password, $registered_user["password_hashed"]) and
-      (strpos($credential, $registered_user["email"]) !== false or
-        strpos($credential, $registered_user["phone"]) !== false)
-    ) {
-            // create a cookie that expires after 7 days
+      (strpos($credential, $registered_user["email"]) !== false )){
+       // create a cookie that expires after 7 days
             setcookie(
-                "loggedin_user",
-                $_POST["credential"],
-                time() + 60 * 60 * 24 * 7
-            );
-
+            "loggedin_user",
+            $_POST["credential"],
+            time() + 60 * 60 * 24 * 7;
             header("location: MyAccount_Logged.php");
-        } else {
+      }
+       else if(password_verify($password, $registered_user["password_hashed"]) and strpos($credential, $registered_user["phone"]) !== false){
+        setcookie(
+            "loggedin_user",
+            $_POST["credential"],
+            time() + 60 * 60 * 24 * 7
+            ;
+
+        header("location: MyAccount_Logged.php");
+       }
+       else {
             $status = "Invalid username/password";
         }
     }
@@ -55,17 +68,24 @@ if (isset($_POST["login"])) {
 
                 <input type="radio" id="perf_email" name="perf_contact" value="perf_email" />
                 <label for="perf_email">Email</label>
+                </div>
+
+            <!-- phone -->
+            <div class="styled-input-text">
+                <label for="credential">Phone</label><br />
+                <input class="credential_phone" name="credential_phone" value = "credential_phone" placeholder="Type your phone" required />
+
             </div>
 
             <!-- Email -->
             <div class="styled-input-text">
-                <label for="credential">Email</label><br />
-                <input id="credential" name="credential" placeholder="Your phone or email" required />
+                <label id = "email" for="credential">Email</label><br />
+                <input type = "hidden" class="credential_email" name="credential_email" value = "credential_email" placeholder="Type your email" required />
             </div>
 
             <!-- Password -->
             <div class="styled-input-text">
-                <label for="assword">Password</label><br />
+                <label for="password">Password</label><br />
                 <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^*])[a-zA-Z\d!@#$%^*]{8,20}$" required />
             </div>
 
@@ -89,5 +109,26 @@ if (isset($_POST["login"])) {
     <script src="JS/1-cookie.js"></script>
     <script src="JS/5-login.js"></script>
 </body>
-
 </html>
+
+<script type="text/javascript">
+
+var radio = document.getElementsByClassName("styled-radio");
+var credential_phone=  document.getElementById("perf_phone");
+var credential_email =  document.getElementById("perf_email");
+
+for(var i = 0; i < radio.length; i++) {
+   radio[i].onclick = function() {
+     var val = this.value;
+     if(val == 'perf_phone' ){  
+        credential_phone.style.display = 'block';   // show
+        internetpayment.style.display = 'none';// hide
+     }
+     else if(val == 'perf_email'){
+         credential_email.style.display = 'none';
+         internetpayment.style.display = 'block';
+     }    
+
+  }
+}
+</script>

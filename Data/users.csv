@@ -1,4 +1,3 @@
-email,phone,password_hashed,firstname,lastname,address,city,zipcode
-test1@1,1111111111,$2y$10$Z41/pmEC/YEv.LnB31/unu/7nV51fTbTr679EaHxEDtvqewvtK,test,test,test,Test,111111
-test2@2,11111111111,$2y$10$tZNGo.hFv3Bg8YaNL1996uQ8dhsfxYv.r9C7dk3LJPx1Rd.GLBZEq,test,test,Test,Test,11111
-test2@3,0906825808,$2y$10$tZNGo.hFv3Bg8YaNL1996uQ8dhsfxYv.r9C7dk3LJPx1Rd.GLBZEq,test,test,Test,Test,11111
+version https://git-lfs.github.com/spec/v1
+oid sha256:166dbc38e97ca169af29a765ea3dfcbd39769cbc206e12fb0c39633fcac71ff9
+size 620

@@ -1,3 +1,13 @@
+<?php
+require "PHP_functions/CSV.php";
+// require "Data/users.csv";
+
+$registered_users = create_associative_array("users");
+
+if(isset($_SESSION[''])){
+get_item)
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +32,7 @@
                 <div class="col-2">
                     <h5>Email</h5>
                     <p id="account-email">josephinerachel@gmail.com</p>
+ 
                 </div>
                 <div class="col-2">
                     <h5>Phone number</h5>
