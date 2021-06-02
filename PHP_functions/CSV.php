@@ -3,6 +3,43 @@
 // Move to the document root, so that the data files can be taken correctly no matter where the function is called from
 chdir($_SERVER["DOCUMENT_ROOT"]);
 
+// Create user.csv
+$user_csv = "../user.csv";
+
+$csv_1st_row = [
+  "id",
+  "email",
+  "phone",
+  "password",
+  "fname",
+  "lname",
+  "address",
+  "city",
+  "zipcode",
+  "country",
+];
+
+$user_detail = [
+  "001",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+  "dummy",
+];
+
+if (file_exists("../user.csv")) {
+} else {
+    ($fp = fopen($user_csv, "a+")) or die("unable open $file for writing");
+    fputcsv($fp, $csv_1st_row);
+    fputcsv($fp, $user_detail);
+    fclose($fp);
+}
+
 // Create associative array containing many rows of store/cat./products inside.
 function create_associative_array($data)
 {
@@ -18,7 +55,7 @@ function create_associative_array($data)
       $file = fopen("Data/categories.csv", "r");
       break;
     case "users":
-      $file = fopen("Data/users.csv", "r");
+      $file = fopen("../user.csv", "r");
       break;
     default:
       exit("Pick between 'stores', 'products', 'categories'");

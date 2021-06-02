@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 
@@ -18,43 +15,70 @@ if (isset($_POST["submit"])) {
     $country = $_POST["country"];
 
     $user_detail = [
-        $uid,
-        $email,
-        $phone,
-        $password_hashed,
-        $firstname,
-        $lastname,
-        $address,
-        $city,
-        $zipcode,
-        $country,
-    ];
+    $uid,
+    $email,
+    $phone,
+    $password_hashed,
+    $firstname,
+    $lastname,
+    $address,
+    $city,
+    $zipcode,
+    $country,
+  ];
 
-    $file = "Data/users.csv";
-    ($fp = fopen($file, "r+")) or die("unable open $file for writing");
-    $contents = fread($fp, filesize($file));
+    $csv_1st_row = [
+    "id",
+    "email",
+    "phone",
+    "password",
+    "fname",
+    "lname",
+    "address",
+    "city",
+    "zipcode",
+    "country",
+  ];
 
-    // check if email or phone already exist
-    if (
-        stripos($contents, $email) !== false or
-        stripos($contents, $phone) !== false
+    $file = "../user.csv";
+
+    if (file_exists("../user.csv")) {
+        ($fp = fopen($file, "a+")) or die("unable open $file for writing");
+        $contents = fread($fp, filesize($file));
+
+        // check if email or phone already exist
+        if (
+      stripos($contents, $email) !== false or
+      stripos($contents, $phone) !== false
     ) {
-        echo '<script type="text/JavaScript">
-                                function display_toast() {
-                                document.querySelector("#toast-error").style.display = "flex";}
-                                </script>';
+            echo '<script type="text/JavaScript">
+                                  function display_toast() {
+                                  document.querySelector("#toast-error").style.display = "flex";}
+                                  </script>';
+        } else {
+            fputcsv($fp, $user_detail);
+            echo '<script type="text/JavaScript">
+                  function display_toast() {
+                  document.querySelector("#toast-ok").style.display = "flex";}
+                  </script>';
+            header("location: MyAccount_Login.php");
+        }
     } else {
+        ($fp = fopen($file, "a+")) or die("unable open $file for writing");
+        fputcsv($fp, $csv_1st_row);
         fputcsv($fp, $user_detail);
         echo '<script type="text/JavaScript">
-                function display_toast() {
-                document.querySelector("#toast-ok").style.display = "flex";}
-                </script>';
-        header("Location:MyAccount_Login.php");
+              function display_toast() {
+              document.querySelector("#toast-ok").style.display = "flex";}
+              </script>';
+        header("location: MyAccount_Login.php");
     }
-
     fclose($fp);
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
