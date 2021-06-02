@@ -32,10 +32,10 @@ document.getElementById(
 			</div>
 		  </div>
 		</li>
-		<li><a href="5.1.2-Aboutus.html">About us</a></li>
-		<li><a href="5.1.4-Fees.html">Fees</a></li>
-		<li><a href="5.1.5-FAQs.html">FAQs</a></li>
-		<li><a href="5.1.6-Contact.html">Contact</a></li>
+		<li><a href="5.1.2-Aboutus.php">About us</a></li>
+		<li><a href="5.1.4-Fees.php">Fees</a></li>
+		<li><a href="5.1.5-FAQs.php">FAQs</a></li>
+		<li><a href="5.1.6-Contact.php">Contact</a></li>
 	  </ul>
 	</div>
   </div>
@@ -57,10 +57,10 @@ document.getElementById(
 		>
 	  </li>
 
-	  <li><a href="5.1.2-Aboutus.html">About us</a></li>
-	  <li><a href="5.1.4-Fees.html">Fees</a></li>
-	  <li><a href="5.1.5-FAQs.html">FAQs</a></li>
-	  <li><a href="5.1.6-Contact.html">Contact</a></li>
+	  <li><a href="5.1.2-Aboutus.php">About us</a></li>
+	  <li><a href="5.1.4-Fees.php">Fees</a></li>
+	  <li><a href="5.1.5-FAQs.php">FAQs</a></li>
+	  <li><a href="5.1.6-Contact.php">Contact</a></li>
 	  <hr class="sidebar_hr" />
 	  <li class="cart-access">
 		<a href="Cart.php"
