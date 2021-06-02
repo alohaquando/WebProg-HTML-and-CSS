@@ -1,4 +1,9 @@
 <?php
+if (file_exists("install.php")) {
+    exit(
+        "Create an admin account and remove the install.php file before using this website"
+    );
+}
 require "PHP_functions/CSV.php";
 $registered_users = create_associative_array("users");
 
@@ -19,35 +24,35 @@ if (isset($_POST["login"])) {
     $password = $_POST["password"];
 
     switch ($_POST["perf_contact"]) {
-    case "perf_phone":
-      foreach ($registered_users as $registered_user) {
-          if (
-          password_verify($password, $registered_user["password"]) and
-          strpos($_POST["phone"], $registered_user["phone"]) !== false
-        ) {
-              login($registered_user["id"]);
-              $correct = "yes";
-          }
-      }
-      break;
+        case "perf_phone":
+            foreach ($registered_users as $registered_user) {
+                if (
+                    password_verify($password, $registered_user["password"]) and
+                    strpos($_POST["phone"], $registered_user["phone"]) !== false
+                ) {
+                    login($registered_user["id"]);
+                    $correct = "yes";
+                }
+            }
+            break;
 
-    case "perf_email":
-      foreach ($registered_users as $registered_user) {
-          if (
-          password_verify($password, $registered_user["password"]) and
-          strpos($_POST["email"], $registered_user["email"]) !== false
-        ) {
-              login($registered_user["id"]);
-              $correct = "yes";
-          }
-      }
-      break;
-  }
+        case "perf_email":
+            foreach ($registered_users as $registered_user) {
+                if (
+                    password_verify($password, $registered_user["password"]) and
+                    strpos($_POST["email"], $registered_user["email"]) !== false
+                ) {
+                    login($registered_user["id"]);
+                    $correct = "yes";
+                }
+            }
+            break;
+    }
     if ($correct != "yes") {
         echo '<script type="text/JavaScript">
-    function display_toast() {
-    document.querySelector("#toast-error").style.display = "flex";}
-    </script>';
+        function display_toast() {
+        document.querySelector("#toast-error").style.display = "flex";}
+        </script>';
     }
 }
 ?>
@@ -65,17 +70,17 @@ if (isset($_POST["login"])) {
     <script>
     function show_email() {
         document.querySelector("#login_email").innerHTML = `<div class="styled-input-text">
-        <label id="email" for="email">Email</label><br />
-        <input type="email" name="email" placeholder="Your email" required />
-    </div>`;
+                <label id="email" for="email">Email</label><br />
+                <input type="email" name="email" placeholder="Your email" required />
+        </div>`;
         document.querySelector("#login_phone").innerHTML = "";
     }
 
     function show_phone() {
         document.querySelector("#login_phone").innerHTML = `<div class="styled-input-text">
-        <label for="phone">Phone</label><br />
-        <input type="tel" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" name="phone" placeholder="Your phone number"  required />
-    </div>`;
+                <label for="phone">Phone</label><br />
+                <input type="tel" pattern="^\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d([ .-]?)\d?([ .-]?)\d?([ .-]?){9,11}$" name="phone" placeholder="Your phone number"  required />
+        </div>`;
         document.querySelector("#login_email").innerHTML = "";
     }
     </script>

@@ -1,4 +1,9 @@
 <?php
+if (file_exists("install.php")) {
+    exit(
+    "Create an admin account and remove the install.php file before using this website"
+  );
+}
 require "PHP_functions/CSV.php";
 $logged_in_user = get_item("users", $_COOKIE["uid"]);
 

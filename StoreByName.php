@@ -3,19 +3,24 @@
 
 <?php
 session_start();
+if (file_exists("install.php")) {
+    exit(
+        "Create an admin account and remove the install.php file before using this website"
+    );
+}
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 
 if (isset($_GET["character"])) {
     $selected_character = $_GET["character"];
     switch ($selected_character) {
-    case "num":
-      $character_regex = "/^\d.+$/";
-      break;
-    default:
-      $character_regex = "/^$selected_character.+$/";
-      break;
-  }
+        case "num":
+            $character_regex = "/^\d.+$/";
+            break;
+        default:
+            $character_regex = "/^$selected_character.+$/";
+            break;
+    }
 } else {
     $selected_character = "none";
 }
@@ -42,53 +47,53 @@ if (isset($_GET["character"])) {
             <ul class="letter-spacing">
 
                 <?php
-                switch ($selected_character) {
-                  case "none":
-                    echo "<li><a class=\"name-selected\" href=\"StoreByName.php?\">All</a></li>";
-                    echo "<li><a href=\"StoreByName.php?character=num\">#</a></li>";
-                    break;
-                  case "num":
-                    echo "<li><a href=\"StoreByName.php\">All</a></li>";
-                    echo "<li><a class=\"name-selected\" href=\"StoreByName.php?character=num\">#</a></li>";
+                                switch ($selected_character) {
+                                    case "none":
+                                        echo "<li><a class=\"name-selected\" href=\"StoreByName.php?\">All</a></li>";
+                                        echo "<li><a href=\"StoreByName.php?character=num\">#</a></li>";
+                                        break;
+                                    case "num":
+                                        echo "<li><a href=\"StoreByName.php\">All</a></li>";
+                                        echo "<li><a class=\"name-selected\" href=\"StoreByName.php?character=num\">#</a></li>";
 
-                    break;
-                  default:
-                    echo "<li><a href=\"StoreByName.php\">All</a></li>
-                    <li><a href=\"StoreByName.php?character=num\">#</a></li>";
-                }
+                                        break;
+                                    default:
+                                        echo "<li><a href=\"StoreByName.php\">All</a></li>
+                                        <li><a href=\"StoreByName.php?character=num\">#</a></li>";
+                                }
 
-                foreach (range("A", "Z") as $letter) {
-                    if ($letter == $selected_character) {
-                        echo "<li>";
-                        echo "<a class=\"name-selected\" href=\"StoreByName.php?character=$letter\">$letter</a>";
-                        echo "</li>";
-                    } else {
-                        echo "<li>";
-                        echo "<a href=\"StoreByName.php?character=$letter\">$letter</a>";
-                        echo "</li>";
-                    }
-                }
-                ?>
+                                foreach (range("A", "Z") as $letter) {
+                                    if ($letter == $selected_character) {
+                                        echo "<li>";
+                                        echo "<a class=\"name-selected\" href=\"StoreByName.php?character=$letter\">$letter</a>";
+                                        echo "</li>";
+                                    } else {
+                                        echo "<li>";
+                                        echo "<a href=\"StoreByName.php?character=$letter\">$letter</a>";
+                                        echo "</li>";
+                                    }
+                                }
+                                ?>
             </ul>
         </div>
         <!--------Sort Stores-------->
         <div class="row">
 
             <?php
-            $stores = create_associative_array("stores");
-            if (isset($_GET["character"])) {
-                foreach ($stores as $store) {
-                    if (preg_match($character_regex, $store["name"])) {
-                        display_store($store);
-                    } else {
-                    }
-                }
-            } else {
-                foreach ($stores as $store) {
-                    display_store($store);
-                }
-            }
-            ?>
+                        $stores = create_associative_array("stores");
+                        if (isset($_GET["character"])) {
+                            foreach ($stores as $store) {
+                                if (preg_match($character_regex, $store["name"])) {
+                                    display_store($store);
+                                } else {
+                                }
+                            }
+                        } else {
+                            foreach ($stores as $store) {
+                                display_store($store);
+                            }
+                        }
+                        ?>
 
         </div>
     </div>

@@ -1,4 +1,9 @@
 <?php
+if (file_exists("install.php")) {
+    exit(
+    "Create an admin account and remove the install.php file before using this website"
+  );
+}
 require "PHP_functions/CSV.php";
 require "PHP_functions/display.php";
 
@@ -81,11 +86,11 @@ if (isset($_GET["buy_now"])) {
         <div class="toast-large" id="toast">
             <div class="toast-large-elements">
                 <?php
-                            $amount_in_cart =
-                                $_SESSION["cart"][$current_product_id]["quantity"];
-                            echo "<p id=\"toast-large-message\">  $amount_in_cart $product[name] currently in cart</p>";
-                            echo "<a href=\"Cart.php\">View cart</a>";
-                            ?>
+                $amount_in_cart =
+                  $_SESSION["cart"][$current_product_id]["quantity"];
+                echo "<p id=\"toast-large-message\">  $amount_in_cart $product[name] currently in cart</p>";
+                echo "<a href=\"Cart.php\">View cart</a>";
+                ?>
             </div>
         </div>
         <script>
@@ -103,18 +108,18 @@ if (isset($_GET["buy_now"])) {
             <!-- Product Detail Text -->
             <div class="product-detail-text col-2">
                 <?php
-                                echo "<h1>$product[name]</h1>";
-                                $product_store = get_item_field(
-                                    "stores",
-                                    $product["store_id"],
-                                    "name"
-                                );
-                                echo "<h4>From $product_store</h4>";
-                                echo "<h4>\$$product[price]</h4>";
-                                echo "<p class=\"BodyLight-Black17\">
+                echo "<h1>$product[name]</h1>";
+                $product_store = get_item_field(
+                    "stores",
+                    $product["store_id"],
+                    "name"
+                );
+                echo "<h4>From $product_store</h4>";
+                echo "<h4>\$$product[price]</h4>";
+                echo "<p class=\"BodyLight-Black17\">
                                         Never worry again with $product[name]. Made with love and care, $product[name] lets you to have a good time without problems. Still skeptical? Just try it and if you don't like it within the next 90 days, we'll refund every penny!
                                 </p>";
-                                ?>
+                ?>
                 <form method="get" action="ProductDetail.php">
                     <div class="button-primary-and-secondary" id="product-cart-button">
                         <?php echo "<input hidden name=\"product_id\" value=\"$current_product_id\" />"; ?>
@@ -134,17 +139,17 @@ if (isset($_GET["buy_now"])) {
             <h3>Recommended products</h3>
             <div class="row">
                 <?php
-                                $count = 0;
-                                $products = create_associative_array("products");
-                                shuffle($products);
-                                foreach ($products as $product) {
-                                    display_product($product);
-                                    $count++;
-                                    if ($count == 4) {
-                                        break;
-                                    }
-                                }
-                                ?>
+                $count = 0;
+                $products = create_associative_array("products");
+                shuffle($products);
+                foreach ($products as $product) {
+                    display_product($product);
+                    $count++;
+                    if ($count == 4) {
+                        break;
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>

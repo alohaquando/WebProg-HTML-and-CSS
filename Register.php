@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (file_exists("install.php")) {
+    exit(
+        "Create an admin account and remove the install.php file before using this website"
+    );
+}
 
 if (isset($_POST["submit"])) {
     $uid = rand();
@@ -15,30 +20,30 @@ if (isset($_POST["submit"])) {
     $country = $_POST["country"];
 
     $user_detail = [
-    $uid,
-    $email,
-    $phone,
-    $password_hashed,
-    $firstname,
-    $lastname,
-    $address,
-    $city,
-    $zipcode,
-    $country,
-  ];
+        $uid,
+        $email,
+        $phone,
+        $password_hashed,
+        $firstname,
+        $lastname,
+        $address,
+        $city,
+        $zipcode,
+        $country,
+    ];
 
     $csv_1st_row = [
-    "id",
-    "email",
-    "phone",
-    "password",
-    "fname",
-    "lname",
-    "address",
-    "city",
-    "zipcode",
-    "country",
-  ];
+        "id",
+        "email",
+        "phone",
+        "password",
+        "fname",
+        "lname",
+        "address",
+        "city",
+        "zipcode",
+        "country",
+    ];
 
     $file = "../user.csv";
 
@@ -48,19 +53,19 @@ if (isset($_POST["submit"])) {
 
         // check if email or phone already exist
         if (
-      stripos($contents, $email) !== false or
-      stripos($contents, $phone) !== false
-    ) {
+            stripos($contents, $email) !== false or
+            stripos($contents, $phone) !== false
+        ) {
             echo '<script type="text/JavaScript">
-                                  function display_toast() {
-                                  document.querySelector("#toast-error").style.display = "flex";}
-                                  </script>';
+                                                                    function display_toast() {
+                                                                    document.querySelector("#toast-error").style.display = "flex";}
+                                                                    </script>';
         } else {
             fputcsv($fp, $user_detail);
             echo '<script type="text/JavaScript">
-                  function display_toast() {
-                  document.querySelector("#toast-ok").style.display = "flex";}
-                  </script>';
+                                    function display_toast() {
+                                    document.querySelector("#toast-ok").style.display = "flex";}
+                                    </script>';
             header("location: MyAccount_Login.php");
         }
     } else {
@@ -68,9 +73,9 @@ if (isset($_POST["submit"])) {
         fputcsv($fp, $csv_1st_row);
         fputcsv($fp, $user_detail);
         echo '<script type="text/JavaScript">
-              function display_toast() {
-              document.querySelector("#toast-ok").style.display = "flex";}
-              </script>';
+                            function display_toast() {
+                            document.querySelector("#toast-ok").style.display = "flex";}
+                            </script>';
         header("location: MyAccount_Login.php");
     }
     fclose($fp);
